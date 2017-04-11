@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Image} from 'react-native';
-import styles from '../styles.js';
+import styles from './styles.js';
 
 export default class InPageImages extends React.Component {
   constructor(props) {
