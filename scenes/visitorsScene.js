@@ -24,7 +24,7 @@ export default class AboutScene extends React.Component {
     const WIDTH = Dimensions.get('window').width - PADDING;
     const ICON_SIZE = 64;
 
-    const imageStyle = {width: ICON_SIZE, height: ICON_SIZE};
+    const IMAGE_STYLE = {width: ICON_SIZE, height: ICON_SIZE};
 
     const data = [
       {source: require('../images/icons/telefon.png'), text: '546 432 311'},
@@ -39,7 +39,7 @@ export default class AboutScene extends React.Component {
     let renderedData = [];
     data.forEach((element, idx) => {
       renderedData.push(
-        <ImageLabel key={idx} source={element.source} style={imageStyle}>
+        <ImageLabel key={idx} source={element.source} style={IMAGE_STYLE}>
           <Text style={[{color: TEXT_COLOR, textAlignVertical: 'center', paddingLeft: 10}]}>{element.text}</Text>
         </ImageLabel>
       )
