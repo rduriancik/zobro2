@@ -3,11 +3,12 @@ import { AppRegistry } from 'react-native';
 
 import AboutScene from './scenes/aboutScene';
 import VisitorsScene from './scenes/visitorsScene';
+import ServicesScene from './scenes/servicesScene';
 
 export default class zobro2 extends Component {
   render() {
     return (
-      <VisitorsScene />
+      <ServicesScene />
     );
   }
 }
