@@ -5,14 +5,20 @@ import {
   View,
   ScrollView,
   Image,
+  Linking,
 } from 'react-native';
 import Text from '../components/text'
 import InPageImages from '../components/inPageImages'
 import Dimensions from 'Dimensions';
+import Hyperlink from 'react-native-hyperlink'
 
 export default class AboutScene extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  _openURL(url) {
+    Linking.openURL(url);
   }
 
   render() {
@@ -32,8 +38,12 @@ export default class AboutScene extends React.Component {
         </Text><Text style={{color: TEXT_COLOR}}>
           Start hry je na konci vstupního esíčka před Tygřími skalami.
         </Text><Text style={{color: TEXT_COLOR}}>
-          Více se o&nbsp;šifrovací hře Dotkni se evoluce dozvíte na <Text style={[styles.ctext, {color: 'blue'}]}>www.dotkni-se-evoluce.cz</Text>.
-        </Text><Text style={{color: TEXT_COLOR}}>
+          Více se o&nbsp;šifrovací hře Dotkni se evoluce dozvíte na
+        </Text>
+        <Hyperlink onPress={() => {this._openURL('http://www.dotkni-se-evoluce.cz')}}>
+          <Text style={[styles.ctext, {color: 'blue', textAlign: 'center'}]}>www.dotkni-se-evoluce.cz</Text>
+        </Hyperlink>
+        <Text style={{color: TEXT_COLOR}}>
           P. S.: Je to opravdu pecka! A jsme první gamifikovaná zoo v&nbsp;ČR.
         </Text>
 
