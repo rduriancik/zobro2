@@ -7,9 +7,13 @@ export default class ourText extends React.Component {
     super(props);
   }
 
+  setNativeProps(nativeProps) {
+    this._root.setNativeProps(nativeProps);
+  }
+
   render() {
     return (
-      <Text style={[styles.text, this.props.style]}>
+      <Text ref={component => this._root = component} style={[styles.text, this.props.style]}>
         {this.props.children}
       </Text>
     );
