@@ -92,6 +92,9 @@ export default class EventsScene extends React.Component {
   render() {
     _this = this;
 
+    // @todo: filtering
+    // @todo: notifications
+
     return (
       <ScrollView>
       <Accordion
