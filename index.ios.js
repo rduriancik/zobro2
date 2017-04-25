@@ -9,11 +9,12 @@ import ServicesScene from './scenes/servicesScene';
 import GameScene from './scenes/gameScene';
 import EventsScene from './scenes/eventsScene';
 import MenuScene from './scenes/menuScene';
-
+import AnimalListScene from './scenes/animalListScene';
 //import * as scenes from './scenes.js';
 
 const zobro2 = StackNavigator({
   MAIN_MENU: { screen: MenuScene },
+  ANIMAL_LIST: { screen: AnimalListScene },
   ABOUT: { screen: AboutScene },
   EVENTS: { screen: EventsScene },
   SERVICES: { screen: ServicesScene },
