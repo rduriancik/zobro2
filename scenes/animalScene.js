@@ -17,6 +17,12 @@ class TextTab extends React.Component {
 
   static navigationOptions = {
     title: 'Zvíře',
+    tabBarIcon: ({tintColor}) => (
+      <Image
+          source={require('../images/tab-icons/t.png')}
+          style={[styles.tabIcons, {backgroundColor: tintColor}]}
+      />
+    )
   }
 
   render() {
@@ -33,6 +39,12 @@ class QRTab extends React.Component {
 
   static navigationOptions = {
     title: 'QR tab',
+    tabBarIcon: ({tintColor}) => (
+      <Image
+          source={require('../images/tab-icons/qr.png')}
+          style={[styles.tabIcons, {backgroundColor: tintColor}]}
+      />
+    )
   }
 
   render() {
@@ -49,6 +61,12 @@ class NeighbourTab extends React.Component {
 
   static navigationOptions = {
     title: 'Sousedi',
+    tabBarIcon: ({tintColor}) => (
+      <Image
+          source={require('../images/tab-icons/neighb.png')}
+          style={[styles.tabIcons, {backgroundColor: tintColor}]}
+      />
+    )
   }
 
   render() {

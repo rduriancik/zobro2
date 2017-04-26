@@ -29,6 +29,10 @@ const styles = {
     fontWeight: '300',
     textAlign: 'center',
     color: 'black',
+  },
+  tabIcons: {
+    width: 32,
+    height: 32,
   }
 };
 
