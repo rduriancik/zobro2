@@ -1,4 +1,5 @@
 import React from 'react';
+import { TabNavigator } from 'react-navigation';
 import styles from '../components/styles';
 
 import {
@@ -8,7 +9,7 @@ import {
   Text,
 } from 'react-native';
 
-import { TabNavigator } from 'react-navigation';
+import animals from '../animals';
 
 class TextTab extends React.Component {
   constructor(props) {
