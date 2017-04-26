@@ -1,6 +1,7 @@
 import React from 'react';
 import { TabNavigator } from 'react-navigation';
 import styles from '../components/styles';
+import AnimalNeighbourScene from '../components/animalNeighbourScene';
 
 import {
   View,
@@ -78,8 +79,12 @@ class NeighbourTab extends React.Component {
   }
 
   render() {
+    const animalName = this.props.navigation.state.params.animal;
+
     return (
-      <Text>Sousedi</Text>
+      <AnimalNeighbourScene
+        navigation={this.props.navigation}
+        animal={animalName} />
     );
   }
 }
