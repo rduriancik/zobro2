@@ -10,7 +10,7 @@ import Text from '../components/text';
 import ImageLabel from '../components/imageLabel';
 import Dimensions from 'Dimensions';
 
-export default class AboutScene extends React.Component {
+export default class VisitorsScene extends React.Component {
   constructor(props) {
     super(props);
   }
