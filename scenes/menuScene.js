@@ -23,7 +23,7 @@ class MainMenuItem extends React.Component {
     return (
       <TouchableHighlight
         underlayColor='#aaaaaa'
-        onPress={() => {this.props.navigation.navigate(scenes.sceneTitles[this.props.scene].name)}}
+        onPress={() => {this.props.navigation.navigate(scenes.sceneTitles[this.props.scene].name, {animal: 'tygrSumatersky'})}}
         >
           <View style={[styles.mainMenuItem, {backgroundColor: bgColor}]}>
             <Text style={[styles.mainMenuItemText, {

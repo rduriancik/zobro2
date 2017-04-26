@@ -12,7 +12,7 @@
     "react-native-alphabetlistview": "git+https://github.com/marxsk/react-native-alphabetlistview.git",
     "react-native-collapsible": "^0.8.0",
     "react-native-hyperlink": "0.0.9",
-    "react-native-lightbox": "^0.6.0",
+    "react-native-lightbox": "git+https://github.com/marxsk/react-native-lightbox.git",
     "react-native-swiper": "^1.5.4",
     "react-navigation": "git+https://github.com/react-community/react-navigation.git",
     "react-style-proptype": "^3.0.0"

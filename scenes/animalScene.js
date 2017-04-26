@@ -7,6 +7,7 @@ import {
   ScrollView,
   Image,
   Text,
+  Alert,
 } from 'react-native';
 
 import animals from '../animals';
@@ -27,8 +28,14 @@ class TextTab extends React.Component {
   }
 
   render() {
+    const animalName = this.props.navigation.state.params.animal;
+    const AnimalDetailAdult = animals[animalName].contentAdult;
+    const AnimalDetail = AnimalDetailAdult;
+
     return (
-      <Text>Text tab</Text>
+      <ScrollView>
+        <AnimalDetail animal = {animalName} />
+      </ScrollView>
     );
   }
 }
