@@ -19,6 +19,6 @@ export const sceneTitles = {
   [SERVICES]: {name: 'SERVICES',  title: 'Služby', bgColor: '#267f3b', barColor: '#3c3c3b'},
   [ABOUT]: {name: 'ABOUT',  title: 'O aplikaci', bgColor: '#37af54', barColor: '#3c3c3b'},
 
-  [ANIMAL_DETAIL]: {name: 'ANIMAL_DETAIL',  bgColor: 'green', barColor: '#3c3c3b' },
+  [ANIMAL_DETAIL]: {name: 'ANIMAL_DETAIL',  title: 'XXX', bgColor: 'green', barColor: '#3c3c3b' },
   [ANIMAL_NEIGHBOURS]: {name: 'ANIMAL_NEIGHBOURS',  title: 'Sousedi', bgColor: 'blue', barColor: '#3c3c3b' },
 }
