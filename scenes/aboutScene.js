@@ -15,6 +15,10 @@ export default class AboutScene extends React.Component {
     super(props);
   }
 
+  static navigationOptions = {
+    title: 'O aplikaci',
+  }
+
   render() {
     const MIN_ZOOM = 0.5;
     const MAX_ZOOM = 5.0;

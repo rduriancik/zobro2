@@ -21,6 +21,10 @@ export default class AboutScene extends React.Component {
     Linking.openURL(url);
   }
 
+  static navigationOptions = {
+    title: 'Šifrovací hra',
+  }
+
   render() {
     const MIN_ZOOM = 0.5;
     const MAX_ZOOM = 5.0;

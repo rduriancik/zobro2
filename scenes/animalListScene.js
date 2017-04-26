@@ -79,7 +79,7 @@ class SectionHeader extends React.Component {
   }
 }
 
-export default class AboutScene extends React.Component {
+export default class AnimalListScene extends React.Component {
   constructor(props) {
     super(props);
 
@@ -155,6 +155,10 @@ export default class AboutScene extends React.Component {
       data['*'] = [{name: 'Zvíře s požadovaným jménem v aplikaci zatím chybí'}];
     }
     return data;
+  }
+
+  static navigationOptions = {
+    title: 'Zvířata',
   }
 
   render() {

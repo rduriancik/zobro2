@@ -42,6 +42,11 @@ export default class MenuScene extends React.Component {
     super(props);
   }
 
+  static navigationOptions = {
+    headerVisible: false,
+    headerMode: 'screen',
+  }
+
   render() {
     const MIN_ZOOM = 0.5;
     const MAX_ZOOM = 5.0;

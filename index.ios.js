@@ -22,6 +22,7 @@ const zobro2 = StackNavigator({
   VISITORS: { screen: VisitorsScene },
 }, {
   initialRouteName: 'MAIN_MENU',
+  mode: 'modal'
 });
 
 AppRegistry.registerComponent('zobro2', () => zobro2);
