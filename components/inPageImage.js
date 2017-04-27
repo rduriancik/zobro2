@@ -32,8 +32,28 @@ class AnimalImage extends React.Component {
     const WINDOW_WIDTH = Dimensions.get('window').width;
     const WINDOW_HEIGHT = Dimensions.get('window').height;
 
-    const rightArrow = (<Text style={styles.buttonText}>›</Text>);
-    const leftArrow = (<Text style={styles.buttonText}>‹</Text>);
+    const rightArrow = (
+      <View style={{
+        backgroundColor: 'rgba(150,150,150,0.8)',
+        padding: 12,
+        marginRight: -11,
+        borderTopLeftRadius: 30,
+        borderBottomLeftRadius: 30,
+      }}>
+        <Text style={styles.buttonText}>›</Text>
+      </View>
+    );
+    const leftArrow = (
+      <View style={{
+        backgroundColor: 'rgba(150,150,150,0.8)',
+        padding: 11,
+        marginLeft: -11,
+        borderTopRightRadius: 30,
+        borderBottomRightRadius: 30,
+      }}>
+        <Text style={styles.buttonText}>‹</Text>
+      </View>
+    );
 
     return (
       <Swiper showsButtons={true} index={props.index} prevButton={leftArrow} nextButton={rightArrow} showsPagination={false}>

@@ -135,9 +135,9 @@ const styles = {
     fontWeight: 'bold',
   },
   buttonText: {
-    color: backgroundColors[0],
+    color: 'black',
     fontWeight: 'bold',
-    fontSize: 44,
+    fontSize: 34,
   }
 };
 
