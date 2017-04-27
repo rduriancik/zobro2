@@ -12,7 +12,7 @@ export default class AnimalTemplate extends React.Component {
       return (
         <View>
           <View>
-            <InPageImage firstImage={true} indexes={this.props.firstIndex} thumbnails={this.props.thumbnails} images={this.props.images} navigator={this.props.navigator} />
+            <InPageImage firstImage={true} indexes={this.props.firstIndex} thumbnails={this.props.thumbnails} images={this.props.images} />
           </View>
           <View style={styles.scrollView}>
             {this.props.children}
@@ -27,5 +27,4 @@ AnimalTemplate.propTypes = {
     thumbnails: React.PropTypes.array.isRequired,
     images: React.PropTypes.array.isRequired,
     children: React.PropTypes.arrayOf(React.PropTypes.element).isRequired,
-    navigator: React.PropTypes.object.isRequired,
 };

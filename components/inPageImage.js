@@ -108,5 +108,4 @@ InPageImage.propTypes = {
     indexes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
     thumbnails: React.PropTypes.array.isRequired,
     images: React.PropTypes.array.isRequired,
-    navigator: React.PropTypes.object.isRequired,
 };
