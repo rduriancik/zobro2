@@ -9,12 +9,7 @@ import {
 import * as scenes from '../scenes';
 
 import AlphabetListView from 'react-native-alphabetlistview';
-
-const animals = {
-  'pes' : {name: 'pes divoký'},
-  'hroch' : {name: 'hroch hro'},
-  'zmija' : {name: 'zmija pásikavá'},
-}
+import animals from '../animals';
 
 class Cell extends React.Component {
   constructor(props) {
@@ -24,7 +19,7 @@ class Cell extends React.Component {
   render() {
     return (
       <TouchableHighlight
-        onPress={() => this.props.navigation.navigate(scenes.sceneTitles['events'].name)}
+        onPress={() => this.props.navigation.navigate(scenes.sceneTitles['animal-detail'].name, {animal: this.props.item.animal})}
         underlayColor='#bbbbbb'
       >
       <View style={{height:30, paddingLeft: 5}}>
