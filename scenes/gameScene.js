@@ -7,7 +7,7 @@ import {
   Image,
   Linking,
 } from 'react-native';
-import Text from '../components/text'
+import Text from '../components/animalText'
 import Dimensions from 'Dimensions';
 import Hyperlink from 'react-native-hyperlink'
 

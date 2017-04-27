@@ -6,7 +6,7 @@ import {
   ScrollView,
   Image,
 } from 'react-native';
-import Text from '../components/text'
+import Text from '../components/animalText'
 import InPageImages from '../components/inPageImages'
 import Dimensions from 'Dimensions';
 

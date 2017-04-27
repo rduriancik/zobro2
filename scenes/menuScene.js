@@ -7,7 +7,7 @@ import {
   View,
   Alert,
 } from 'react-native';
-import Text from '../components/text';
+import Text from '../components/animalText';
 
 import * as scenes from '../scenes';
 
