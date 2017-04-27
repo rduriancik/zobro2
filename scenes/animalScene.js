@@ -1,6 +1,6 @@
 import React from 'react';
 import { TabNavigator } from 'react-navigation';
-import styles from '../components/styles';
+import styles from '../styles/styles';
 import AnimalNeighbourScene from '../components/animalNeighbourScene';
 
 import {
