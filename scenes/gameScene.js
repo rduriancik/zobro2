@@ -8,7 +8,6 @@ import {
   Linking,
 } from 'react-native';
 import Text from '../components/text'
-import InPageImages from '../components/inPageImages'
 import Dimensions from 'Dimensions';
 import Hyperlink from 'react-native-hyperlink'
 

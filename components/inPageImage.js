@@ -1,7 +1,55 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import styles from '../styles/styles';
-import AnimalImage from './animalImage';
+
+import Lightbox from 'react-native-lightbox';
+import Dimensions from 'Dimensions';
+import Swiper from 'react-native-swiper';
+
+class AnimalImage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+      return (
+        <Lightbox
+          swipeToDismiss={false}
+          renderContent={this.renderModal}
+          activeProps={this.props}
+          style={this.props.lightboxStyle}
+        >
+          <Image
+            source={this.props.thumbnails[this.props.index]}
+            resizeMode='cover'
+            style={this.props.thumbnailStyle}
+          />
+        </Lightbox>
+      );
+  }
+
+  renderModal(props) {
+    const WINDOW_WIDTH = Dimensions.get('window').width;
+    const WINDOW_HEIGHT = Dimensions.get('window').height;
+
+    const rightArrow = (<Text style={styles.buttonText}>›</Text>);
+    const leftArrow = (<Text style={styles.buttonText}>‹</Text>);
+
+    return (
+      <Swiper showsButtons={true} index={props.index} prevButton={leftArrow} nextButton={rightArrow} showsPagination={false}>
+        {props.images.map((image, index) => (
+            <View key={index} style={{flex: 1}}>
+              <Image
+                source={image}
+                resizeMode='contain'
+                style={{width: WINDOW_WIDTH, height: WINDOW_HEIGHT}}
+              />
+            </View>
+        ))}
+      </Swiper>
+    );
+  }
+};
 
 export default class InPageImage extends React.Component {
   constructor(props) {
@@ -18,12 +66,10 @@ export default class InPageImage extends React.Component {
             thumbnails={this.props.thumbnails}
             thumbnailStyle={[styles.inPageSingleThumbnail, {width: styles.WIDTH - 92}]}
             lightboxStyle={{borderColor: '#3cac54', borderRightWidth: 12}}
-            navigator={this.props.navigator}
           />
         </View>
       );
     } else if (this.props.indexes.length === 1) {
-
       return (
         <View>
           <AnimalImage
@@ -31,7 +77,6 @@ export default class InPageImage extends React.Component {
             images={this.props.images}
             thumbnails={this.props.thumbnails}
             thumbnailStyle={styles.inPageSingleThumbnail}
-            navigator={this.props.navigator}
           />
         </View>
       );
@@ -43,14 +88,12 @@ export default class InPageImage extends React.Component {
           images={this.props.images}
           thumbnails={this.props.thumbnails}
           thumbnailStyle={styles.inPageDuoThumbnailLeft}
-          navigator={this.props.navigator}
         />
         <AnimalImage
           index={this.props.indexes[1]}
           images={this.props.images}
           thumbnails={this.props.thumbnails}
           thumbnailStyle={styles.inPageDuoThumbnailRight}
-          navigator={this.props.navigator}
         />
       </View>
     );
