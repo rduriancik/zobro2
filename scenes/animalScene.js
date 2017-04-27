@@ -18,15 +18,16 @@ class TextTab extends React.Component {
     super(props);
   }
 
-  static navigationOptions = {
-    title: 'Zvíře',
+  static navigationOptions = (navigation) =>
+    ({
+    title: `${animals[navigation.navigation.state.params.animal].name}`,
     tabBarIcon: ({tintColor}) => (
       <Image
           source={require('../images/tab-icons/t.png')}
           style={[styles.tabIcons, {backgroundColor: tintColor}]}
       />
     )
-  }
+  })
 
   render() {
     const animalName = this.props.navigation.state.params.animal;
