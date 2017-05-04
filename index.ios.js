@@ -1,30 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { AppRegistry } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-import { StackNavigator } from 'react-navigation';
+import AppReducer from './reducers';
+import AppWithNavigationState from './navigation';
 
-import AboutScene from './scenes/aboutScene';
-import VisitorsScene from './scenes/visitorsScene';
-import ServicesScene from './scenes/servicesScene';
-import GameScene from './scenes/gameScene';
-import EventsScene from './scenes/eventsScene';
-import MenuScene from './scenes/menuScene';
-import AnimalListScene from './scenes/animalListScene';
-import AnimalScene from './scenes/animalScene';
-//import * as scenes from './scenes.js';
+export default class Zobro2App extends React.Component {
+  store = createStore(AppReducer);
 
-const zobro2 = StackNavigator({
-  MAIN_MENU: { screen: MenuScene },
-  ANIMAL_DETAIL: { screen: AnimalScene },
-  ANIMAL_LIST: { screen: AnimalListScene },
-  ABOUT: { screen: AboutScene },
-  EVENTS: { screen: EventsScene },
-  SERVICES: { screen: ServicesScene },
-  GAME: { screen: GameScene },
-  VISITORS: { screen: VisitorsScene },
-}, {
-  initialRouteName: 'MAIN_MENU',
-  mode: 'modal'
-});
+  render() {
+    return (
+      <Provider store={this.store}>
+        <AppWithNavigationState />
+      </Provider>
+    );
+  }
+}
 
-AppRegistry.registerComponent('zobro2', () => zobro2);
+AppRegistry.registerComponent('zobro2', () => Zobro2App);

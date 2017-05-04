@@ -20,7 +20,7 @@ class TextTab extends React.Component {
 
   static navigationOptions = (navigation) =>
     ({
-    title: `${animals[navigation.navigation.state.params.animal].name}`,
+      title: 'Text',
     tabBarIcon: ({tintColor}) => (
       <Image
           source={require('../images/tab-icons/t.png')}
@@ -30,9 +30,14 @@ class TextTab extends React.Component {
   })
 
   render() {
-    const animalName = this.props.navigation.state.params.animal;
-    const AnimalDetailAdult = animals[animalName].contentAdult;
-    const AnimalDetail = AnimalDetailAdult;
+    let AnimalDetail;
+    const animalName = this.props.screenProps.animal;
+
+    if (this.props.screenProps.readerLevel === "adult") {
+      AnimalDetail = animals[animalName].contentAdult;
+    } else {
+      AnimalDetail = animals[animalName].contentChild;
+    }
 
     return (
       <ScrollView>
@@ -80,7 +85,7 @@ class NeighbourTab extends React.Component {
   }
 
   render() {
-    const animalName = this.props.navigation.state.params.animal;
+    const animalName = this.props.screenProps.animal;
 
     return (
       <AnimalNeighbourScene
@@ -96,4 +101,14 @@ const MainScreenNavigator = TabNavigator({
   Neighbour: { screen: NeighbourTab }
 });
 
-export default MainScreenNavigator;
+export default class AnimalMainScreen extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <MainScreenNavigator screenProps={this.props}/>
+    );
+  }
+}

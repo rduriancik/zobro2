@@ -5,7 +5,6 @@ import {
   ScrollView,
   TouchableHighlight,
   View,
-  Alert,
 } from 'react-native';
 import Text from '../components/animalText';
 
