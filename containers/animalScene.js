@@ -5,6 +5,8 @@ import {bindActionCreators} from 'redux';
 import AnimalScene from '../scenes/animalScene';
 import {setReaderLevel} from '../actions'
 
+import animals from '../animals';
+
 const mapStateToProps = (state) => {
   return {
     configuration: state.configuration,
@@ -21,6 +23,10 @@ class AnimalContainer extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  static navigationOptions = ({navigation}) => ({
+    title: `${animals[navigation.state.params.animal].name}`,
+  })
 
   render() {
     return (
