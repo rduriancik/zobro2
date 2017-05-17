@@ -33,6 +33,12 @@ class TextTab extends React.Component {
     let AnimalDetail;
     const animalName = this.props.screenProps.animal;
 
+    if (!(animalName in animals)) {
+        return (
+          <Text>Neznámý QR kód načten: {animalName}</Text>
+        );
+    }
+
     if (this.props.screenProps.readerLevel === "adult") {
       AnimalDetail = animals[animalName].contentAdult;
     } else {
@@ -86,6 +92,12 @@ class NeighbourTab extends React.Component {
 
   render() {
     const animalName = this.props.screenProps.animal;
+
+    if (!(animalName in animals)) {
+        return (
+          <Text>Neznámý QR kód načten: {animalName}</Text>
+        );
+    }
 
     return (
       <AnimalNeighbourScene

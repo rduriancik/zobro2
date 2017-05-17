@@ -24,9 +24,19 @@ class AnimalContainer extends React.Component {
     super(props);
   }
 
-  static navigationOptions = ({navigation}) => ({
-    title: `${animals[navigation.state.params.animal].name}`,
-  })
+  static navigationOptions = ({navigation}) => {
+    const animalName = navigation.state.params.animal;
+
+    if (!(animalName in animals)) {
+      return ({
+        title: `Chybný QR kód`,
+      })
+    } else {
+      return ({
+        title: `${animals[animalName].name}`,
+      })
+    }
+  }
 
   render() {
     return (

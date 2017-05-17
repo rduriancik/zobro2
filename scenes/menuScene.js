@@ -52,7 +52,7 @@ export default class MenuScene extends React.Component {
     const TEXT_COLOR = 'black';
 
     const PADDING = 20;
-    const menuItems = [scenes.ANIMAL_DETAIL, scenes.ANIMAL_LIST, scenes.EVENTS, scenes.GAME, scenes.SERVICES, scenes.VISITORS, scenes.ABOUT];
+    const menuItems = [scenes.QR_READER, scenes.ANIMAL_LIST, scenes.EVENTS, scenes.GAME, scenes.SERVICES, scenes.VISITORS, scenes.ABOUT];
 
     return (
       <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={styles.contentView}>

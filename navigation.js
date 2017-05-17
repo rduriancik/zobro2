@@ -11,6 +11,7 @@ import EventsScene from './scenes/eventsScene';
 import MenuScene from './scenes/menuScene';
 import AnimalListScene from './scenes/animalListScene';
 import AnimalScene from './containers/animalScene';
+import QRScene from './scenes/qrScene';
 //import * as scenes from './scenes.js';
 
 const zobro2 = StackNavigator({
@@ -22,6 +23,7 @@ const zobro2 = StackNavigator({
   SERVICES: { screen: ServicesScene },
   GAME: { screen: GameScene },
   VISITORS: { screen: VisitorsScene },
+  QR_READER: { screen: QRScene},
 }, {
   initialRouteName: 'MAIN_MENU',
   mode: 'modal'
