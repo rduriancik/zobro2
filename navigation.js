@@ -11,7 +11,7 @@ import EventsScene from './scenes/eventsScene';
 import MenuScene from './scenes/menuScene';
 import AnimalListScene from './scenes/animalListScene';
 import AnimalScene from './containers/animalScene';
-import QRScene from './scenes/qrScene';
+import QRScene from './containers/qrScene';
 //import * as scenes from './scenes.js';
 
 const zobro2 = StackNavigator({

@@ -10,12 +10,12 @@ import {
 } from 'react-native';
 import Dimensions from 'Dimensions';
 import Camera from 'react-native-camera';
+import { NavigationActions } from 'react-navigation'
 import * as scenes from '../scenes';
 
 export default class AboutScene extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       showCamera: true,
     }
@@ -27,7 +27,24 @@ export default class AboutScene extends React.Component {
 
   onBarCodeRead(barcode) {
     this.setState({showCamera: false});
-    this.props.navigation.navigate(scenes.sceneTitles['animal-detail'].name, {animal: barcode.data})
+
+    // We want to prevent state when camera is reloaded with back-button
+    // This scenarios points back-button to main menu what is fine (and work-around)
+    // Look at https://stackoverflow.com/questions/44034430/react-navigation-and-component-lifecycle
+    const resetAction = NavigationActions.reset({
+      index: 1,
+      actions: [
+        NavigationActions.navigate({
+          routeName: scenes.sceneTitles['main-menu'].name,
+        }),
+        NavigationActions.navigate({
+          routeName: scenes.sceneTitles['animal-detail'].name,
+          params: {animal: barcode.data},
+        })
+      ]
+    });
+
+    this.props.navigation.dispatch(resetAction);
   }
 
   render() {
