@@ -11,7 +11,7 @@ import {
 import Dimensions from 'Dimensions';
 import Camera from 'react-native-camera';
 import { NavigationActions } from 'react-navigation'
-import * as scenes from '../scenes';
+import { scenes, sceneTitles } from '../scenes';
 
 export default class AboutScene extends React.Component {
   constructor(props) {
@@ -35,10 +35,10 @@ export default class AboutScene extends React.Component {
       index: 1,
       actions: [
         NavigationActions.navigate({
-          routeName: scenes.sceneTitles['main-menu'].name,
+          routeName: sceneTitles[scenes.MAIN_MENU].name,
         }),
         NavigationActions.navigate({
-          routeName: scenes.sceneTitles['animal-detail'].name,
+          routeName: sceneTitles[scenes.ANIMAL_DETAIL].name,
           params: {animal: barcode.data},
         })
       ]

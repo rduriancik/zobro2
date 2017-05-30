@@ -6,7 +6,7 @@ import {
   TextInput,
   StyleSheet, Alert
 } from 'react-native';
-import * as scenes from '../scenes';
+import {sceneTitles} from '../scenes';
 
 import AlphabetListView from 'react-native-alphabetlistview';
 import animals from '../animals';
@@ -19,7 +19,7 @@ class Cell extends React.Component {
   render() {
     return (
       <TouchableHighlight
-        onPress={() => this.props.navigation.navigate(scenes.sceneTitles['animal-detail'].name, {animal: this.props.item.animal})}
+        onPress={() => this.props.navigation.navigate(sceneTitles['animal-detail'].name, {animal: this.props.item.animal})}
         underlayColor='#bbbbbb'
       >
       <View style={{height:30, paddingLeft: 5}}>

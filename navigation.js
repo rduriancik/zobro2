@@ -12,20 +12,20 @@ import MenuScene from './scenes/menuScene';
 import AnimalListScene from './scenes/animalListScene';
 import AnimalScene from './containers/animalScene';
 import QRScene from './containers/qrScene';
-//import * as scenes from './scenes.js';
+import {scenes} from './scenes.js';
 
 const zobro2 = StackNavigator({
-  MAIN_MENU: { screen: MenuScene },
-  ANIMAL_DETAIL: { screen: AnimalScene },
-  ANIMAL_LIST: { screen: AnimalListScene },
-  ABOUT: { screen: AboutScene },
-  EVENTS: { screen: EventsScene },
-  SERVICES: { screen: ServicesScene },
-  GAME: { screen: GameScene },
-  VISITORS: { screen: VisitorsScene },
-  QR_READER: { screen: QRScene},
+  [scenes.MAIN_MENU]: { screen: MenuScene },
+  [scenes.ANIMAL_DETAIL]: { screen: AnimalScene },
+  [scenes.ANIMAL_LIST]: { screen: AnimalListScene },
+  [scenes.ABOUT]: { screen: AboutScene },
+  [scenes.EVENTS]: { screen: EventsScene },
+  [scenes.SERVICES]: { screen: ServicesScene },
+  [scenes.GAME]: { screen: GameScene },
+  [scenes.VISITORS]: { screen: VisitorsScene },
+  [scenes.QR_READER]: { screen: QRScene},
 }, {
-  initialRouteName: 'MAIN_MENU',
+  initialRouteName: scenes.MAIN_MENU,
   mode: 'modal'
 });
 

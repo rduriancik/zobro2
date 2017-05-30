@@ -6,7 +6,6 @@ import {
   TouchableHighlight, Alert, Image,
 } from 'react-native';
 
-import * as scenes from '../scenes';
 import styles from '../styles/styles';
 import animals from '../animals';
 

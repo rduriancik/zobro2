@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import Text from '../components/animalText';
 
-import * as scenes from '../scenes';
+import {scenes, sceneTitles} from '../scenes';
 
 class MainMenuItem extends React.Component {
   constructor(props) {
@@ -16,13 +16,13 @@ class MainMenuItem extends React.Component {
   }
 
   render() {
-    const bgColor = scenes.sceneTitles[this.props.scene].bgColor;
-    const title = scenes.sceneTitles[this.props.scene].title;
+    const bgColor = sceneTitles[this.props.scene].bgColor;
+    const title = sceneTitles[this.props.scene].title;
 
     return (
       <TouchableHighlight
         underlayColor='#aaaaaa'
-        onPress={() => {this.props.navigation.navigate(scenes.sceneTitles[this.props.scene].name, {animal: 'tygrSumatersky'})}}
+        onPress={() => {this.props.navigation.navigate(sceneTitles[this.props.scene].name, {animal: 'tygrSumatersky'})}}
         >
           <View style={[styles.mainMenuItem, {backgroundColor: bgColor}]}>
             <Text style={[styles.mainMenuItemText, {
