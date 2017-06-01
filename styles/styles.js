@@ -43,7 +43,7 @@ const styles = {
   eventButton: {
     flex: 1,
     padding: 15,
-    height: 50,
+    height: 60,
     justifyContent: 'center',
     borderWidth: 2,
     backgroundColor: 'white',

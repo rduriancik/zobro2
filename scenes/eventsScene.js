@@ -78,7 +78,7 @@ export default class EventsScene extends React.Component {
         <Text style={{fontSize: 16, width: WIDTH, textAlign: 'center', paddingBottom: 20, paddingTop: 20, color: 'white'}}>
           Chcete být upozorněni na začátek krmení?
         </Text>
-        <View style={{height: 50, flexDirection: 'row'}}>
+        <View style={{height: 62, flexDirection: 'row'}}>
           <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton]} onPress={() => _this.abc(event.place, 5)}>
             <Text style={styles.eventButtonText}> 5 minut </Text>
           </TouchableHighlight>
