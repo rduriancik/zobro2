@@ -55,7 +55,7 @@ export default class MenuScene extends React.Component {
     const menuItems = [scenes.QR_READER, scenes.ANIMAL_LIST, scenes.EVENTS, scenes.GAME, scenes.SERVICES, scenes.VISITORS, scenes.ABOUT];
 
     return (
-      <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={styles.contentView}>
+      <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={[styles.contentView,{paddingLeft: 0, paddingRight: 0}]}>
         {
         menuItems.map((itemInMenu, index) => (
           <MainMenuItem
