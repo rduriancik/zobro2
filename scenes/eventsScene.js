@@ -14,7 +14,9 @@ import {
 } from 'react-native';
 import Text from '../components/animalText'
 import Dimensions from 'Dimensions';
-import EVENTS from '../events.js';
+import PushNotification from 'react-native-push-notification';
+
+import events from '../events.js';
 
 const backgroundColors = [
   '#37af54',
@@ -31,9 +33,19 @@ export default class EventsScene extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      selectedTime: 10,
-    }
+    PushNotification.configure({
+        onNotification: function(notification) {
+            console.log(JSON.stringify(notification));
+            console.log('call call call');
+            Alert.alert(notification.message);
+        },
+
+        permissions: {
+            alert: true,
+            badge: false,
+            sound: true
+        },
+    });
   }
 
   static navigationOptions = {
@@ -79,13 +91,13 @@ export default class EventsScene extends React.Component {
           Chcete být upozorněni na začátek krmení?
         </Text>
         <View style={{height: 62, flexDirection: 'row'}}>
-          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton]} onPress={() => _this.abc(event.place, 5)}>
+          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 5)]} onPress={() => _this.toggleEvent(event, 5)}>
             <Text style={styles.eventButtonText}> 5 minut </Text>
           </TouchableHighlight>
-          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton]} onPress={() => _this.abc(event.place, 10)}>
+          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 10)]} onPress={() => _this.toggleEvent(event, 10)}>
             <Text style={styles.eventButtonText}> 10 minut </Text>
           </TouchableHighlight>
-          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton]} onPress={() => _this.abc(event.place, 15)}>
+          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 15)]} onPress={() => _this.toggleEvent(event, 15)}>
             <Text style={styles.eventButtonText}> 15 minut </Text>
           </TouchableHighlight>
         </View>
@@ -93,16 +105,89 @@ export default class EventsScene extends React.Component {
     );
   }
 
+  toggleEvent(zooEvent, deltaTime) {
+    if (this.checkEventNotification(zooEvent, deltaTime)) {
+      this.props.removeNotification(zooEvent, deltaTime);
+      PushNotification.cancelLocalNotificationById(this._createNotificationID(zooEvent, deltaTime));
+    } else {
+      const deltas = [5, 10, 15];
+      // @todo: fix - android issue, ID have to be integer
+/*      // remove notifications for same zooEvent but different deltaTime
+      deltas.forEach((value) => {
+          PushNotification.cancelLocalNotificationById(this._createNotificationID(zooEvent, value));
+      });
+*/
+      // add new local notification
+      let fireTime = new Date(Date.now());
+      const p = zooEvent.time.split(':');
+      fireTime.setHours(p[0]);
+      fireTime.setMinutes(p[1]);
+      fireTime.setSeconds(0);
+
+      let z = {
+        id: zooEvent.nid.toString(),
+        vibrate: true,
+        message: (zooEvent.name + '\n' + zooEvent.place + '\n' + zooEvent.time),
+//        userInfo: {id: zooEvent.nid.toString()},
+        userInfo: {id: 111},
+        // @fix: this is for testing purposes; run alarm in 10 seconds
+        date: new Date(Date.now() + 1000 * 10),
+//        date: new Date(fireTime - ((deltaTime + 0) * 60 * 1000)),
+      };
+      PushNotification.localNotificationSchedule(z);
+
+      this.props.addNotification(zooEvent, deltaTime);
+    }
+  }
+
+  checkEventNotification(zooEvent, deltaTime) {
+    return (this.props.notifications[zooEvent.id] === deltaTime);
+  }
+
+  _createNotificationID(zooEvent, deltaTime) {
+    return (zooEvent.id + '-' + deltaTime);
+  }
+
+  styleEvent(zooEvent, deltaTime) {
+    if (this.checkEventNotification(zooEvent, deltaTime)) {
+      return ({
+        backgroundColor: '#3cac54',
+      });
+    } else {
+      return ({
+      });
+    }
+  }
+
   render() {
     _this = this;
 
-    // @todo: filtering
-    // @todo: notifications
+    const currentDate = new Date();
+    const SHOW_RUNNING = 30;
+    let filteredEvents = events.filter((event) => {
+      const matchingDay = event['weekdays'].includes(currentDate.getDay());
+
+      const eventHour = event['time'].split(":")[0];
+      const eventMinutes = event['time'].split(":")[1];
+      const eventTime = 60 * parseInt(eventHour) + parseInt(eventMinutes) + SHOW_RUNNING
+      const currentTime = 60 * currentDate.getHours() + currentDate.getMinutes();
+
+      const startDate = new Date(event.startDate); // include this day
+      const endDate = new Date(event.endDate);  // do not include this day
+
+      const result = (
+          matchingDay &&
+          (eventTime >= currentTime) &&
+          (+startDate <= +currentDate) &&
+          (+endDate > +currentDate)
+        );
+      return result;
+    });
 
     return (
       <ScrollView>
       <Accordion
-        sections={EVENTS}
+        sections={filteredEvents}
         renderHeader={this._renderHeader}
         renderContent={this._renderContent}
       />
