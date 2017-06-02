@@ -4,7 +4,7 @@ import styles from '../styles/styles';
 import {
   ScrollView,
   TouchableHighlight,
-  View,
+  Image,
 } from 'react-native';
 import Text from '../components/animalText';
 
@@ -24,13 +24,17 @@ class MainMenuItem extends React.Component {
         underlayColor='#aaaaaa'
         onPress={() => {this.props.navigation.navigate(sceneTitles[this.props.scene].name, {animal: 'tygrSumatersky'})}}
         >
-          <View style={[styles.mainMenuItem, {backgroundColor: bgColor}]}>
+        <Image
+          style={styles.mainMenuItem}
+          source={sceneTitles[this.props.scene].background}
+          resizeMode="cover"
+        >
             <Text style={[styles.mainMenuItemText, {
               textAlign: this.props.alignText,
               paddingRight: 32,
               paddingLeft: 32,
             }]}>{title}</Text>
-          </View>
+          </Image>
         </TouchableHighlight>
     );
   }
