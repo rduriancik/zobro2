@@ -27,10 +27,10 @@ var AnimalDetail = React.createClass({
           Jsme krajta a krajťák kobercoví, anglicky nám říkají <Text style={styles.italic}>carpet python</Text>. Je tomu tak nikoliv proto, že se z&nbsp;nás koberce vyrábějí, nýbrž proto, že svým výrazným zbarvením se žlutými a černými skvrnami připomínáme vzory tkaných orientálních koberců.
         </AnimalText>
         <AnimalText>
-          Náš druh se dělí na šest různých poddruhů. Každý z&nbsp;nich má specifické zbarvení podle toho, kde žije. My dva patříme k poddruhu <Text style={styles.italic}>Morelia spilotes variegata</Text> a do brněnské zoo jsme se přistěhovali v&nbsp;únoru 2014 ze Dvora Králové.
+          Náš druh, krajty diamantové, se dělí na šest různých poddruhů. Každý z&nbsp;nich má specifické zbarvení podle toho, kde žije. My dva patříme k poddruhu <Text style={styles.italic}>Morelia spilotes variegata</Text>, tedy k&nbsp;již zmíněným krajtám kobercovým, a do brněnské zoo jsme se přistěhovali v&nbsp;únoru&nbsp;2014 ze Dvora Králové.
         </AnimalText>
         <AnimalText>
-          Ve volné přírodě je naším domovem Austrálie, kde jsme mezi krajtami nejrozšířenějším druhem, a také Nová Guinea. Jsme přizpůsobivé a žijeme na různých místech, můžete nás najít jak v&nbsp;deštných tropických pralesech, tak v&nbsp;suché buši. Tam se nejčastějí skrýváme v&nbsp;opuštěných norách či ve skalních rozsedlinách. V&nbsp;deštných lesích jsou naším oblíbeným úkrytem díry pod pařezy a kmeny, je možné nás najít i&nbsp;v&nbsp;rozsochách větví.
+          Ve volné přírodě je naším domovem Austrálie, kde jsme mezi krajtami nejrozšířenějším druhem, a také Nová Guinea. Jsme přizpůsobivé a žijeme na různých místech, můžete nás najít jak v&nbsp;deštných tropických pralesech, tak v&nbsp;suchých křovinách. Tam se nejčastěji skrýváme v&nbsp;opuštěných norách či ve skalních rozsedlinách. V&nbsp;deštných lesích jsou naším oblíbeným úkrytem například díry pod kmeny, je možné nás najít i&nbsp;v&nbsp;rozsochách větví.
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />        
         <AnimalText>

@@ -41,7 +41,7 @@ var AnimalDetail = React.createClass({
 
         </AnimalText>
         <AnimalText>
-          Jsem to já, vlk hřivnatý. Říkají mi také pes hřivnatý či méně lichotivě skunčí vlk, podle toho, že mé území je pořádně cítit. Mezi mé koníčky patří orientační běh ve vysoké trávě a mimochodem, jsem mimochodník – používám zároveň obě pravé či levé nohy. Pocházím z&nbsp;Jižní Ameriky a jsem jednou z&nbsp;nejvyšších psovitých šelem. Procestoval jsem bažinaté oblasti od střední Brazílie po sever Argentiny až sem, abych Tě našel.
+          Jsem to já, vlk hřivnatý. Říkají mi také pes hřivnatý či méně lichotivě skunčí vlk, podle toho, že mé území je pořádně cítit. Mezi mé koníčky patří orientační běh ve vysoké trávě a mimochodem, jsem mimochodník – používám zároveň obě pravé či levé nohy. Pocházím z&nbsp;Jižní Ameriky a jsem jednou z&nbsp;nejvyšších psovitých šelem. Procestoval jsem bažinaté i&nbsp;suché oblasti od střední Brazílie po sever Argentiny až sem, abych Tě našel.
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

@@ -30,14 +30,14 @@ var AnimalDetail = React.createClass({
         </AnimalText>
        <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          My pekariové pocházíme z&nbsp;amerického světadílu, z&nbsp;tropických deštných pralesů jižního Mexika a Argentiny. To jsou oblasti, kde je pořád teplo, hodně prší a jsou tam obrovské lesy rostoucí bujně, bez zásahu lidí.
+          My pekariové pocházíme z&nbsp;amerického světadílu, z&nbsp;tropických deštných pralesů a dalších oblastí od jižního Mexika až po Argentinu.
         </AnimalText>
         <AnimalText>
-          Máme vynikající čich i&nbsp;sluch a velmi rádi si smočíme kopýtka ve vodě. A nejen kopýtka! Ač by tě to při pohledu na nás možná nenapadlo, umíme velmi dobře plavat. To však není náš jediný oblíbený sport – kdyby se blížilo nebezpečí, dokážeme i&nbsp;docela rychle běhat. Nejčastěji se živíme ovocem, kořeny rostlin, trávou, ale i&nbsp;malými živočichy.
+          Máme vynikající čich i&nbsp;sluch a velmi rádi si smočíme kopýtka ve vodě. A nejen kopýtka! Ač by tě to při pohledu na nás možná nenapadlo, umíme velmi dobře plavat. To však není náš jediný oblíbený sport – kdyby se blížilo nebezpečí, dokážeme i&nbsp;docela rychle běhat. Nejčastěji se živíme plody, kořeny rostlin, trávou, ale i&nbsp;malými živočichy.
         </AnimalText>
        <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Vypadáme jako divoká prasátka, ale rozeznáš nás podle toho, že máme bílou skvrnu na krku (díky ní jsme dostali své pojmenování). Od divokých prasátek se odlišujeme také tím, že žijeme ve velkých skupinách, v&nbsp;nichž nás může být až několik stovek. Dorůstáme do výšky až 60&nbsp;centimetrů, to je jako dvě kočky nad sebou, a délky až 120&nbsp;centimetrů, což je jako dvě kočky (počítáno bez ocasu) za sebou.
+          Vypadáme jako divoká prasátka, ale rozeznáš nás podle toho, že máme bílou skvrnu na bradě (díky ní jsme dostali své pojmenování). Od divokých prasátek se odlišujeme také tím, že žijeme ve velkých skupinách, v&nbsp;nichž nás může být až několik stovek. Dorůstáme do výšky až 60&nbsp;centimetrů, to je jako dvě kočky nad sebou, a délky až 120&nbsp;centimetrů, což je jako dvě kočky (počítáno bez ocasu) za sebou.
         </AnimalText>
         <AnimalText>
         

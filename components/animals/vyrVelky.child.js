@@ -37,10 +37,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        Nejvíce mi chutnají menší zvířátka, můžou to být myšky, ale zvládnu i&nbsp;zajíce. Kamarád dokonce ulovil i&nbsp;koloucha. Největší zábava je však chytat ježky. 
-        </AnimalText>
-        <AnimalText>
-        A&nbsp;jak mě poznáš? Jsem velká sova s&nbsp;pěknými a chocholatými oušky.
+        Nejvíce mi chutnají menší zvířátka, můžou to být myšky, ale zvládnu i&nbsp;zajíce. Kamarád dokonce ulovil i&nbsp;koloucha. Největší zábava je však chytat ježky.
         </AnimalText>
       </AnimalTemplate>
     );

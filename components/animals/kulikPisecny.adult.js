@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Kulík písečný (pro latiníky a milovníky lehkých jazykolamů <Text style={styles.italic}>Charadrius hiaticula</Text>) je pták dorůstající zhruba 20&nbsp;centimetrů. Rozpětím křídel svou velikost efektivně dvojnásobí, neboť se tak blíží ke 40&nbsp;centimetrům. K&nbsp;ještě větším číslům dosahuje hmotností, jež se pohybuje v&nbsp;intervalu 50–70&nbsp;gramů. Vzhledem připomíná kulík kuličku, je tedy postavy spíše zavalité. Na zádech a temeni jsou kulíci zbarveni hnědošedě, zatímco bříško mají bílé. Bílý je i&nbsp;límec, který kulíkům zdobí krk.
         </AnimalText>
         <AnimalText>
-          Kulíci jsou tažní ptáci. Obvykle hnízdí na severních pobřežích Evropy a Asie, objevují se také v&nbsp;Grónsku a v&nbsp;Kanadě. Na přelomu srpna a září migrují na jih, někteří mohou doletět až na jih Afriky. Občas táhnou kulíci i&nbsp;přes Českou republiku, někdy tu i&nbsp;zahnízdí. Jejich obvyklé cesty ale vedou jinudy.
+          Kulíci jsou tažní ptáci. Obvykle hnízdí na severních pobřežích Evropy a Asie, objevují se také v&nbsp;Grónsku a v&nbsp;Kanadě. Na přelomu srpna a září migrují na jih, někteří mohou doletět až na jih Afriky. Občas táhnou tito kulíci i&nbsp;přes Českou republiku, někdy tu i&nbsp;zahnízdí. Jejich obvyklé cesty ale vedou jinudy.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

@@ -23,7 +23,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Snovač rudozobý, latinsky <Text style={styles.italic}>Quelea quelea</Text>, patří mezi nejpočetnější ptačí druh na světě. Množství je odhadováno na 1,5&nbsp;miliardy jedinců. To je skoro o&nbsp;třetinu více, než je obyvatel celé Afriky.
+          Snovač rudozobý, latinsky <Text style={styles.italic}>Quelea quelea</Text>, je nejpočetnějším volně žijícím ptačím druhem na světě. Populace je odhadována na 1,5&nbsp;miliardy jedinců. To je skoro o&nbsp;třetinu více, než je obyvatel celé Afriky.
         </AnimalText>
         <AnimalText>
           Vyskytuje se na zmiňovaném kontinentu v&nbsp;savanách, kde má dostatek zdrojů potravy. Poletuje v&nbsp;hejnech. Některá hejna mohou být tak obrovská, že může trvat i&nbsp;pět hodin, než vám celá přeletí nad hlavou.
@@ -36,7 +36,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Samci nosí takzvaný svatební šat, který je pestře zbarven. Zahrnuje černou škrabošku a žlutohnědé peří na zádech i&nbsp;ocasu. Zbytek těla je pokrytý peřím hnědavým, někdy se znatelným nádechem do růžova. Samčí zobák a okruží kolem oka jsou výrazně rudé. Samička je – jak už to v&nbsp;přírodě bývá – zabarvená méně nápadně, šedohnědě. Její zobák je však rovněž červený a stejně tak okruží oka.
+          Samci nosí takzvaný svatební šat, který je pestře zbarven. Zahrnuje černou škrabošku a žlutohnědé peří na zádech i&nbsp;ocasu. Zbytek těla je pokrytý peřím hnědavým, někdy se znatelným nádechem do růžova. Samčí zobák a okruží kolem oka jsou výrazně rudé. Samička je – jak už to v&nbsp;přírodě bývá – zabarvená méně nápadně – šedohnědě. Její zobák je však rovněž červený a stejně tak okruží oka.
         </AnimalText>
         <AnimalText>
           Začátkem období dešťů začíná snovač hnízdit. Sameček začne snovat hnízdo ze stébel trávy. Vchod do hnízda umisťuje dospod, tím protřele znesnadňuje přístup těm, kteří by měli nekalý zájem o&nbsp;nakladená vajíčka či bezbranná mláďata. Ještě před dokončením hnízda si volí svoji partnerku. Až si vybere, spáří se a společně dokončují své dílo. Poté samička do hnízda snese 2–4 vejce. Při každém dalším hnízdění si sameček vybírá novou partnerku.

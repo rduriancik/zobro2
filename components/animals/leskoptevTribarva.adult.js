@@ -27,7 +27,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Strava leskoptví sestává z&nbsp;hmyzu, bobulí a malých plodů, nepohrdnou ale ani různým hmyzem. Krmí se sarančaty, kudlankami, střevlíky nebo housenkami motýlů. Slupnou i&nbsp;termita, takže kdyby byly leskoptve známější, nemusela by Lorelai v&nbsp;Gilmorových děvčatech tak naříkat, bylo by jí stačilo pořídit si pár leskoptví.
+          Strava leskoptví sestává z&nbsp;bobulí a malých plodů, nepohrdnou ale ani různým hmyzem. Krmí se sarančaty, kudlankami, střevlíky nebo housenkami motýlů. Slupnou i&nbsp;termita, takže kdyby byly leskoptve známější, nemusela by Lorelai v&nbsp;Gilmorových děvčatech tak naříkat, bylo by jí stačilo pořídit si pár leskoptví.
         </AnimalText>
       <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

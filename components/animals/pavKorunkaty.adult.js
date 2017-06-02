@@ -43,7 +43,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Co se týče našeho jídelníčku, pochutnáme si na hmyzu, ještěrkách, žábách, hadech i&nbsp;na trávě či různých semínkách. V&nbsp;sanskrtu naše jméno znamená „zabiják hadů“, to proto, že pojídáme mladé kobry, čímž lidem děláme dobrou službu. Když však sežerem nějakou vzácnou ještěrku, už to prý tak super není. No co, nemají nám chodit do cesty, že?
+          Co se týče našeho jídelníčku, pochutnáme si na hmyzu, ještěrech, žábách, hadech i&nbsp;na trávě či různých semínkách. V&nbsp;sanskrtu naše jméno znamená „zabiják hadů“, to proto, že pojídáme mladé kobry, čímž lidem děláme dobrou službu. Když však sežerem nějakého vzácného ještěra, už to prý tak super není. No co, nemají nám chodit do cesty, že?
         </AnimalText>
         <AnimalText>
           Mluvě o&nbsp;jídle, jdu si něco vyhrabat. Mějte se krásně jako já.

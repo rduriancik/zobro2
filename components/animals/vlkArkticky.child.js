@@ -33,7 +33,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Bílé proto, že pocházíme z&nbsp;Arktidy a díky tomuto zbarvení nás není v&nbsp;zemi sněhu a ledu vůbec vidět. A chlupaté proto, že je v&nbsp;naší domovině velká zima. Teploty tam bývají stále pod bodem mrazu. Představte si, že byste museli bydlet v&nbsp;mrazničce! Všimli jste si našich ocásků? Ty jsou chlupaté nejvíc. Prozradím vám proč: když je nám velká zima, před spánkem se stočíme do klubíčka a  ocáskem si přikryjeme naše čumáčky, aby nám neomrzly.
+          Bílé proto, že pocházíme z&nbsp;Arktidy a díky tomuto zbarvení nás není v&nbsp;zemi sněhu a ledu vůbec vidět. A chlupaté proto, že je v&nbsp;naší domovině velká zima. Teploty tam většinu času bývají pod bodem mrazu. Představte si, že byste museli bydlet v&nbsp;mrazničce! Všimli jste si našich ocásků? Ty jsou chlupaté nejvíc. Prozradím vám proč: když je nám velká zima, před spánkem se stočíme do klubíčka a  ocáskem si přikryjeme naše čumáčky, aby nám neomrzly.
         </AnimalText>
       <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

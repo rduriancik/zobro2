@@ -30,7 +30,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        Mou nejoblíbenější pochoutkou jsou malé rybky, drobní korýši a měkkýši. V&nbsp;zoo dostávám také speciální granule pro bahňáky.
+        Mou nejoblíbenější pochoutkou je vodní hmyz, malé rybky, drobní korýši a měkkýši. V&nbsp;zoo dostávám také speciální granule pro bahňáky.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

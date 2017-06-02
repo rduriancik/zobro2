@@ -33,7 +33,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Pocházejí z&nbsp;deštných lesů severovýchodní části Madagaskaru. Jejich jídelníček tvoří ovocné plody, větvičky, listy nebo hmyz (jsou to všežravci). Převážnou část života tráví na stromech, kde se pohybují po čtyřech a poskakují z&nbsp;větve na větev. Mají dlouhý huňatý ocas, který jim pomáhá udržovat rovnováhu. Jsou aktivní v&nbsp;různých časových intervalech během dne i&nbsp;noci. Právě díky jejich nočnímu cestování pralesem dostaly tyto poloopice jméno lemur, které v&nbsp;překladu znamená „noční putující duch“.
+          Pocházejí z&nbsp;deštných lesů severovýchodní části Madagaskaru. Jejich jídelníček tvoří ovocné plody, větvičky, listy nebo hmyz (jsou to všežravci). Převážnou část života tráví na stromech, kde se pohybují po čtyřech a poskakují z&nbsp;větve na větev. Mají dlouhý huňatý ocas, který jim pomáhá udržovat rovnováhu. Jsou aktivní v&nbsp;různých časových intervalech během dne i&nbsp;noci. Právě díky jejich nočnímu cestování pralesem a plačtivému hlasu dostaly tyto poloopice jméno lemur, které ve staré římské mytologii označovalo duchy zemřelých a dalo by se přeložit jako „noční putující duch“.
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

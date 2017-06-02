@@ -30,14 +30,14 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Víte, kde je Madagaskar? Je to celkem velký ostrov u&nbsp;pobřeží Afriky. To, že nás Marty, Alex a jejich parta na Madagaskaru objevili ve filmu, nebyla žádná náhoda – je to jediné místo na Zemi, kde žijeme volně v&nbsp;přírodě. Kvůli tomu patříme mezi ohrožená zvířata.
+          Víte, kde je Madagaskar? Je to celkem velký ostrov u&nbsp;pobřeží Afriky. To, že nás Marty, Alex a jejich parta na Madagaskaru objevili ve filmu, nebyla žádná náhoda – je to jediné místo na Zemi, kde žijeme volně v&nbsp;přírodě. Kvůli ničení unikátní madagaskarské přírody patříme mezi ohrožená zvířata.
         </AnimalText>
         <AnimalText>
-          Jednoznačně nás poznáte podle pruhovaného ocasu. Je pro nás hodně důležitý, využíváme ho pro udržení rovnováhy při skocích a také se s&nbsp;jeho pomocí dorozumíváme ve vysoké trávě. Naše tělo je pokryto hustou a jemnou srstí, na dotek jsme hebcí. Často si ji pročesáváme hřebínkem, který si tvoříme ze špičáků a řezáků. Srst si pročesáváme také speciálním nehtem na druhém prstu na noze, ostatní drápy máme ploché, takže jsou stejné jako tvoje nehty. 
+          Jednoznačně nás poznáte podle pruhovaného ocasu. Je pro nás hodně důležitý, využíváme ho pro udržení rovnováhy při skocích a také se s&nbsp;jeho pomocí dorozumíváme ve vysoké trávě. Naše tělo je pokryto hustou a jemnou srstí, na dotek jsme hebcí. Často si ji pročesáváme hřebínkem, který nám tvoří špičáky a řezáky. Srst si pročesáváme také speciálním nehtem na druhém prstu na noze, ostatní drápy máme ploché, takže jsou stejné jako tvoje nehty. 
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          K&nbsp;snědku si rádi dáme různé druhy ovoce, listy a bylinky. Občas si dáme i&nbsp;nějaký drobný hmyz, třeba cikádu nebo pavouka, výjimečně si pochutnáme na malých obratlovcích, například na chameleonovi či malém ptáčkovi.
+          K&nbsp;snědku si rádi dáme různé druhy ovoce, listy a bylinky. Občas si dáme i&nbsp;nějaký drobný hmyz nebo pavouka, výjimečně si pochutnáme na malých obratlovcích, například na chameleonovi či malém ptáčkovi.
         </AnimalText>
         <AnimalText>
           Už se s&nbsp;vámi musím rozloučit, děti, musím si jít sbalit kufry, protože odjíždím za dalším dobrodružstvím. Trsejte každý den!

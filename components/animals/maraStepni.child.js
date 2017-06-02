@@ -37,7 +37,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Jako rodiče jsme velmi zodpovědní. Maří mámy pro svá mláďata hloubí nory nebo si vypůjčí již vykopané (třeba po pásovcích). V&nbsp;norách pak přespává celá rodina a malé mary tam zůstávají, dokud nepřijde čas krmení. Ale nemyslete si, i&nbsp;v&nbsp;tom máme řád – na krmení jsou u&nbsp;nás pořadníky! Dávat svým mláďatům najíst může v&nbsp;jednu chvíli vždy jen jedna maminka, ostatní musejí počkat. Tatínek se mezitím stará o&nbsp;to, aby si všichni drželi odstup, a spolu s&nbsp;ostatními marami dává pozor, aby jeho milé nikdo neohrozil.
+          Jako rodiče jsme velmi zodpovědní. Maří mámy pro svá mláďata hloubí nory nebo si vypůjčí již vyhrabané (třeba po pásovcích). V&nbsp;norách pak přespává celá rodina a malé mary tam zůstávají, dokud nepřijde čas krmení. Ale nemyslete si, i&nbsp;v&nbsp;tom máme řád – na krmení jsou u&nbsp;nás pořadníky! Dávat svým mláďatům najíst může v&nbsp;jednu chvíli vždy jen jedna maminka, ostatní musejí počkat. Tatínek se mezitím stará o&nbsp;to, aby si všichni drželi odstup, a spolu s&nbsp;ostatními marami dává pozor, aby jeho milé nikdo neohrozil.
         </AnimalText>
         <AnimalText>
           A vyplácí se to, jen se podívejte, kolik nás tu je! Ale teď už nás omluvte, rodičovské povinnosti volají.

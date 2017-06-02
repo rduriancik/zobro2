@@ -77,7 +77,7 @@ var AnimalDetail = React.createClass({
         Pyšníme se
         </AnimalText>
         <AnimalText style={{textAlign: 'center'}}>
-        hnědým zbarvením.
+        hnědavým zbarvením.
         </AnimalText>
         <AnimalText style={{textAlign: 'center'}}>
         Kůži nám zdobí

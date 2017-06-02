@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Dobrý den, dovolte, abychom se vám představili. My jsme velbloudi, velbloudi dvouhrbí. Můžete nám říkat také drabaři, nebo chcete-li být za vzdělance, smíte nás oslovovat latinsky <Text style={styles.italic}>Camelus bactrianus</Text>, vadit nám to nebude.
         </AnimalText>
         <AnimalText>
-          Jsme sudokopytníci z&nbsp;čeledi velbloudovitých a v&nbsp;přírodě jsme druhem kriticky ohroženým. Najít nás můžete ve stepích a pouštích Číny a Mongolska, kde žijeme ve zhruba třicetičlenných stádech vedených dospělým samcem.
+          Jsme sudokopytníci z&nbsp;čeledi velbloudovitých a naši příbuzní žijící ve volné přírodě jsou druhem kriticky ohroženým. Najít je můžete ve stepích a pouštích Číny a Mongolska, kde žijí ve zhruba třicetičlenných stádech vedených dospělým samcem.
         </AnimalText>
       <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

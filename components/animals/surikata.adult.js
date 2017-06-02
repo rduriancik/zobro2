@@ -23,7 +23,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Surikata, která v&nbsp;češtině nemá druhé jméno a odborný název ji odbyl pojmenováním <Text style={styles.italic}>Suricata suricatta</Text>, je šelma nepříliš velkého vzrůstu, měří zhruba 30&nbsp;centimetrů, k&nbsp;tomu má ocas dlouhý 20&nbsp;centimetrů a váží necelé kilo. Kromě toho se vyznačuje výskytem na západě jihu Afriky, v&nbsp;polopouštích a suchých stepích, kde se baví mimo jiné hloubením nor, ve kterých žijí početné surikatí klany. Do podzemí se ale schovává jen před nebezpečím nebo při velkém žáru, jinak se ráda sluní venku.
+          Surikata, která v&nbsp;češtině nemá druhé jméno a vědecký název ji odbyl pojmenováním <Text style={styles.italic}>Suricata suricatta</Text>, je šelma nepříliš velkého vzrůstu, na délku měří zhruba 30&nbsp;centimetrů, k&nbsp;tomu má ocas dlouhý 20&nbsp;centimetrů a váží necelé kilo. Kromě toho se vyznačuje výskytem na jihu Afriky, v&nbsp;polopouštích a savanách, kde se baví mimo jiné hloubením nor, ve kterých žijí početné surikatí klany. Do podzemí se ale schovává jen před nebezpečím nebo při velkém žáru, jinak se ráda sluní venku.
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

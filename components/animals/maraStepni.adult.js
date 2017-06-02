@@ -118,7 +118,7 @@ var AnimalDetail = React.createClass({
           MARA TŘETÍ: Tati, tati, já se jdu zahrabat!
         </AnimalText>
         <AnimalText>
-          MARA DRUHÁ: Jen utíkej, marečku. Hodný kluk. Polední klid musí být.
+          MARA DRUHÁ: Jen utíkej, Marečku. Hodný kluk. Polední klid musí být.
         </AnimalText>
         <AnimalText>
           REPORTÉR: Tak vám moc děkuju a ať se vám maří. Já jdu na ten srnčí hřbet.

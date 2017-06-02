@@ -29,7 +29,7 @@ var AnimalDetail = React.createClass({
         I&nbsp;přes jeho veškerou majestátnost a vznešenost se orel bělohlavý ocitl v&nbsp;polovině 20.&nbsp;století na pokraji vyhynutí. Otrava pesticidy a nelegální lov patřily mezi hlavní příčiny zápisu tohoto zvířete na seznam ohrožených druhů. Po mnohých ochranářských opatřeních se však početní stavy orlů bělohlavých podařilo opět zvýšit. V&nbsp;divočině se průměrně dožívají 28&nbsp;let, v&nbsp;zajetí až 36&nbsp;let.
         </AnimalText>
         <AnimalText>
-        Jak už druhové jméno napovídá, hlava tohoto dravce je pokryta bílým peřím, což výrazně kontrastuje s&nbsp;tmavě hnědým tělem a křídly. Ocas má taktéž bílý a jeho pařáty, zobák a duhovky jsou naopak zářivě žluté. Celková délka těla orla bělohlavého dosahuje v průměru 70–102&nbsp;cm a rozpětí křídel 168–244&nbsp;cm. Zajímavé je, že samice přerůstají samce, a to až o&nbsp;25&nbsp;%.
+        Jak už druhové jméno napovídá, hlava tohoto dravce je pokryta bílým peřím, což výrazně kontrastuje s&nbsp;tmavě hnědým tělem a křídly. Ocas má taktéž bílý a jeho pařáty, zobák a duhovky jsou naopak zářivě žluté. Celková délka těla orla bělohlavého dosahuje v průměru 70–102&nbsp;cm a rozpětí křídel 168–244&nbsp;cm. Zajímavé je, že samice přerůstají samce, a to až o&nbsp;25&nbsp;%. U&nbsp;dravců je to ovšem pravidlem.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

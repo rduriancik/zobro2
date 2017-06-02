@@ -33,7 +33,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Když máme hlad, dáme si k&nbsp;snědku trávu či byliny, ty máme totiž moc rádi! Pitný režim moc řešit nemusíme, bez vody totiž vydržíme velmi dlouho, dokonce i&nbsp;několik týdnů. Když pak ale máme žízeň, vypijeme naráz klidně celý sud vody! A když není zrovna nablízku voda sladká, nevadí nám napít se aspoň té slané, co jí je plné moře.
+          Když máme hlad, dáme si k&nbsp;snědku nějaké byliny, ty máme totiž moc rádi! Pitný režim moc řešit nemusíme, bez vody totiž vydržíme velmi dlouho, dokonce i&nbsp;několik týdnů. Když pak ale máme žízeň, vypijeme naráz klidně celý sud vody! A když není zrovna nablízku voda sladká, nevadí nám napít se aspoň té slané, co jí je plné moře.
         </AnimalText>
       <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

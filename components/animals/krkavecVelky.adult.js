@@ -59,13 +59,13 @@ var AnimalDetail = React.createClass({
           Expozice krkavců velkých, latinsky nazývaných <Text style={styles.italic}>Corvus corax</Text>, je v&nbsp;brněnské zoo umístěna nad správní budovou. Pro zajímavost, pokud vám něco říká saltarello či si někdy poslechnete středověkou hudbu, pak je vám latinský název povědomý díky stejnojmenné hudební skupině.
         </AnimalText>
         <AnimalText>
-          Krkavci se vyskytují v&nbsp;Asii, Evropě a Severní Americe. V&nbsp;polovině 19.&nbsp;století z&nbsp;české přírody téměř vymizeli. O&nbsp;století později se sice začali vracet, dodnes však patří mezi ohrožené a zvláště chráněné druhy.
+          Krkavci se vyskytují v&nbsp;Asii, Evropě, severní Africe a Severní Americe. V&nbsp;polovině 19.&nbsp;století z&nbsp;české přírody téměř vymizeli. O&nbsp;století později se sice začali vracet, dodnes však patří mezi ohrožené a zvláště chráněné druhy.
         </AnimalText>
         <AnimalText>
           Krkavci žijí v párech. Náš samec se narodil v&nbsp;roce 2004 a do brněnské zoo byl přivezen 14.&nbsp;12.&nbsp;2012. Samička se narodila v&nbsp;dubnu roku 2012 a ještě v&nbsp;červenci téhož roku k&nbsp;nám přijela z&nbsp;Košic. Krkavčí pár uvidíte na horních větvích voliéry, kde na sebe často krákají či jinak komunikují. Mladé zatím neměli, ačkoliv jsou krkavci obecně velmi starostliví rodiče, a to jak samec, tak samička. Proto rozhodně nevěřte zažitým pomluvám o&nbsp;krkavčích matkách.
         </AnimalText>
         <AnimalText>
-          Krkavci jsou velcí na délku 54–67&nbsp;cm, přičemž rozpětí křídel mají asi 115–130&nbsp;cm. Průměrně váží 700–1600&nbsp;g. Na zobáku mají charakteristické opeření. Živí se bezobratlými živočichy, plazy, ptáky, drobnými obojživelníky, mršinami, případně semeny. Ve volné přírodě se dožívají 10–15&nbsp;let, ovšem v&nbsp;péči člověka se mohou dožít téměř dvojnásobného věku.
+          Krkavci měří na délku 54–67&nbsp;cm, přičemž rozpětí křídel mají asi 115–130&nbsp;cm. Průměrně váží 700–1600&nbsp;g. Na bázi zobáku mají charakteristické opeření. Živí se bezobratlými živočichy, plazy, ptáky, drobnými obojživelníky, mršinami, případně semeny. Ve volné přírodě se dožívají kolem 20&nbsp;let, ovšem v&nbsp;péči člověka se mohou dožít až trojnásobného věku.
         </AnimalText>
       </AnimalTemplate>
     );

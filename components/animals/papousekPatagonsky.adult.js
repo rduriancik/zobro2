@@ -19,7 +19,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Seznamte se s&nbsp;papoušky patagonskými (lat. <Text style={styles.italic}>Cyanoliseus patagonus</Text>) nebo jak jim zkráceně říkáme – patagonci. Na první pohled je poznáte podle zbarvení v&nbsp;odstínech hnědé, žluté a oranžové. Jejich voliéru není možné minout – rádi o&nbsp;sobě totiž dávají vědět svým charakteristickým silným křikem. Současnou partu těchto barevných krasavců jsme postupně získali v&nbsp;letech 2012 a 2014. Momentálně zde chováme tři samečky a dvě samičky.
+          Seznamte se s&nbsp;papoušky patagonskými (lat. <Text style={styles.italic}>Cyanoliseus patagonus</Text>) nebo jak jim zkráceně říkáme – patagonci. Na první pohled je poznáte podle zbarvení v&nbsp;odstínech olivově zelené, šedé, modré, žluté a červené. Jejich voliéru není možné minout – rádi o&nbsp;sobě totiž dávají vědět svým charakteristickým silným křikem. Současnou partu těchto barevných krasavců jsme postupně získali v&nbsp;letech 2012 a 2014. Momentálně zde chováme tři samečky a dvě samičky.
         </AnimalText>
         <AnimalText>
           Patagonci jsou unikátní v&nbsp;mnoha ohledech. Na rozdíl od většiny ostatních papoušků nehnízdí na stromech, nýbrž ve skalních puklinách a norách, které si sami vyhrabávají do útesů z&nbsp;vápence, pískovce či jílu. Tyto nory bývají dlouhé až tři metry a mohou tvořit rozsáhlý labyrint chodeb. Na konci nory se obvykle nachází rozšířená hnízdní dutina, kam samičky kladou vejce.

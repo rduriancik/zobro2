@@ -33,7 +33,7 @@ var AnimalDetail = React.createClass({
           I&nbsp;když asi víte, že sovy loví v&nbsp;noci, my jsme výjimka, běžně lovíme i&nbsp;ve dne. Nejraději se živíme lumíky, což jsou hlodavci – takové větší myši s&nbsp;krátkým ocasem. Ale když je lumíků málo, lovíme i&nbsp;jiná zvířata. 
         </AnimalText>
         <AnimalText>
-          Žijeme na severu, v&nbsp;tundrách, kde je zem pořád zmrzlá a nerostou tam žádné stromy. Proto někdy létáme za polárními liškami, a když něco uloví, obereme je o&nbsp;jejich kořist. Říká se sice „mazaný jako liška“, ale na nás si jen tak nepřijdou! I&nbsp;když občas nás lišky pozlobí taky. Stavíme si totiž hnízda buď ve skalách, nebo přímo na zemi. A z&nbsp;nich nám pak kradou vejce.
+          Žijeme na severu, v&nbsp;tundře, kde je zem pořád zmrzlá a nerostou tam žádné stromy. Proto někdy létáme za polárními liškami, a když něco uloví, obereme je o&nbsp;jejich kořist. Říká se sice „mazaný jako liška“, ale na nás si jen tak nepřijdou! I&nbsp;když občas nás lišky pozlobí taky. Stavíme si totiž hnízda buď ve skalách, nebo přímo na zemi. A z&nbsp;nich nám pak kradou vejce.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

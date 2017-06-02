@@ -49,10 +49,10 @@ var AnimalDetail = React.createClass({
         Obvykle se sobům rodí pouze jedno mládě, ale víme i&nbsp;o&nbsp;dvojčatech. Mládě může následovat matku už po jedné hodině od narození a po jednom dni předběhne dokonce i&nbsp;člověka.
         </AnimalText>
         <AnimalText>
-        Během dne jsou sobi téměř neustále v&nbsp;pohybu. Při běhu dosahují rychlosti 60 až 80&nbsp;km/hod. Při migraci za potravou urazí za rok přes 5&nbsp;000&nbsp;km, což je nejvíce ze všech pozemských savců. A&nbsp;věděli jste, že sob je i&nbsp;vynikající plavec? Při cestování za potravou totiž často překračuje řeky i&nbsp;fjordy.
+        Během dne jsou sobi téměř neustále v&nbsp;pohybu. Při běhu dosahují rychlosti 60 až 80&nbsp;km/hod. Při migraci za potravou urazí za rok přes 5&nbsp;000&nbsp;km, což je nejvíce ze všech pozemních savců. A&nbsp;věděli jste, že sob je i&nbsp;vynikající plavec? Při cestování za potravou totiž často překračuje řeky i&nbsp;fjordy.
         </AnimalText>
         <AnimalText>
-        Potravu sobů tvoří široká škála rostlin. Vybírají si suroviny, které jsou nejvýživnější a lehce stravitelné. Na jaře a v&nbsp;létě žerou zelené porosty, mechy, pupeny a listy. V&nbsp;zimě, díky svému vynikajícímu čichu, hledají pod sněhem lišejníky. Pozoruhodné je, že sobi vidí ultrafialové záření, jež jim během zimy pomáhá najít potravu, ale i&nbsp;rozlišit nepřátele. Například lišejník ve sněhu vnímají jako tmavší objekt, protože absorbuje více UV záření, nebo na sněhové pláni rozpoznají vlka, jehož huňatá kožešina pohlcuje sluneční světlo. I&nbsp;přes svoji mohutnost má sob několik přirozených predátorů, kterými jsou vlci, medvědi a pumy.
+        Potravu sobů tvoří široká škála rostlin. Vybírají si takové, které jsou nejvýživnější a lehce stravitelné. Na jaře a v&nbsp;létě žerou zelené rostliny, mechy, pupeny a listy. V&nbsp;zimě, díky svému vynikajícímu čichu, hledají pod sněhem lišejníky. Pozoruhodné je, že sobi vidí ultrafialové záření, jež jim během zimy pomáhá najít potravu, ale i&nbsp;rozlišit nepřátele. Například lišejník ve sněhu vnímají jako tmavší objekt, protože absorbuje více UV záření, nebo na sněhové pláni rozpoznají vlka, jehož huňatá kožešina pohlcuje sluneční světlo. I&nbsp;přes svoji mohutnost má sob několik přirozených predátorů, kterými jsou vlci, medvědi a pumy.
         </AnimalText>
       </AnimalTemplate>
     );

@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
         Ahoj! Viděli jste nás už někde na obrázcích či v knihách? Vsadím se, že ne. O nás se moc nemluví, nejsme tak známí jako orli bělohlaví nebo sovice sněžní. A&nbsp;to jsme přitom největšími orly na světě! A&nbsp;tak jsme se rozhodli, že se vám představíme sami. 
         </AnimalText>
         <AnimalText>
-        Ten menší z&nbsp;nás jsem já – táta orel. A&nbsp;ten větší? To je přece máma orlice. Když roztáhneme křídla, máme je tak dlouhá, jako jsou ruce dospělých lidí. Peří máme popelavé, ale u&nbsp;křídel a u&nbsp;ocásku vidíte sněhově bílé skvrny, které jsou jako obláčky na tmavé obloze. Naše zobáky jsou jako velké banány, které jsou na konci ohnuté dolů. Možná proto to vypadá, že se stále mračíme. Ale to není pravda! 
+        Ten menší z&nbsp;nás jsem já – táta orel. A&nbsp;ten větší? To je přece máma orlice. Když roztáhneme křídla, máme je tak dlouhá, jako jsou ruce dospělých lidí. Peří máme tmavohnědé, ale u&nbsp;křídel a u&nbsp;ocasu vidíte sněhově bílé skvrny, které jsou jako obláčky na tmavé obloze. Naše zobáky jsou jako velké banány, které jsou na konci ohnuté dolů. Možná proto to vypadá, že se stále mračíme. Ale to není pravda! 
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

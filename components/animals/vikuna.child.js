@@ -30,7 +30,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          V&nbsp;jihoamerických horách, odkud pocházíme, taková srst přijde vhod. V&nbsp;noci tam totiž bývá dost chladno. Zato přes den se občas docela zapotíme. To když sestupujeme ze svahů, kde přespáváme, dolů na pastviny a k&nbsp;močálům. Tam plynule přecházíme od snídaně k&nbsp;obědu a od oběda k&nbsp;večeři. Leckdo by řekl, že náš jídelníček není moc pestrý, samé trávy, byliny a sukulenty (to jsou rostliny, které umějí shromažďovat hodně vody, jako třeba kaktusy), ale nám to tak nepřipadá.
+          V&nbsp;jihoamerických horách, odkud pocházíme, taková srst přijde vhod. V&nbsp;noci tam totiž bývá dost chladno. Zato přes den se občas docela zapotíme. To když sestupujeme ze svahů, kde přespáváme, dolů na pastviny a k&nbsp;močálům. Tam plynule přecházíme od snídaně k&nbsp;obědu a od oběda k&nbsp;večeři. Leckdo by řekl, že náš jídelníček není moc pestrý, samé byliny a sukulenty (to jsou rostliny, které umějí shromažďovat hodně vody, jako třeba kaktusy), ale nám to tak nepřipadá.
         </AnimalText>
         <AnimalText>
           Někteří z&nbsp;nás jsou samotáři, jiní žijí v&nbsp;rodinných skupinách a mladí samci si někdy vytvářejí vlastní skupiny. V&nbsp;rodinných skupinách je vždy nějaký vůdčí samec, taková hlava rodiny. Má všechno pod dohledem a brání své stádo proti nepřátelům.

@@ -38,7 +38,7 @@ var AnimalDetail = React.createClass({
           „No tak, Arwen. Nebuď taková. Není správné si z&nbsp;ostatních utahovat. Soustřeď se a zkus pokračovat.“
         </AnimalText>
         <AnimalText>
-          „Ano, ano, druhý rozdíl: zebra Chapmanova je rozměrově menší než zebra Grévyho. Holt jsme prťavé. Ale já určitě vyrostu a budu největší ze všech zeber. Jo a poslední: náš čumáček je černý, kdežto zebry Grévyho ho mají šedý s&nbsp;fousky.“
+          „Ano, ano, druhý rozdíl: zebra Chapmanova je rozměrově menší než zebra Grévyho. Holt jsme prťavé. Ale já určitě vyrostu a budu největší ze všech zeber. Jo a poslední: náš nos je černý, kdežto zebry Grévyho ho mají hnědý s&nbsp;fousky.“
         </AnimalText>
         <AnimalText>
           „Správně. Sice to nejsou všechny rozdíly, ale to není tak důležité. Víš něco o&nbsp;zemi, ze které pocházíme?“

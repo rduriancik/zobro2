@@ -41,7 +41,7 @@ var AnimalDetail = React.createClass({
         Já i&nbsp;moje kamarádka z&nbsp;Finska patříme do poddruhu puštíka bělavého západosibiřského, kterého najdete pouze v&nbsp;několika evropských zoo.
         </AnimalText>
         <AnimalText>
-        V&nbsp;České republice se ve volné přírodě můžete s&nbsp;jinými puštíky bělavými setkat např.&nbsp;na Šumavě, kde byli úspěšně vysazeni, či v&nbsp;Beskydech. Naleznete nás i&nbsp;na Slovensku, ale především v&nbsp;severských zemích s&nbsp;borovicovými lesy, tedy v&nbsp;pásu od Norska až po Japonsko.
+        V&nbsp;České republice se ve volné přírodě můžete s&nbsp;jinými puštíky bělavými setkat např.&nbsp;na Šumavě, kde byli úspěšně vysazeni, či v&nbsp;Beskydech. Naleznete nás i&nbsp;na Slovensku, ale především v&nbsp;severských zemích s&nbsp;jehličnatými lesy, tedy v&nbsp;pásu od Norska až po Japonsko.
         </AnimalText>
         <AnimalText>
         Samičky snáší 2–6&nbsp;vajíček, z&nbsp;nichž se po 27–29&nbsp;dnech vylíhnou malí puštíci. Běžně se pak dožíváme až 25&nbsp;let. V&nbsp;brněnské zoo jsme mláďátka ještě neměli, avšak až se s&nbsp;mojí kamarádkou pořádně poznáme, jistě se nějakých dočkáte.

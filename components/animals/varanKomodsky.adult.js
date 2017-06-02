@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Varan komodský, latinsky <Text style={styles.italic}>Varanus komodoensis</Text>, je nejmohutnější ještěr na světě, dožívající se 30&nbsp;let a opředený mnoha legendami. Tyto legendy vychází především z&nbsp;jeho jedovatosti a tělesných rozměrů. Dospělý samec totiž může přesahovat 3&nbsp;m a vážit i&nbsp;přes 100&nbsp;kg. Nejvíce však strašlivé příběhy o&nbsp;komodském drakovi podpořil fakt, že až donedávna se o&nbsp;něm téměř nic nevědělo.
         </AnimalText>
         <AnimalText>
-          Teprve ve 20.&nbsp;století se pomalu začaly rozplétat dohady o&nbsp;tomto predátorovi z&nbsp;řady ještěrů. Do té doby nebyl varan komodský chován v&nbsp;zajetí. I&nbsp;dnes patří k&nbsp;nejvzácnějším zvířatům chovaným v&nbsp;zoologických zahradách – smyslem péče o&nbsp;něj je především zachování ohroženého druhu, který v&nbsp;současné době ve volné přírodě čítá kolem 3&nbsp;500&nbsp;jedinců.
+          Teprve ve 20.&nbsp;století se pomalu začaly rozplétat dohady o&nbsp;tomto predátorovi ze skupiny ještěrů. Do té doby nebyl varan komodský chován v&nbsp;zajetí. I&nbsp;dnes patří k&nbsp;nejvzácnějším zvířatům chovaným v&nbsp;zoologických zahradách – smyslem péče o&nbsp;něj je především zachování ohroženého druhu, který v&nbsp;současné době ve volné přírodě čítá kolem 3&nbsp;500&nbsp;jedinců.
         </AnimalText>
       <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

@@ -23,7 +23,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Paovce hřivnatá se latinsky nazývá <Text style={styles.italic}>Ammotragus lervia</Text> a anglicky <Text style={styles.italic}>barbary sheep</Text>. Paovce se vyskytují v&nbsp;horských oblastech severní Afriky, kolem 4000&nbsp;metrů nad mořem. Potřebují se pohybovat v&nbsp;oblastech, kde jim skály, stromy nebo keře poskytnou dostatek stínu.
+          Paovce hřivnatá se latinsky nazývá <Text style={styles.italic}>Ammotragus lervia</Text> a anglicky <Text style={styles.italic}>barbary sheep</Text>. Paovce se vyskytují v&nbsp;pouštích i&nbsp;horských oblastech severní Afriky, především pak v&nbsp;nedostupných pohořích Sahary, tedy ve výškách kolem 200–4000&nbsp;metrů nad mořem. Potřebují se pohybovat v&nbsp;oblastech, kde jim skály, stromy nebo keře poskytnou dostatek stínu.
         </AnimalText>
         <AnimalText>
           Svým vzhledem připomínají jak ovci, tak kozu. Jejich srst je lehce narezlá až písčitě hnědá. Ačkoliv samcům i&nbsp;samicím rostou zahnuté rohy, je možné je od sebe docela dobře rozeznat. Samci mají rohy delší a tlustší, s&nbsp;výraznějším rýhováním a dorůstají jim až do délky 85&nbsp;centimetrů, kdežto samicím pouze do délky 50&nbsp;centimetrů. Samci jsou také značně větší a těžší – jejich hmotnost může být až dvakrát větší, než je zvykem u&nbsp;jejich protějšků. Též se mohou pyšnit delší hřívou na spodní straně hrudi, krku a předních nohou. Ta se téměř dotýká země. Obě pohlaví mají krátký ocas, který je zespodu holý a obsahuje pachové žlázy.

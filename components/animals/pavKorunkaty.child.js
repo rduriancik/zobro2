@@ -27,7 +27,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Když mi budeš dostatečně dlouho lichotit, možná se uvolím a ukážu ti svůj přenádherný vějíř ocasních per s&nbsp;barevnými oky! Zpravidla to však dělám pouze ve výjimečných případech, například když bráním své teritorium nebo když jde kolem nějaká paví lady. Honosím se před ní nejen tímto ocasním klenotem, nýbrž i&nbsp;královskou modří na krku. Ona totiž nic takového nemá, chodí zásadně v&nbsp;hnědém, nosí bílo-zelený límec kolem krku a o&nbsp;jejím královském původu svědčí jen drobná korunka na hlavě. Proto se jí moc líbí má barevná honosnost. Ale pozor! Pokud chceš zkusit štěstí a tento skvost spatřit, musíš přijít ve správnou dobu, jelikož pera v&nbsp;červenci vypadají a obnoví se až v&nbsp;zimě.
+          Když mi budeš dostatečně dlouho lichotit, možná se uvolím a ukážu ti svůj přenádherný vějíř svrchních ocasních krovek s&nbsp;barevnými oky! Zpravidla to však dělám pouze ve výjimečných případech, například když bráním své teritorium nebo když jde kolem nějaká paví lady. Honosím se před ní nejen tímto ocasním klenotem, nýbrž i&nbsp;královskou modří na krku. Ona totiž nic takového nemá, chodí zásadně v&nbsp;hnědém, nosí bílo-zelený límec kolem krku a o&nbsp;jejím královském původu svědčí jen drobná korunka na hlavě. Proto se jí moc líbí má barevná honosnost. Ale pozor! Pokud chceš zkusit štěstí a tento skvost spatřit, musíš přijít ve správnou dobu, jelikož pera v&nbsp;červenci vypadají a obnoví se až v&nbsp;zimě.
         </AnimalText>
         <AnimalText>
           Na délku měřím i&nbsp;s&nbsp;ocasem přibližně 180 až 230&nbsp;centimetrů – to je asi dvakrát tolik, co měříš ty. Samice bývají spíše poloviční. Co do váhy však nikdy nemám více než šest kilogramů, což představuje asi dvě a půl královské koruny Karla&nbsp;IV.
@@ -37,7 +37,7 @@ var AnimalDetail = React.createClass({
           My samci se neradi vážeme na jednu konkrétní samici, naopak se rádi družíme s&nbsp;každou, kterou potkáme.
         </AnimalText>
         <AnimalText>
-          Živíme se semeny, travinami, hmyzem a vodními obratlovci. Dožíváme se 15–20&nbsp;let. Ve volné přírodě se vyskytujeme především v&nbsp;Asii, ve vlhkých pralesích Indie, Srí Lanky či Bangladéše. Jsme lidmi chováni již od dob antiky, to je více než dva tisíce let. Že jsme skutečně urozená zvířata, dokazuje také to, že páva nosil v erbu rod Petřvaldských z&nbsp;Petřvaldu, který vlastnil například zámek v&nbsp;Buchlovicích.
+          Živíme se semeny, travinami, hmyzem a různými obratlovci. Dožíváme se 15–20&nbsp;let. Ve volné přírodě se vyskytujeme především v&nbsp;Asii, v&nbsp;lesích Indie, Srí Lanky či Bangladéše. Jsme lidmi chováni již od dob antiky, to je více než dva tisíce let. Že jsme skutečně urozená zvířata, dokazuje také to, že páva nosil v erbu rod Petřvaldských z&nbsp;Petřvaldu, který vlastnil například zámek v&nbsp;Buchlovicích.
         </AnimalText>
       </AnimalTemplate>
     );

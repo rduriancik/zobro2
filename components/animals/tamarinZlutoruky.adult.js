@@ -31,7 +31,7 @@ var AnimalDetail = React.createClass({
           Délka dospělého jedince se pohybuje mezi 20 a 30&nbsp;centimetry, přičemž ocas bývá až dvakrát delší než samotné tělo. Tamarín obvykle váží asi půl kilogramu a dožívá se 10&nbsp;let, v&nbsp;lidské péči až 15&nbsp;let.
         </AnimalText>
         <AnimalText>
-          Rádi si pochutnají na ovoci či květinách, případně malých zvířatech, jako jsou pavouci, ještěrky či žáby. Samotní tamaríni jsou zase oblíbenou potravou divokých koček, hadů a dravých ptáků.
+          Rádi si pochutnají na ovoci či květinách, případně malých zvířatech, jako jsou pavouci, ještěři či žáby. Samotní tamaríni jsou zase oblíbenou potravou divokých koček, hadů a dravých ptáků.
         </AnimalText>
       </AnimalTemplate>
     );

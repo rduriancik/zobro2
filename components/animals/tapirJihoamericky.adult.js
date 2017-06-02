@@ -23,7 +23,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Tapír je lichokopytník z&nbsp;čeledi tapírovitých. Původem je z&nbsp;Jižní Ameriky, kde žije v&nbsp;tropických deštných lesích. Tapír většinou žije samotářsky a je aktivní zejména za soumraku. Je velice plachý. Kvůli lovu a ztrátě přirozeného biotopu je klasifikováni jako zranitelný druh.
+          Tapír je lichokopytník z&nbsp;čeledi tapírovitých. Původem je z&nbsp;Jižní Ameriky, kde žije v&nbsp;tropických deštných lesích. Tapír většinou žije samotářsky a je aktivní zejména v&nbsp;noci. Je velice plachý. Kvůli lovu a ztrátě přirozeného biotopu je klasifikováni jako zranitelný druh.
         </AnimalText>
         <AnimalText>
           Na první pohled vypadá tapír jako velké tmavé prase, ale jistě vás zaujala jeho hlava. Tapír má krátký pohyblivý chobot, kterým může lépe uchopit svou potravu. Nenechte se zmýlit, chobot tapíra neznačí příbuznost se slony.
@@ -39,17 +39,17 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Strava tapíra je podobná jako u&nbsp;jiných býložravců. Jí výhonky, listy, plody i&nbsp;vodní rostliny. Ve volné přírodě byste na něj mohli narazit na poli či na plantáži s&nbsp;kukuřicí nebo cukrovou třtinou.
+          Strava tapíra je podobná jako u&nbsp;jiných býložravců. Jí výhonky, listy, plody i&nbsp;vodní rostliny. Ve volné přírodě byste na něj mohli narazit například v&nbsp;deštném lese, ale i&nbsp;v&nbsp;suchých lesích, křovinách nebo savanách a dalších oblastech. Když vyrazí za potravou, lze ho spatřit i&nbsp;na poli či na plantáži s&nbsp;kukuřicí nebo cukrovou třtinou.
         </AnimalText>
         <AnimalText>
           Samci tapíra jsou většinou velice agresivní a se samicemi se sdružují jen na pár dnů v&nbsp;období páření. Samice je březí 400&nbsp;dní a rodí jedno mládě.
         </AnimalText>
         <AnimalText>
-          Mláďata tapíra vypadají podobně jako mláďata prasete divokého. Mají pruhovanou nebo skvrnitou srst, díky které nejsou v&nbsp;osvětlené přírodě dobře vidět. S&nbsp;matkou zůstávají jen rok po svém narození, ale dospívají až ve věku tří nebo čtyř let.
+          Mláďata tapíra vypadají podobně jako mláďata prasete divokého. Mají pruhovanou nebo skvrnitou srst, díky které nejsou ve vegetaci, skrze niž prosvítá světlo a střídá se se stíny, vidět. S&nbsp;matkou zůstávají jen rok po svém narození, ale dospívají až ve věku tří nebo čtyř let.
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Tapíři se u&nbsp;nás v&nbsp;zoo dožívají až 35&nbsp;let, avšak ve volné přírodě umírají dříve. Důvodem mohou být, mimo jiné, predátoři, kteří se ve volné přírodě vyskytují. Přirozenými predátory tapíra jsou jaguáři, pumy a krokodýli.
+          Tapíři se u&nbsp;nás v&nbsp;zoo dožívají až 35&nbsp;let, avšak ve volné přírodě umírají dříve. Důvodem mohou být, mimo jiné, predátoři, kteří se ve volné přírodě vyskytují. Přirozenými predátory tapíra jsou jaguáři, pumy a kajmani.
         </AnimalText>
         <AnimalText>
           Tak co? Zalíbili se vám tapíři, nebo pro vás stále budou jen těmi zvířaty s&nbsp;divnou tlamou?

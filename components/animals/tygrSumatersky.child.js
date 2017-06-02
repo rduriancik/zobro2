@@ -23,7 +23,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
   <AnimalText>
-    Ahoj! Jmenuji se Satu a v&nbsp;Brně žiji od roku 2005. Narodila jsem se v&nbsp;zoo v&nbsp;Dublinu, což je město v&nbsp;Irsku. Nejsem jen tak obyčejná tygřice, můj druh pochází se Sumatry. To je ostrov mezi Asií a Austrálií.
+    Ahoj! Jmenuji se Satu a v&nbsp;Brně žiji od roku 2005. Narodila jsem se v&nbsp;zoo v&nbsp;Dublinu, což je město v&nbsp;Irsku. Nejsem jen tak obyčejná tygřice, můj poddruh pochází ze Sumatry. To je ostrov patřící k&nbsp;Asii.
   </AnimalText>
   <AnimalText>
     My tygři sumaterští žijeme obvykle v&nbsp;lesích, rašeliništích a bažinách. Už nás ale není moc. Míst, kde se nám dobře žije, totiž ubývá. Z&nbsp;lesů se stávají plantáže a my nemáme kde žít a lovit. Aby toho nebylo málo, najdou se i&nbsp;lidé, kteří nás zabíjejí kvůli kůži a drápům.

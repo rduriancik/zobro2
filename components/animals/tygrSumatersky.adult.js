@@ -30,11 +30,11 @@ var AnimalDetail = React.createClass({
   </AnimalText>
   <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
   <AnimalText>
-    Tygři sumaterští – jak už jejich jméno napovídá – pocházejí ze Sumatry, což je ostrov v&nbsp;Indonésii. Obývají lesnaté oblasti, kterých však kvůli palmovým a akáciovým plantážím rychle ubývá. Proto – a taky kvůli obchodu s&nbsp;kůžemi a kostmi – se v&nbsp;současné době řadí tygři sumaterští mezi kriticky ohrožený druh a jejich populace na ostrově je odhadována na pouhých několik stovek. A z&nbsp;toho důvodu je pro zoologické zahrady tolik důležité tato zvířata rozmnožit.
+    Tygři sumaterští – jak už jejich jméno napovídá – pocházejí ze Sumatry, což je ostrov v&nbsp;Indonésii. Obývají lesnaté oblasti, kterých však kvůli palmovým a akáciovým plantážím rychle ubývá. Proto – a taky kvůli obchodu s&nbsp;kůžemi a kostmi – jsou v&nbsp;současné době tygři sumaterští označeni jako kriticky ohrožený poddruh tygrů a jejich populace na ostrově je odhadována na pouhých několik stovek. A z&nbsp;toho důvodu je pro zoologické zahrady tolik důležité tato zvířata rozmnožit.
   </AnimalText>
   <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
   <AnimalText>
-    Naše tygřice se jmenuje Satu. Narodila se 27.&nbsp;března 2004 v&nbsp;Dublinu a do Brna dorazila v&nbsp;říjnu 2005. Od té doby se v&nbsp;jejím výběhu vystřídalo už pět tygrů – Dick, Kampar, Dustin, Dua a Dandys. Poslední zmíněný se narodil 18.&nbsp;února 2012, do Brna přijel v&nbsp;březnu 2014 a je zde stále k vidění. Ale ani on zatím nebyl úspěšný v&nbsp;rozmnožení svého druhu. Že by za to mohlo jméno naší tygřice? Vždyť Satu znamená v&nbsp;indonéštině jeden – a tak i&nbsp;naše Satu nadále zůstává jen jedna.
+    Naše tygřice se jmenuje Satu. Narodila se 27.&nbsp;března 2004 v&nbsp;Dublinu a do Brna dorazila v&nbsp;říjnu 2005. Od té doby se v&nbsp;jejím výběhu vystřídalo už pět tygrů – Dick, Kampar, Dustin, Dua a Dandys. Poslední zmíněný se narodil 18.&nbsp;února 2012, do Brna přijel v&nbsp;březnu 2014 a je zde stále k vidění. Ale ani on zatím nebyl úspěšný v&nbsp;rozmnožení svého tygřího poddruhu. Že by za to mohlo jméno naší tygřice? Vždyť Satu znamená v&nbsp;indonéštině jeden – a tak i&nbsp;naše Satu nadále zůstává jen jedna.
   </AnimalText>
     </AnimalTemplate>
     );

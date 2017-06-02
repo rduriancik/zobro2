@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Ahoj kamarádi,
         </AnimalText>
         <AnimalText>
-          jmenuji se Daan a jsem levhart cejlonský. Hned na úvod vám musím říct, že já a moje kamarádka Nayana patříme k&nbsp;jednomu z&nbsp;největších druhů levhartů. Na Srí Lance, odkud pocházíme, jsme dokonce největší kočkovité šelmy. Přesto je náš druh ohrožený a počet našich kamarádů stále klesá. V&nbsp;přírodě se dožíváme 10&nbsp;let, v&nbsp;zoo až 23&nbsp;roků.
+          jmenuji se Daan a jsem levhart cejlonský. Hned na úvod vám musím říct, že já a moje kamarádka Nayana patříme k&nbsp;jednomu z&nbsp;největších poddruhů levhartů. Na Srí Lance, odkud pocházíme, jsme dokonce největší kočkovité šelmy. Přesto je náš poddruh ohrožený a počet našich kamarádů stále klesá. V&nbsp;přírodě se dožíváme 10&nbsp;let, v&nbsp;zoo až 23&nbsp;roků.
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
@@ -34,7 +34,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Oplýváme výborným sluchem, zrakem i&nbsp;čichem. Umíme moc dobře plavat, vyskočíme až nad hlavy vašich rodičů a běhat dokážeme stejně rychle jako auto jedoucí v&nbsp;obci. Díky tomu jsme skvělí lovci – dokážeme ulovit nejen malé ptáky a plazy, ale i&nbsp;větší zvířata, jako jsou třeba jelen, divoké prase, nebo dokonce dospělý buvol. Nejraději lovíme v&nbsp;noci.
+          Oplýváme výborným sluchem, zrakem i&nbsp;čichem. Umíme moc dobře plavat, vyskočíme až nad hlavy vašich rodičů a běhat dokážeme stejně rychle jako auto jedoucí v&nbsp;obci. Díky tomu jsme skvělí lovci – dokážeme ulovit nejen malé ptáky a plazy, ale i&nbsp;větší zvířata, jako jsou třeba jelen, divoké prase, nebo výjimečně dokonce i&nbsp;dospělý buvol. Nejraději lovíme v&nbsp;noci.
         </AnimalText>
         <AnimalText>
           Jsme samotáři, proto jsme tady ve výběhu jen my dva, to abychom se moc nehádali.

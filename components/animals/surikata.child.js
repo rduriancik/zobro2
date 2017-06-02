@@ -31,7 +31,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Zapomněly jsme na něco? Kde že žijeme? Na jihu Afriky, máme rády stepi a polopouště, zkrátka místa, kde je celkem sucho a není tam moc stromů. Potřebujeme totiž mít přehled, co se kolem nás děje. Máte pravdu, to je přesně ten důvod, proč vždycky jedna z&nbsp;nás stojí na vyvýšeném místě a rozhlíží se po okolí. My ostatní se pak nemusíme bát a víme, že kdyby přišlo nebezpečí, hlídka nás včas varuje, takže můžeme mezitím třeba lovit. Rády si pochutnáváme na hmyzu a pavoucích. Ale teď nás omluvte, jdeme zase stavět, slunit se a hrát si.
+          Zapomněly jsme na něco? Kde že žijeme? Na jihu Afriky, máme rády stepi, savany a polopouště, zkrátka místa, kde je celkem sucho a není tam moc stromů. Potřebujeme totiž mít přehled, co se kolem nás děje. Máte pravdu, to je přesně ten důvod, proč vždycky jedna z&nbsp;nás stojí na vyvýšeném místě a rozhlíží se po okolí. My ostatní se pak nemusíme bát a víme, že kdyby přišlo nebezpečí, hlídka nás včas varuje, takže můžeme mezitím třeba lovit. Rády si pochutnáváme na hmyzu a pavoucích. Ale teď nás omluvte, jdeme zase stavět, slunit se a hrát si.
         </AnimalText>
       </AnimalTemplate>
     );

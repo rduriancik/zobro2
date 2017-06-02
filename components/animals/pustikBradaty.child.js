@@ -27,7 +27,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         
         <AnimalText>
-        Já jsem puštík bradatý a patřím mezi sovy, moudré noční živočichy, jejichž řád čítá přes 200&nbsp;druhů. Narodil jsem se 13.&nbsp;května 2012 v&nbsp;zemi tulipánů – Nizozemsku. Moje kamarádka, se kterou bydlím ve stejné voliéře, se narodila v&nbsp;sousední Belgii přesně o&nbsp;jeden rok a jeden den dříve, tedy 12.&nbsp;května 2011. Na první pohled nás od sebe nerozeznáte, ale zkušené oko pozorovatele odhalí, že samička je o&nbsp;něco větší. Kromě nás existuje ve světě asi 20 dalších druhů puštíků, ale my jsme ze všech největší. Jsme dokonce větší než výr velký, jen nejsme tak mohutní. Když roztáhneme křídla, od jednoho konce k&nbsp;druhému měříme až 1,5&nbsp;metru, což je zhruba délka těla vlka obecného.
+        Já jsem puštík bradatý a patřím mezi sovy, moudré noční živočichy, jejichž řád čítá přes 200&nbsp;druhů. Vylíhl jsem se 13.&nbsp;května 2012 v&nbsp;zemi tulipánů – Nizozemsku. Moje kamarádka, se kterou bydlím ve stejné voliéře, se vylíhla v&nbsp;sousední Belgii přesně o&nbsp;jeden rok a jeden den dříve, tedy 12.&nbsp;května 2011. Na první pohled nás od sebe nerozeznáte, ale zkušené oko pozorovatele odhalí, že samička je o&nbsp;něco větší. Kromě nás existuje ve světě asi dvacet dalších druhů puštíků, ale my jsme ze všech největší. Když roztáhneme křídla, od jednoho konce k&nbsp;druhému měříme až 1,5&nbsp;metru, což je zhruba délka těla vlka obecného.
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

@@ -23,7 +23,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Dobrý den vespolek, slyšeli jste už někdy mé jméno? Že vám zní neobvykle? Trochu jako kdybych byl typ kari, viďte? Ale já jsem zvíře. Jsem sudokopytník a patřím k&nbsp;čeledi pekariovitých. Celkem existují čtyři druhy pekari. Jistě poznáte, proč jsem zrovna já pekari bělobradý. Bílou skvrnu na krku mám nejen já jako dospělý, ale mají ji i&nbsp;naše mláďata. Zbytek kožichu mám stejně jako čumák tmavě hnědý. Naše mláďata bývají světle hnědá a čumáky mají růžové.
+          Dobrý den vespolek, slyšeli jste už někdy mé jméno? Že vám zní neobvykle? Trochu jako kdybych byl typ kari, viďte? Ale já jsem zvíře. Jsem sudokopytník a patřím k&nbsp;čeledi pekariovitých. Celkem existují tři uznávané druhy pekari. Jistě poznáte, proč jsem zrovna já pekari bělobradý. Bílou skvrnu na bradě mám nejen já jako dospělý, ale mají ji i&nbsp;naše mláďata. Zbytek kožichu mám stejně jako čumák tmavě hnědý. Naše mláďata bývají světle hnědá a čumáky mají růžové.
         </AnimalText>
         <AnimalText>
           Moji rodinu byste nejspíš našli v&nbsp;Jižní Americe – od jižního Mexika až po Argentinu, kde by si lebedila v&nbsp;deštných pralesích. Nicméně tady se mně také líbí. Pečlivě se o&nbsp;nás všechny starají – což je dobře, protože jsme téměř ohrožený druh.
@@ -37,7 +37,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
        <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Naše mláďata se rodí po pěti měsících od početí. Samice může mít jedno až – představte si to – pět mláďat. A musíme je zvládnout uživit! V&nbsp;lidské péči se dožíváme až 24&nbsp;let, takže si svých dětí dostatečně užijeme. Však nám taky dělají radost!
+          Naše mláďata se rodí po pěti měsících od početí. Samice může mít jedno až – představte si to – pět mláďat. A musíme je zvládnout uživit! Ale můžeme být ještě rádi – nám příbuzná prasata jich mívají mnohem více. V&nbsp;lidské péči se dožíváme až 24&nbsp;let, takže si svých dětí dostatečně užijeme. Však nám taky dělají radost!
         </AnimalText>
       </AnimalTemplate>
     );

@@ -29,14 +29,14 @@ var AnimalDetail = React.createClass({
           jsme kulíci píseční a do Brna jsme se už jako malí dostali v&nbsp;roce 2014 z&nbsp;německé zoo. Původně ale pocházíme ze severnějších krajů, máme totiž rádi příjemný chládek.
         </AnimalText>
         <AnimalText>
-          Vypadáme podobně jako vrabčáci, ty jste už určitě někdy viděli, ale naše peří je hnědé bez tmavších proužků a bříška máme zářivě bílá. Navíc si, stejně jako vlaštovky, každý rok rádi zaletíme na jih do teplých krajin.
+          Vypadáme podobně jako vrabčáci, ty jste už určitě někdy viděli, ale naše peří je hnědé bez tmavších proužků, bříška máme zářivě bílá a na hlavě černobílou kontrastní kresbu. Navíc si, stejně jako vlaštovky, každý rok rádi zaletíme na jih do teplých krajin.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           Jsme starostliví rodiče, a tak jsme si na hladovce, kteří mají spadeno na naše krásná puntíkatá vajíčka, vymysleli fintu. Když se takový hamoun přiblíží k našemu hnízdu, jeden z&nbsp;nás začne předstírat, že ho něco bolí. Když si útočník všimne, že by mohl mít sousto větší než vajíčko, rozběhne se za námi, a když už je dost daleko od našeho hnízdečka, prostě mu frkneme. To je hezká finta, viďte, děti? Na nás si totiž žádný hamoun jen tak nepřijde.
         </AnimalText>
         <AnimalText>
-          Kluky a holky od sebe na první pohled nerozeznáte, jen my kluci občas vystavujeme své bílé peří, to když chceme na holky udělat dojem. Ale nakonec si stejně vyberou toho s&nbsp;nejčervenějším zobáčkem, ty se totiž kulíčím slečnám tuze líbí!
+          Kluky a holky od sebe na první pohled nerozeznáte, jen my kluci občas vystavujeme své bílé peří, to když chceme na holky udělat dojem. Ale nakonec si stejně vyberou toho s&nbsp;nejoranžovějším zobáčkem, ty se totiž kulíčím slečnám tuze líbí!
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

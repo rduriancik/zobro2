@@ -22,7 +22,7 @@ var AnimalDetail = React.createClass({
           Nazdar krasavci!
         </AnimalText>
         <AnimalText>
-          Jistě jste zdatní přírodovědci, přesto vás musíme upozornit, že ne každý zná naše opravdové jméno. Takže aby bylo jasno – nejsme havrani, protože ti jsou oproti nám menší, mají světlejší zobák a v&nbsp;zimě je někdy potkáte ve městech. Nejsme ani vrány, protože těm se neleskne peří. Jsme krkavci. Brázdíme lesy skoro celé severní polokoule, a tak se občas objevíme i&nbsp;v&nbsp;těch českých.
+          Jistě jste zdatní přírodovědci, přesto vás musíme upozornit, že ne každý zná naše opravdové jméno. Takže aby bylo jasno – nejsme havrani, protože ti jsou oproti nám menší a v&nbsp;zimě je někdy potkáte ve městech. Nejsme ani vrány. Jsme krkavci. Brázdíme lesy i&nbsp;otevřená prostředí skoro celé severní polokoule, a tak se občas objevíme i&nbsp;v&nbsp;těch českých.
         </AnimalText>
         <AnimalText>
           Jeden takový hluboký hvozd obýval náš prapradědeček Krako. Už od malička se chtěl stát rytířem. Neohroženě se pral o&nbsp;každou kořist, zobákem naporcoval kdejakou mršinu a k&nbsp;tomu všemu byl vysoce inteligentní. Říká se, že dokonce uměl napočítat do osmi!

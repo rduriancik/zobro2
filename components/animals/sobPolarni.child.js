@@ -34,7 +34,7 @@ var AnimalDetail = React.createClass({
         Chladné počasí nám vůbec nevadí, protože naši předci pocházejí ze severní části planety, kde jsou stále extrémně mrazivé podmínky. Proto musíme být na takovou zimu velmi dobře připraveni. Máme dlouhou srst s&nbsp;dutými chlupy, ve kterých je vzduch, což nám pomáhá udržovat teplo. A&nbsp;chlupatý máme i&nbsp;čenich. Do sněhu se neboříme, protože máme široká kopyta. Ta nám během podzimu a zimy navíc ztvrdnou a vytvoří se na nich ostré hrany, abychom mohli při hledání potravy prolomit led a sníh.
         </AnimalText>
         <AnimalText>
-        Jsme býložravci, takže milujeme různé druhy rostlin, trávu, listy a pupeny dřevin, lišejníky, ale i&nbsp;mechy. V&nbsp;zimě dokážeme rostliny najít i&nbsp;pod sněhem, a to díky svému dokonalému čichu. Kvůli potravě se pořádně naběháme, urazíme klidně i&nbsp;5&nbsp;000&nbsp;km ročně, takže bychom přeběhli Evropu od severu k&nbsp;jihu. A&nbsp;to jiný zemský savec nezvládne!
+        Jsme býložravci, takže milujeme různé druhy rostlin, trávu, listy a pupeny dřevin, lišejníky, ale i&nbsp;mechy. V&nbsp;zimě dokážeme rostliny najít i&nbsp;pod sněhem, a to díky svému dokonalému čichu. Kvůli potravě se pořádně naběháme, urazíme klidně i&nbsp;5&nbsp;000&nbsp;km ročně, takže bychom přeběhli Evropu od severu k&nbsp;jihu. A&nbsp;to jiný pozemní savec nezvládne!
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

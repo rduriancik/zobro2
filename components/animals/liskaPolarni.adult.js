@@ -37,7 +37,7 @@ var AnimalDetail = React.createClass({
           </AnimalText>
       <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
           <AnimalText>    
-            V&nbsp;rodičovství jsou polární lišky velice zodpovědné, na výchově mláďat se podílí i&nbsp;otec. Liščí monogamní páry pečují o&nbsp;mláďata ve spletitých tunelech své nory, odkud mladí vykouknou poprvé ve věku zhruba měsíce. V&nbsp;norách ovšem lišky pobývají jen v&nbsp;létě, kdy prohrabávají další a další tunely (a vytváří epickou podzemní pevnost). V&nbsp;zimě se ale stahují k pobřeží a spávají zahrabané do sněhu.
+            V&nbsp;rodičovství jsou polární lišky velice zodpovědné, na výchově mláďat se podílí i&nbsp;otec. Liščí monogamní páry pečují o&nbsp;mláďata ve spletitých tunelech své nory, odkud mladí vykouknou poprvé ve věku zhruba měsíce. V&nbsp;norách ovšem lišky pobývají jen v&nbsp;létě, kdy prohrabávají další a další tunely (a vytváří podzemní pevnost). V&nbsp;zimě se ale stahují k pobřeží a spávají zahrabané do sněhu.
           </AnimalText>
       </AnimalTemplate>
     );

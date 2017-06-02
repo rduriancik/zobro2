@@ -40,7 +40,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        Když chce skunk na někoho zaútočit, otočí se k&nbsp;němu zády a vystříkne sekret pachových žláz. Ač je skunk otočen zády, umí mířit přesně na protivníka. Pokud se strefí do jeho očí, způsobí mu velkou bolest, a může mu způsobit dokonce i&nbsp;dočasnou slepotu. Samotný sekret velice zapáchá a jde těžko smýt. Odstranit se dá rajčatovou šťávou nebo jablečným moštem. Takto skunk útočí nejen na lidi, ale samozřejmě i&nbsp;na své přirozené predátory. Těmi jsou lišky, kojoti, výři, jestřábi nebo třeba psi.
+        Když chce skunk na někoho zaútočit, otočí se k&nbsp;němu zády a vystříkne sekret pachových žláz. Ač je skunk otočen zády, umí mířit přesně na protivníka. Pokud se strefí do jeho očí, způsobí mu velkou bolest, a může mu způsobit dokonce i&nbsp;dočasnou slepotu. Samotný sekret velice zapáchá a jde těžko smýt. Odstranit se dá rajčatovou šťávou nebo jablečným moštem. Takto skunk útočí nejen na lidi, ale samozřejmě i&nbsp;na své přirozené predátory. Těmi jsou lišky, kojoti, výři, draví ptáci nebo třeba psi.
         </AnimalText>
       </AnimalTemplate>
     );

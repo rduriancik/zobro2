@@ -40,7 +40,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Zajímavé je, že jméno „lemur“ v&nbsp;překladu znamená noční duch. Že vám toto roztomilé zvířátko ducha ani trochu nepřipomíná? To jste ho ovšem neviděli v noci! Lemurům totiž ve tmě svítí oči, a navíc občas vydávají děsivé zvuky připomínající pláč. Ale nebojte se, lemuři jsou ve skutečnosti plaší a zcela neškodní.
+          Zajímavé je, že jméno „lemur“ pochází ze staré římské mytologie a znamená noční duch. Že vám toto roztomilé zvířátko ducha ani trochu nepřipomíná? To jste ho ovšem neviděli v noci! Lemurům totiž ve tmě svítí oči, a navíc občas vydávají děsivé zvuky připomínající pláč. Ale nebojte se, lemuři jsou ve skutečnosti plaší a zcela neškodní.
         </AnimalText>
         <AnimalText>
           Nezapomeňte, že v&nbsp;naší zoo najdete kromě lemura běločelého i&nbsp;další dva druhy – lemury černé a známější lemury kata. Pokud jste je ještě nebyli pozdravit, tak to honem napravte, ať jim to není líto.
