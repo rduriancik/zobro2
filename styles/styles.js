@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import Dimensions from 'Dimensions';
 
-const WIDTH = Dimensions.get('window').width;
+export const WIDTH = Dimensions.get('window').width;
 const ANIMAL_RIGHT_BORDER = 12;
 
 const backgroundColors = [

@@ -4,9 +4,12 @@ import {
   Text,
   TouchableHighlight,
   TextInput,
-  StyleSheet, Alert
+  StyleSheet,
+  Image,
+  Alert,
 } from 'react-native';
 import {sceneTitles} from '../scenes';
+import {WIDTH} from '../styles/styles';
 
 import AlphabetListView from 'react-native-alphabetlistview';
 import animals from '../animals';
@@ -60,16 +63,12 @@ class SectionHeader extends React.Component {
       textAlign:'center',
       color:'#fff',
       fontWeight:'700',
-      fontSize:24
+      fontSize:24,
+      backgroundColor: 'rgba(0,0,0,0)',
     };
 
-    var viewStyle = {
-      backgroundColor: '#104f1f'
-    };
     return (
-      <View style={viewStyle}>
         <Text style={textStyle}>{this.props.title}</Text>
-      </View>
     );
   }
 }
@@ -158,14 +157,18 @@ export default class AnimalListScene extends React.Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
-      <TextInput
-        style={{height: 40, textAlign: 'center', borderColor: 'gray', borderWidth: 1, backgroundColor: 'white'}}
-        onChangeText={(text) => this.setFilter({text})}
-        value={this.state.text}
-        placeholder='Hledat'
-        autoCorrect={false}
-      />
+      <Image
+        source={require('../images/background/about.png')}
+        resizeMode="cover"
+        style={{flex: 1, width: WIDTH}}
+      >
+        <TextInput
+          style={{height: 40, textAlign: 'center', borderColor: 'gray', borderWidth: 1, backgroundColor: 'white'}}
+          onChangeText={(text) => this.setFilter({text})}
+          value={this.state.text}
+          placeholder='Hledat'
+          autoCorrect={false}
+        />
         <AlphabetListView
           data={this.state.data}
           cell={Cell}
@@ -175,11 +178,8 @@ export default class AnimalListScene extends React.Component {
           sectionHeader={SectionHeader}
           sectionHeaderHeight={22.5}
           compareFunction={(a,b) => {return a.localeCompare(b); }}
-          style={{
-            backgroundColor: '#104f1f',
-          }}
         />
-      </View>
+      </Image>
     );
   }
 }
