@@ -22,7 +22,7 @@ export default class AboutScene extends React.Component {
   render() {
     const MIN_ZOOM = 0.5;
     const MAX_ZOOM = 5.0;
-    const TEXT_COLOR = 'black';
+    const TEXT_COLOR = 'white';
 
     const PADDING = 20;
     const LOGO_HEIGHT = 90;
@@ -40,27 +40,32 @@ export default class AboutScene extends React.Component {
     ];
 
     return (
-      <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={styles.contentView}>
-        <Text style={{paddingTop: 0, color: TEXT_COLOR}}>
+      <Image
+        source={require('../images/background/about.png')}
+        resizeMode="cover"
+        style={{flex: 1, width: WIDTH+20}}
+      >
+      <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={[styles.contentView,{backgroundColor: undefined}]}>
+        <Text style={{paddingTop: 0, color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)'}}>
           Aplikace vznikla ve spolupráci Zoo Brno a Masarykovy univerzity. Na projektu se podíleli studenti oboru Český jazyk se specializací počítačová lingvistika (PLIN) a pracovníci Ústavu českého jazyka Filozofické fakulty MU. Nasazení aplikace do praxe bylo finančně podpořeno Centrem pro transfer technologií MU.
         </Text>
 
-        <View style={{height: (LOGO_HEIGHT + LOGO_TOPMARGIN), marginTop: LOGO_TOPMARGIN}}>
-          <InPageImages sources={logos.slice(0,3)} style={{width: WIDTH/3, height: LOGO_HEIGHT}} marginRight={LOGO_RIGHTMARGIN}/>
+        <View style={{height: (LOGO_HEIGHT + LOGO_TOPMARGIN), marginTop: LOGO_TOPMARGIN, backgroundColor: 'white'}}>
+          <InPageImages sources={logos.slice(0,3)} style={{width: (WIDTH-2*LOGO_RIGHTMARGIN)/3, height: LOGO_HEIGHT}} marginRight={LOGO_RIGHTMARGIN}/>
         </View>
-        <View style={{height: (LOGO_HEIGHT + LOGO_TOPMARGIN), marginTop: LOGO_TOPMARGIN}}>
-          <InPageImages sources={logos.slice(3)} style={{width: WIDTH/3, height: LOGO_HEIGHT}} marginRight={LOGO_RIGHTMARGIN}/>
+        <View style={{height: (LOGO_HEIGHT + LOGO_TOPMARGIN), marginTop: LOGO_TOPMARGIN, backgroundColor: 'white'}}>
+          <InPageImages sources={logos.slice(3)} style={{width: (WIDTH-2*LOGO_RIGHTMARGIN)/3, height: LOGO_HEIGHT}} marginRight={LOGO_RIGHTMARGIN}/>
         </View>
 
-        <Text style={{color: TEXT_COLOR}}>
+        <Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)'}}>
           Koordinace projektu: Dana Hlaváčková
-        </Text><Text style={{color: TEXT_COLOR}}>
+        </Text><Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)'}}>
           Programování aplikace: Marek Grác
-        </Text><Text style={{color: TEXT_COLOR}}>
+        </Text><Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)'}}>
           Design: Kevin W. Scherrer
-        </Text><Text style={{color: TEXT_COLOR}}>
+        </Text><Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)'}}>
           Závěrečné korektury v češtině: Hana Žižková
-        </Text><Text style={{color: TEXT_COLOR}}>
+        </Text><Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)'}}>
           Příprava textů, korektury, překlady do angličtiny a všechny další pomocné práce:
           Babincová Adriana,
           Bendáková Eliška,
@@ -88,6 +93,7 @@ export default class AboutScene extends React.Component {
           Vostřelová Klára
         </Text>
       </ScrollView>
+      </Image>
     );
   }
 };

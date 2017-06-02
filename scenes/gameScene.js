@@ -27,31 +27,37 @@ export default class AboutScene extends React.Component {
   render() {
     const MIN_ZOOM = 0.5;
     const MAX_ZOOM = 5.0;
-    const TEXT_COLOR = 'black';
+    const TEXT_COLOR = 'white';
 
     const WIDTH = Dimensions.get('window').width - PADDING;
     const PADDING = 20;
 
     return (
-      <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={styles.contentView}>
-        <Text style={{color: TEXT_COLOR}}>
-          Čeká na vás spousta zábavy, cesta kolem světa, 10&nbsp;stanovišť a 1&nbsp;lamí píseň.
-        </Text><Text style={{color: TEXT_COLOR}}>
+      <Image
+        source={require('../images/background/about.png')}
+        resizeMode="cover"
+        style={{flex: 1, width: WIDTH+PADDING}}
+      >
+      <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={[styles.contentView, {backgroundColor: undefined}]}>
+        <Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)'}}>
+          Čeká na vás spousta zábavy, cesta kolem světa, 10&nbsp;stanovišť a jedna lamí píseň.
+        </Text><Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)', paddingTop: 15}}>
           Šifrovací hra je zdarma, platí se jen vstupné do zoo. Potřebujete s&nbsp;sebou dobře nabitý chytrý telefon / tablet s&nbsp;připojením na internet a tužku.
-        </Text><Text style={{color: TEXT_COLOR}}>
+        </Text><Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)', paddingTop: 15}}>
           Start hry je na konci vstupního esíčka před Tygřími skalami.
-        </Text><Text style={{color: TEXT_COLOR}}>
+        </Text><Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)', paddingTop: 15}}>
           Více se o&nbsp;šifrovací hře Dotkni se evoluce dozvíte na
         </Text>
         <Hyperlink onPress={() => {this._openURL('http://www.dotkni-se-evoluce.cz')}}>
-          <Text style={[styles.ctext, {color: 'blue', textAlign: 'center'}]}>www.dotkni-se-evoluce.cz</Text>
+          <Text style={[styles.ctext, {color: 'white', fontWeight: '700', textAlign: 'center', backgroundColor: 'rgba(0,0,0,0)'}]}>www.dotkni-se-evoluce.cz</Text>
         </Hyperlink>
-        <Text style={{color: TEXT_COLOR}}>
+        <Text style={{color: TEXT_COLOR, backgroundColor: 'rgba(0,0,0,0)'}}>
           P. S.: Je to opravdu pecka! A jsme první gamifikovaná zoo v&nbsp;ČR.
         </Text>
 
         <Image source={require('../images/cryptomania.jpg')} style={{width: WIDTH, height: 500, marginRight: 0, marginLeft: 0}} resizeMode='contain'/>
       </ScrollView>
+      </Image>
     );
   }
 }
