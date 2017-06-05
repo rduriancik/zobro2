@@ -25,7 +25,7 @@ class EventsContainer extends React.Component {
 
   static navigationOptions = ({navigation}) => {
     return ({
-      title: 'Events',
+      title: 'Krmení zvířat',
     })
   }
 
