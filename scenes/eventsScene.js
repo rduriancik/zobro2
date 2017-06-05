@@ -35,8 +35,6 @@ export default class EventsScene extends React.Component {
 
     PushNotification.configure({
         onNotification: function(notification) {
-            console.log(JSON.stringify(notification));
-            console.log('call call call');
             Alert.alert(notification.message);
         },
 
@@ -116,15 +114,15 @@ export default class EventsScene extends React.Component {
   toggleEvent(zooEvent, deltaTime) {
     if (this.checkEventNotification(zooEvent, deltaTime)) {
       this.props.removeNotification(zooEvent, deltaTime);
-      PushNotification.cancelLocalNotificationById(this._createNotificationID(zooEvent, deltaTime));
+      PushNotification.cancelLocalNotifications({ id: this._createNotificationID(zooEvent, deltaTime)});
     } else {
       const deltas = [5, 10, 15];
       // @todo: fix - android issue, ID have to be integer
-/*      // remove notifications for same zooEvent but different deltaTime
+      // remove notifications for same zooEvent but different deltaTime
       deltas.forEach((value) => {
-          PushNotification.cancelLocalNotificationById(this._createNotificationID(zooEvent, value));
+          PushNotification.cancelLocalNotifications({ id: this._createNotificationID(zooEvent, value)});
       });
-*/
+
       // add new local notification
       let fireTime = new Date(Date.now());
       const p = zooEvent.time.split(':');
@@ -133,11 +131,10 @@ export default class EventsScene extends React.Component {
       fireTime.setSeconds(0);
 
       let z = {
-        id: zooEvent.nid.toString(),
+        id: this._createNotificationID(zooEvent, deltaTime),
         vibrate: true,
         message: (zooEvent.name + '\n' + zooEvent.place + '\n' + zooEvent.time),
-//        userInfo: {id: zooEvent.nid.toString()},
-        userInfo: {id: 111},
+        userInfo: {id: this._createNotificationID(zooEvent, deltaTime)},
         // @fix: this is for testing purposes; run alarm in 10 seconds
         date: new Date(Date.now() + 1000 * 10),
 //        date: new Date(fireTime - ((deltaTime + 0) * 60 * 1000)),
@@ -153,7 +150,8 @@ export default class EventsScene extends React.Component {
   }
 
   _createNotificationID(zooEvent, deltaTime) {
-    return (zooEvent.id + '-' + deltaTime);
+    const x = 100 * 1 * zooEvent.nid;
+    return x.toString();
   }
 
   styleEvent(zooEvent, deltaTime) {
