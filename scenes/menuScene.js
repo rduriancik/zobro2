@@ -7,6 +7,7 @@ import {
   Image,
 } from 'react-native';
 import Text from '../components/animalText';
+import Dimensions from 'Dimensions';
 
 import {scenes, sceneTitles} from '../scenes';
 
@@ -56,10 +57,16 @@ export default class MenuScene extends React.Component {
     const TEXT_COLOR = 'black';
 
     const PADDING = 20;
+    const WIDTH = Dimensions.get('window').width - PADDING;
     const menuItems = [scenes.QR_READER, scenes.ANIMAL_LIST, scenes.EVENTS, scenes.GAME, scenes.SERVICES, scenes.VISITORS, scenes.ABOUT];
 
     return (
-      <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={[styles.contentView,{paddingLeft: 0, paddingRight: 0}]}>
+      <Image
+        source={require('../images/background/about.png')}
+        resizeMode="cover"
+        style={{flex: 1, width: WIDTH+20}}
+      >
+      <ScrollView minimumZoomScale={MIN_ZOOM} maximumZoomScale={MAX_ZOOM} style={[styles.contentView,{paddingLeft: 0, paddingRight: 0, paddingTop: 0, backgroundColor: undefined}]}>
         {
         menuItems.map((itemInMenu, index) => (
           <MainMenuItem
@@ -71,6 +78,7 @@ export default class MenuScene extends React.Component {
         ))
         }
       </ScrollView>
+      </Image>
     );
   }
 }
