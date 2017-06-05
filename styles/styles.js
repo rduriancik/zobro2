@@ -13,20 +13,25 @@ const backgroundColors = [
       '#2d9946',
 ];
 
+export const TEXT_COLOR = 'white';
+
 const styles = {
   text: {
     fontSize: 18,
-    color: 'white',
+    color: TEXT_COLOR,
+    backgroundColor: 'rgba(0,0,0,0)',
   },
   italic: {
     fontSize: 18,
-    color: 'white',
+    color: TEXT_COLOR,
     fontStyle: 'italic',
+    backgroundColor: 'rgba(0,0,0,0)'
   },
   strong: {
     fontSize: 18,
-    color: 'white',
+    color: TEXT_COLOR,
     fontWeight: 'bold',
+    backgroundColor: 'rgba(0,0,0,0)'
   },
 
   contentView: {
@@ -91,23 +96,23 @@ const styles = {
   },
   ctext: {
     fontSize: 18,
-    color: 'white',
+    color: TEXT_COLOR,
     paddingTop: 5,
     paddingBottom: 5,
   },
   ctextItalic: {
     fontSize: 18,
-    color: 'white',
+    color: TEXT_COLOR,
     fontStyle: 'italic',
   },
   italic: {
     fontSize: 18,
-    color: 'white',
+    color: TEXT_COLOR,
     fontStyle: 'italic',
   },
   strong: {
     fontSize: 18,
-    color: 'white',
+    color: TEXT_COLOR,
     fontWeight: 'bold',
   },
   inPageSingleThumbnail: {
