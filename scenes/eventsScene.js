@@ -61,16 +61,24 @@ export default class EventsScene extends React.Component {
   }
 
   _renderHeader(section, index) {
+    const WIDTH = Dimensions.get('window').width;
+
     return (
+      <Image
+        resizeMode='cover'
+        source={section.thumbnail}
+        style={{width: WIDTH, height: 80 }}
+      >
       <View style={{
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: backgroundColors[index % backgroundColors.length],
+        backgroundColor: '#144d22B0',
         height: 80,
       }}>
         <Text style={[styles.eventItemText, {fontWeight: 'bold'}]}>{section.name}</Text>
         <Text style={styles.eventItemText}>dnes, {section.time}</Text>
       </View>
+      </Image>
     );
   }
 
@@ -184,7 +192,14 @@ export default class EventsScene extends React.Component {
       return result;
     });
 
+    const WIDTH = Dimensions.get('window').width;
+
     return (
+      <Image
+        source={require('../images/background/about.png')}
+        resizeMode="cover"
+        style={{flex: 1, width: WIDTH}}
+      >
       <ScrollView>
       <Accordion
         sections={filteredEvents}
@@ -192,6 +207,7 @@ export default class EventsScene extends React.Component {
         renderContent={this._renderContent}
       />
       </ScrollView>
+      </Image>
     );
   }
 }
