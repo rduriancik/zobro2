@@ -198,13 +198,25 @@ export default class EventsScene extends React.Component {
         resizeMode="cover"
         style={{flex: 1, width: WIDTH}}
       >
-      <ScrollView>
-      <Accordion
-        sections={filteredEvents}
-        renderHeader={this._renderHeader}
-        renderContent={this._renderContent}
-      />
-      </ScrollView>
+      {
+        filteredEvents.length === 0
+        ? (
+          <View style={[styles.eventItem, {flex:1, flexDirection: 'row', backgroundColor: 'rgba(0,0,0,0)'}]}>
+            <View style={{flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+              <Text style={styles.eventItemText}>Je nám líto,</Text>
+              <Text style={styles.eventItemTextTime}>dnes už jsme nakrmení.</Text>
+            </View>
+          </View>
+        ) : (
+        <ScrollView>
+          <Accordion
+            sections={filteredEvents}
+            renderHeader={this._renderHeader}
+            renderContent={this._renderContent}
+          />
+        </ScrollView>
+      )
+    }
       </Image>
     );
   }
