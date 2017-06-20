@@ -136,7 +136,8 @@ export default class AnimalListScene extends React.Component {
     let data = {};
     for (let letter in this.state.fullData) {
       for (let idx in this.state.fullData[letter]) {
-        if (this.state.fullData[letter][idx].name.toUpperCase().includes(text)) {
+        const animalName = this.state.fullData[letter][idx].name.toUpperCase();
+        if (animalName.includes(' ' + text) || animalName.startsWith(text)) {
           if (!(letter in data)) {
             data[letter] = [];
           }
