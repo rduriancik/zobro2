@@ -67,12 +67,19 @@ export default class EventsScene extends React.Component {
         source={section.thumbnail}
         style={{width: WIDTH, height: 80 }}
       >
-      <View style={{
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#144d22B0',
-        height: 80,
-      }}>
+      <View
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#144d22B0',
+          height: 80,
+        }}
+        ref={(component) => {
+          if (!(_this.eventHeader.includes(component)) && (component !== null)) {
+            _this.eventHeader.push(component);
+          }
+        }}
+      >
         <Text style={[styles.eventItemText, {fontWeight: 'bold'}]}>{section.name}</Text>
         <Text style={styles.eventItemText}>dnes, {section.time}</Text>
       </View>
@@ -154,6 +161,19 @@ export default class EventsScene extends React.Component {
     return x.toString();
   }
 
+  _onEventChange(newIndex) {
+    const HEIGHT_HEADER = 80;
+
+    for (headerIndex in _this.eventHeader) {
+      if (('' + headerIndex) === ('' + newIndex)) {
+          _this.refs.list.scrollTo({
+              x: 0,
+              y: (newIndex * HEIGHT_HEADER),
+          });
+      }
+    }
+  }
+
   styleEvent(zooEvent, deltaTime) {
     if (this.checkEventNotification(zooEvent, deltaTime)) {
       return ({
@@ -167,6 +187,7 @@ export default class EventsScene extends React.Component {
 
   render() {
     _this = this;
+    _this.eventHeader = [];
 
     const currentDate = new Date();
     const SHOW_RUNNING = 30;
@@ -208,11 +229,12 @@ export default class EventsScene extends React.Component {
             </View>
           </View>
         ) : (
-        <ScrollView>
+        <ScrollView ref="list">
           <Accordion
             sections={filteredEvents}
             renderHeader={this._renderHeader}
             renderContent={this._renderContent}
+            onChange={this._onEventChange}
           />
         </ScrollView>
       )
