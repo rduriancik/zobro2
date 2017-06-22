@@ -11,7 +11,7 @@
     "prettier": "^1.3.0",
     "react": "16.0.0-alpha.6",
     "react-native": "^0.43.0",
-    "react-native-alphabetlistview": "git+https://github.com/marxsk/react-native-alphabetlistview.git",
+    "react-native-alphabetlistview": "git+https://github.com/sunnylqm/react-native-alphabetlistview.git",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-collapsible": "^0.8.0",
     "react-native-hyperlink": "0.0.9",
