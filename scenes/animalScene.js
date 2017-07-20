@@ -101,7 +101,7 @@ class NeighbourTab extends React.Component {
 
     return (
       <AnimalNeighbourScene
-        navigation={this.props.navigation}
+        navigation={this.props.screenProps.parentNavigation}
         animal={animalName} />
     );
   }
@@ -119,8 +119,12 @@ export default class AnimalMainScreen extends React.Component {
   }
 
   render() {
+    const p = {};
+    p.animal = this.props.animal;
+    p.readerLevel = this.props.readerLevel;
+    p.parentNavigation = this.props.navigation;
     return (
-      <MainScreenNavigator screenProps={this.props}/>
+      <MainScreenNavigator screenProps={p}/>
     );
   }
 }

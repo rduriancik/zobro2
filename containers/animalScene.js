@@ -43,6 +43,7 @@ class AnimalContainer extends React.Component {
         <AnimalScene
           animal={this.props.navigation.state.params.animal}
           readerLevel={this.props.configuration.readerLevel}
+          navigation={this.props.navigation}
         />
       );
     }

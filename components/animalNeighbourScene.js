@@ -8,6 +8,7 @@ import {
 
 import styles from '../styles/styles';
 import animals from '../animals';
+import {sceneTitles} from '../scenes';
 
 var navigation;
 
@@ -37,7 +38,7 @@ class Cell extends React.Component {
 
     return (
       <TouchableHighlight
-        onPress={() => { navigation.navigate('ANIMAL_DETAIL', {animal: this.props.item.animal})}}
+        onPress={() => { navigation.navigate(sceneTitles['animal-detail'].name, {animal: this.props.item.animal})}}
         underlayColor='#bbbbbb'
       >
         <View style={[styles.eventItem, {flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: this.props.backgroundColor}]}>
