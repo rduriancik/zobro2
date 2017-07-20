@@ -40,20 +40,38 @@ export default class VisitorsScene extends React.Component {
         <Text style={{fontWeight: '700', paddingTop: 10}}>
           Kdy máme otevřeno?
         </Text>
-        <Text style={{textAlign: 'center'}}>
-          Listopad-Únor 9-16{"\n"}
-          Březen, Říjen 9-17{"\n"}
-          Duben-Září 9-18
+        <View style={{flexDirection: 'row'}}>
+        <View style={{flex: 1}} />
+        <Text style={{textAlign: 'left', flex: 2}}>
+          Listopad-Únor{"\n"}
+          Březen, Říjen{"\n"}
+          Duben-Září
         </Text>
+        <Text style={{textAlign: 'right', flex: 1}}>
+        9-16{"\n"}
+        9-17{"\n"}
+        9-18
+        </Text>
+        <View style={{flex: 1}} />
+        </View>
 
         <Text style={{fontWeight: '700', paddingTop: 10}}>
           Jak se k nám dostat?
         </Text>
-        <Text style={{textAlign: 'center'}}>
-          Trolejbus 30{"\n"}
-          Tramvaj 1, 3, 11{"\n"}
-          Autobus 50, 52, 54
+        <View style={{flexDirection: 'row'}}>
+        <View style={{flex: 1}} />
+        <Text style={{textAlign: 'left', flex: 2}}>
+          Trolejbus{"\n"}
+          Tramvaj{"\n"}
+          Autobus
         </Text>
+        <Text style={{textAlign: 'right', flex: 1.5}}>
+        30{"\n"}
+        1, 3, 11{"\n"}
+        50, 52, 54
+        </Text>
+        <View style={{flex: 1}} />
+        </View>
 
         <Text style={{fontWeight: '700', paddingTop: 10}}>
           Jak se s námi spojit?
