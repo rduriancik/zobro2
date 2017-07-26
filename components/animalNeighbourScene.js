@@ -79,6 +79,7 @@ export default class AnimalNeighbourScene extends React.Component {
     return (
         <ListView
           dataSource={this.state.dataSource}
+          removeClippedSubviews={false}
           renderRow={(data) => {
             let backgroundColor = backgroundColors[counter % backgroundColors.length];
             counter++;
