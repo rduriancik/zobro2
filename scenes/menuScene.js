@@ -47,8 +47,7 @@ export default class MenuScene extends React.Component {
   }
 
   static navigationOptions = {
-    headerVisible: false,
-    headerMode: 'screen',
+    header: null,
   }
 
   render() {
