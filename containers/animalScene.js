@@ -24,18 +24,8 @@ class AnimalContainer extends React.Component {
     super(props);
   }
 
-  static navigationOptions = ({navigation}) => {
-    const animalName = navigation.state.params.animal;
-
-    if (!(animalName in animals)) {
-      return ({
-        title: `Chybný QR kód`,
-      })
-    } else {
-      return ({
-        title: `${animals[animalName].name}`,
-      })
-    }
+  static navigationOptions = {
+    header: null,
   }
 
   render() {
@@ -43,6 +33,7 @@ class AnimalContainer extends React.Component {
         <AnimalScene
           animal={this.props.navigation.state.params.animal}
           readerLevel={this.props.configuration.readerLevel}
+          setReaderLevel={this.props.setReaderLevel}
           navigation={this.props.navigation}
         />
       );
