@@ -70,9 +70,11 @@ class QRTab extends React.Component {
   }
 
   render() {
-    return (
-      <Text>QR tab</Text>
-    );
+    if (this.props.screenProps.cameraReady) {
+        return <Text>Camera is ON</Text>
+    } else {
+      return <Text>QR tab:: OFF</Text>
+    }
   }
 }
 
@@ -103,17 +105,11 @@ class NeighbourTab extends React.Component {
     return (
       <AnimalNeighbourScene
         navigation={this.props.screenProps.parentNavigation}
+        setAnimalTab={this.props.screenProps.setAnimalTab}
         animal={animalName} />
     );
   }
 }
-
-
-const MainScreenNavigator = TabNavigator({
-  Text: { screen: TextTab },
-  QR: { screen: QRTab },
-  Neighbour: { screen: NeighbourTab }
-});
 
 export default class AnimalMainScreen extends React.Component {
   constructor(props) {
@@ -136,6 +132,14 @@ export default class AnimalMainScreen extends React.Component {
         image = require('../images/tab-icons/child.png');
       }
 
+      const MainScreenNavigator = TabNavigator({
+        Text: { screen: TextTab },
+        QR: { screen: QRTab },
+        Neighbour: { screen: NeighbourTab }
+      }, {
+        initialRouteName: this.props.tabName
+      });
+
     const MainStack = StackNavigator({
       Main: { screen: MainScreenNavigator },
     }, {
@@ -157,9 +161,21 @@ export default class AnimalMainScreen extends React.Component {
     const p = {};
     p.animal = this.props.animal;
     p.readerLevel = this.props.readerLevel;
+    p.cameraReady = this.props.cameraReady;
+    p.setCameraReady = this.props.setCameraReady;
+    p.setReaderLevel = this.props.setReaderLevel;
+    p.setAnimalTab = this.props.setAnimalTab;
     p.parentNavigation = this.props.navigation;
     return (
-      <MainStack screenProps={p}/>
+      <MainStack
+        screenProps={p}
+        onNavigationStateChange={(prevState, currentState) => {
+          if ('QR' === prevState.routes[0].routes[prevState.routes[0].index].key) {
+            p.setCameraReady(true);
+          }
+          p.setAnimalTab(currentState.routes[0].routes[currentState.routes[0].index].key);
+        }}
+      />
     );
   }
 }

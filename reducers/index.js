@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
 const initialAuthState = {
+  cameraReady: true,
   readerLevel: 'adult',
+  tabName: 'Text',
   notifications: {},
 };
 
@@ -11,6 +13,16 @@ function configuration(state = initialAuthState, action) {
       return {
         ...state,
         readerLevel: action.level
+      }
+    case 'SET_CAMERA_READY':
+      return {
+        ...state,
+        cameraReady: action.ready
+      }
+    case 'SET_ANIMAL_TAB':
+      return {
+        ...state,
+        tabName: action.tabName
       }
     case 'ADD_NOTIFICATION':
       {

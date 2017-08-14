@@ -11,6 +11,7 @@ import animals from '../animals';
 import {sceneTitles} from '../scenes';
 
 var navigation;
+var setAnimalTab;
 
 class Cell extends React.Component {
   constructor(props) {
@@ -38,7 +39,10 @@ class Cell extends React.Component {
 
     return (
       <TouchableHighlight
-        onPress={() => { navigation.navigate(sceneTitles['animal-detail'].name, {animal: this.props.item.animal})}}
+        onPress={() => {
+          setAnimalTab('Text');
+          navigation.navigate(sceneTitles['animal-detail'].name, {animal: this.props.item.animal});
+        }}
         underlayColor='#bbbbbb'
       >
         <View style={[styles.eventItem, {flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: this.props.backgroundColor}]}>
@@ -75,6 +79,7 @@ export default class AnimalNeighbourScene extends React.Component {
 
     let counter = 0;
     navigation = this.props.navigation;
+    setAnimalTab = this.props.setAnimalTab;
 
     return (
         <ListView

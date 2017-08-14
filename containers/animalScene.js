@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import AnimalScene from '../scenes/animalScene';
-import {setReaderLevel} from '../actions'
+import {setReaderLevel, setCameraReady, setAnimalTab} from '../actions'
 
 import animals from '../animals';
 
@@ -16,6 +16,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     setReaderLevel,
+    setCameraReady,
+    setAnimalTab,
   }, dispatch);
 }
 
@@ -34,6 +36,10 @@ class AnimalContainer extends React.Component {
           animal={this.props.navigation.state.params.animal}
           readerLevel={this.props.configuration.readerLevel}
           setReaderLevel={this.props.setReaderLevel}
+          cameraReady={this.props.configuration.cameraReady}
+          setCameraReady={this.props.setCameraReady}
+          tabName={this.props.configuration.tabName}
+          setAnimalTab={this.props.setAnimalTab}
           navigation={this.props.navigation}
         />
       );

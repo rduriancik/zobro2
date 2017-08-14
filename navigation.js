@@ -9,7 +9,7 @@ import ServicesScene from './scenes/servicesScene';
 import GameScene from './scenes/gameScene';
 import EventsScene from './containers/eventsScene';
 import MenuScene from './scenes/menuScene';
-import AnimalListScene from './scenes/animalListScene';
+import AnimalListScene from './containers/animalListScene';
 import AnimalScene from './containers/animalScene';
 import QRScene from './containers/qrScene';
 import {scenes} from './scenes.js';

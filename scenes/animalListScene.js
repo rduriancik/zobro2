@@ -14,6 +14,8 @@ import {WIDTH} from '../styles/styles';
 import AlphabetListView from 'react-native-alphabetlistview';
 import animals from '../animals';
 
+var setAnimalTab;
+
 class Cell extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +24,10 @@ class Cell extends React.Component {
   render() {
     return (
       <TouchableHighlight
-        onPress={() => this.props.navigation.navigate(sceneTitles['animal-detail'].name, {animal: this.props.item.animal})}
+        onPress={() => {
+          setAnimalTab('Text');
+          this.props.navigation.navigate(sceneTitles['animal-detail'].name, {animal: this.props.item.animal});
+        }}
         underlayColor='#bbbbbb'
       >
       <View style={{height:30, paddingLeft: 5}}>
@@ -78,6 +83,7 @@ export default class AnimalListScene extends React.Component {
     super(props);
 
     this.state = this.prepareSortedStructure(animals);
+    setAnimalTab = this.props.setAnimalTab;
   }
 
   prepareSortedStructure(animals) {

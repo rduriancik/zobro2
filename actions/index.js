@@ -5,6 +5,20 @@ export function setReaderLevel(level) {
   }
 }
 
+export function setCameraReady(ready) {
+  return {
+    type: 'SET_CAMERA_READY',
+    ready
+  }
+}
+
+export function setAnimalTab(tabName) {
+  return {
+    type: 'SET_ANIMAL_TAB',
+    tabName
+  }
+}
+
 export function addNotification(event, delta) {
   return {
     type: 'ADD_NOTIFICATION',
