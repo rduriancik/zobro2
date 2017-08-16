@@ -1,5 +1,10 @@
 import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
+import Camera from 'react-native-camera';
+import { NavigationActions } from 'react-navigation'
+import { scenes, sceneTitles } from '../scenes';
+
+import Dimensions from 'Dimensions';
 import styles from '../styles/styles';
 import AnimalNeighbourScene from '../components/animalNeighbourScene';
 
@@ -10,6 +15,7 @@ import {
   Text,
   Alert,
   TouchableHighlight,
+  StyleSheet,
 } from 'react-native';
 
 import animals from '../animals';
@@ -69,11 +75,47 @@ class QRTab extends React.Component {
     )
   }
 
+  onBarCodeRead(barcode) {
+    this.props.screenProps.setCameraReady(false);
+
+    // We want to prevent state when camera is reloaded with back-button
+    // This scenarios points back-button to main menu what is fine (and work-around)
+    // Look at https://stackoverflow.com/questions/44034430/react-navigation-and-component-lifecycle
+    const resetAction = NavigationActions.reset({
+      index: 1,
+      actions: [
+        NavigationActions.navigate({
+          routeName: sceneTitles[scenes.MAIN_MENU].name,
+        }),
+        NavigationActions.navigate({
+          routeName: sceneTitles[scenes.ANIMAL_DETAIL].name,
+          params: {animal: barcode.data},
+        })
+      ]
+    });
+
+    this.props.screenProps.setAnimalTab('Text');
+    this.props.screenProps.parentNavigation.dispatch(resetAction);
+  }
+
   render() {
+    const PADDING = 20;
+    const WIDTH = Dimensions.get('window').width - PADDING;
+
     if (this.props.screenProps.cameraReady) {
-        return <Text>Camera is ON</Text>
+      return (
+        <View style={localStyles.container}>
+          <Camera
+            style={localStyles.preview}
+            onBarCodeRead={(barcode) => this.onBarCodeRead(barcode)}
+            aspect={Camera.constants.Aspect.fill}>
+          </Camera>
+        </View>
+      );
     } else {
-      return <Text>QR tab:: OFF</Text>
+      return (
+        <Text>Loading</Text>
+      );
     }
   }
 }
@@ -170,12 +212,22 @@ export default class AnimalMainScreen extends React.Component {
       <MainStack
         screenProps={p}
         onNavigationStateChange={(prevState, currentState) => {
-          if ('QR' === prevState.routes[0].routes[prevState.routes[0].index].key) {
-            p.setCameraReady(true);
-          }
+          p.setCameraReady(true);
           p.setAnimalTab(currentState.routes[0].routes[currentState.routes[0].index].key);
         }}
       />
     );
   }
 }
+
+const localStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+});

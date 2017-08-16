@@ -32,7 +32,7 @@ class QRContainer extends React.Component {
     return (
         <QrScene
           cameraReady={this.props.configuration.cameraReady}
-          cameraChange={this.props.setCameraReady}
+          setCameraReady={this.props.setCameraReady}
           navigation={this.props.navigation}
         />
       );
