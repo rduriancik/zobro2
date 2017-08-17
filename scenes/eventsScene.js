@@ -46,10 +46,6 @@ export default class EventsScene extends React.Component {
     });
   }
 
-  static navigationOptions = {
-    title: 'Krmení zvířat',
-  }
-
   isTimeSelected(time) {
     if (time === this.state.selectedTime) {
       return {backgroundColor: '#3cac54'};
