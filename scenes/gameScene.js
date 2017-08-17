@@ -10,6 +10,7 @@ import {
 import Text from '../components/animalText'
 import Dimensions from 'Dimensions';
 import Hyperlink from 'react-native-hyperlink'
+import {HEADER_STYLE} from '../styles/styles';
 
 export default class AboutScene extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ export default class AboutScene extends React.Component {
 
   static navigationOptions = {
     title: 'Šifrovací hra',
+    ...HEADER_STYLE,
   }
 
   render() {

@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import AnimalListScene from '../scenes/animalListScene';
-import {setAnimalTab} from '../actions'
+import {setAnimalTab} from '../actions';
+import {HEADER_STYLE} from '../styles/styles';
 
 const mapStateToProps = (state) => {
   return {
@@ -25,6 +26,7 @@ class AnimalListContainer extends React.Component {
   static navigationOptions = ({navigation}) => {
       return ({
         title: `Zvířata`,
+        ...HEADER_STYLE,
       });
   }
 

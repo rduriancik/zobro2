@@ -14,6 +14,12 @@ const backgroundColors = [
 ];
 
 export const TEXT_COLOR = 'white';
+export const HEADER_STYLE = {
+  headerTintColor: '#DEDEDE',
+  headerStyle: {
+    backgroundColor: '#3C3C3B',
+  }
+};
 
 const styles = {
   text: {

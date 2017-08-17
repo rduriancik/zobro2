@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/styles';
-import {WIDTH} from '../styles/styles';
+import {WIDTH, HEADER_STYLE} from '../styles/styles';
 
 import {
   View,
@@ -18,6 +18,7 @@ export default class AboutScene extends React.Component {
 
   static navigationOptions = {
     title: 'Služby',
+    ...HEADER_STYLE,
   }
 
   render() {

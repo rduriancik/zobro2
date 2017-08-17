@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/styles';
-import {WIDTH} from '../styles/styles';
+import {WIDTH, HEADER_STYLE} from '../styles/styles';
 
 import {
   View,
@@ -20,6 +20,7 @@ export default class VisitorsScene extends React.Component {
 
   static navigationOptions = {
     title: 'Pro návštěvníky',
+    ...HEADER_STYLE,
   }
 
   _openURL(url) {

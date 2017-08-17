@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/styles';
-import {WIDTH} from '../styles/styles';
+import {WIDTH, HEADER_STYLE} from '../styles/styles';
 
 import {
   View,
@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import Text from '../components/animalText'
 import InPageImages from '../components/inPageImages'
-import Dimensions from 'Dimensions';
 
 export default class AboutScene extends React.Component {
   constructor(props) {
@@ -18,6 +17,7 @@ export default class AboutScene extends React.Component {
 
   static navigationOptions = {
     title: 'O aplikaci',
+    ...HEADER_STYLE,
   }
 
   render() {

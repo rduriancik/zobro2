@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import QrScene from '../scenes/qrScene';
-import {setCameraReady} from '../actions'
+import {setCameraReady} from '../actions';
+import {HEADER_STYLE} from '../styles/styles';
 
 const mapStateToProps = (state) => {
   return {
@@ -25,6 +26,7 @@ class QRContainer extends React.Component {
   static navigationOptions = ({navigation}) => {
       return ({
         title: `Načíst QR kód`,
+        ...HEADER_STYLE,
       });
   };
 

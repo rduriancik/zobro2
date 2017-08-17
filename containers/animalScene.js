@@ -6,6 +6,7 @@ import AnimalScene from '../scenes/animalScene';
 import {setReaderLevel, setCameraReady, setAnimalTab} from '../actions'
 
 import animals from '../animals';
+import {HEADER_STYLE} from '../styles/styles';
 
 const mapStateToProps = (state) => {
   return {

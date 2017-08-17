@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import EventsScene from '../scenes/eventsScene';
-import {addNotification, removeNotification} from '../actions'
+import {addNotification, removeNotification} from '../actions';
+import {HEADER_STYLE} from '../styles/styles';
 
 const mapStateToProps = (state) => {
   return {
@@ -26,6 +27,7 @@ class EventsContainer extends React.Component {
   static navigationOptions = ({navigation}) => {
     return ({
       title: 'Krmení zvířat',
+      ...HEADER_STYLE,
     })
   }
 

@@ -3,6 +3,7 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import Camera from 'react-native-camera';
 import { NavigationActions } from 'react-navigation'
 import { scenes, sceneTitles } from '../scenes';
+import {HEADER_STYLE} from '../styles/styles';
 
 import Dimensions from 'Dimensions';
 import styles from '../styles/styles';
@@ -187,6 +188,7 @@ export default class AnimalMainScreen extends React.Component {
     }, {
       navigationOptions: {
         title: animalName,
+        ...HEADER_STYLE,
         headerLeft: <TouchableHighlight onPress={ () => {
           return this.props.navigation.goBack();
         }}><Text style={{color: 'red'}}>BACK</Text></TouchableHighlight>,
