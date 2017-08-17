@@ -4,6 +4,7 @@ import Camera from 'react-native-camera';
 import { NavigationActions } from 'react-navigation'
 import { scenes, sceneTitles } from '../scenes';
 import {HEADER_STYLE} from '../styles/styles';
+import HeaderBackButton from 'react-navigation/src/views/Header/HeaderBackButton';
 
 import Dimensions from 'Dimensions';
 import styles from '../styles/styles';
@@ -189,9 +190,9 @@ export default class AnimalMainScreen extends React.Component {
       navigationOptions: {
         title: animalName,
         ...HEADER_STYLE,
-        headerLeft: <TouchableHighlight onPress={ () => {
+        headerLeft: <HeaderBackButton tintColor='#DEDEDE' onPress={ () => {
           return this.props.navigation.goBack();
-        }}><Text style={{color: 'red'}}>BACK</Text></TouchableHighlight>,
+        }} />,
         headerRight: <TouchableHighlight onPress={ () => {
           if (this.props.readerLevel === 'adult') {
               this.props.setReaderLevel('child');
