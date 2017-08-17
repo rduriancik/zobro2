@@ -24,7 +24,7 @@ class QRContainer extends React.Component {
 
   static navigationOptions = ({navigation}) => {
       return ({
-        title: `XYZ QR kód`,
+        title: `Načíst QR kód`,
       });
   };
 

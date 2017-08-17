@@ -21,10 +21,6 @@ export default class AboutScene extends React.Component {
     }
   }
 
-  static navigationOptions = {
-    title: 'QR',
-  }
-
   onBarCodeRead(barcode) {
     this.setState({showCamera: false});
 

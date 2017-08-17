@@ -22,6 +22,12 @@ class AnimalListContainer extends React.Component {
     super(props);
   }
 
+  static navigationOptions = ({navigation}) => {
+      return ({
+        title: `Zvířata`,
+      });
+  }
+
   render() {
     return (
         <AnimalListScene
