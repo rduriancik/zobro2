@@ -23,11 +23,11 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Vikuňa (latinou políbení ji mohou znát také pod názvem <Text style={styles.italic}>Vicugna vicugna</Text>) není jen tak ledajaká lama. Nemůže se sice pyšnit závratným vzrůstem, měří maximálně 120&nbsp;centimetrů v&nbsp;kohoutku, což z&nbsp;ní dělá nejmenší z&nbsp;velbloudovitých, její velikost však spočívá v&nbsp;něčem jiném. Díky své pozoruhodné vlně si může žít jako v&nbsp;bavlnce. Ta je totiž velmi kvalitní, a tudíž i&nbsp;cenná. V&nbsp;dávných dobách si ji mohli dovolit jen ti nejvýše postavení. Je jemnější než kašmír, ale vlákna z&nbsp;ní upředená jsou překvapivě pevná. Navíc může dorůstat až třiceti centimetrů.
+          Vikuňa (odborně též <Text style={styles.italic}>Vicugna vicugna</Text>) není jen tak ledajaká lama. Nemůže se sice pyšnit závratným vzrůstem, měří maximálně 120&nbsp;centimetrů v&nbsp;kohoutku, což z&nbsp;ní dělá nejmenší z&nbsp;velbloudovitých, její velikost však spočívá v&nbsp;něčem jiném. Díky své pozoruhodné vlně si může žít jako v&nbsp;(ba)vlnce. Ta je totiž nejkvalitnější, a tudíž velmi cenná. V&nbsp;dávných dobách si ji mohli dovolit jen ti nejvýše postavení. Je jemnější než kašmír, ale vlákna z&nbsp;ní upředená jsou překvapivě pevná. Navíc může dorůstat až třiceti centimetrů.
         </AnimalText>
       <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Vikuním koluje v&nbsp;žilách výjimečně okysličená a na červené krvinky bohatá krev. Díky tomu si mohou ve své domovině, jihoamerických Andách, žít na vysoké úrovni, a to až téměř v&nbsp;pěti tisících metrech nad mořem. V&nbsp;takových výšinách ovšem tráví především noci, přes den tráví trávy, byliny a sukulenty na pastvinách a v&nbsp;okolí močálů.
+          Vikuním koluje v&nbsp;žilách výjimečně okysličená a na červené krvinky bohatá krev. Díky tomu si mohou ve své domovině, jihoamerických Andách, žít na vysoké úrovni, a to až téměř v&nbsp;pěti tisících metrech nad mořem. V&nbsp;takových výšinách ovšem tráví především noci, přes den tráví trávy či jiné byliny a sukulenty na pastvinách a v&nbsp;okolí močálů.
         </AnimalText>
         <AnimalText>
           Některé vikuně žijí samotářsky, jiné v&nbsp;rodinných skupinách, mladí samci si pak občas vytvářejí vlastní společné skupiny. Rodinné skupiny má vždy pod palcem (nebo spíš pod kopytem) jeden dominantní samec, který si brání své stádo i&nbsp;postavení. Žádné jiné dospělé samce proto do svého stáda vůbec nepustí.

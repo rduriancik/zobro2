@@ -23,7 +23,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Největší příslušník čeledi jelenovitých je los evropský (lat. <Text style={styles.italic}>Alces alces</Text>). Běžně dorůstá délky dvou až tří metrů. Samice váží okolo tří set kilogramů, samec může být až dvakrát těžší a poznáte ho podle parohů. Parohy většinou tvarem připomínají lopaty, ale mohou vypadat i&nbsp;jako parůžky. Pořádné parohy mohou vážit až dvacet kilogramů, avšak každý rok je samec shazuje a poté čeká, až mu narostou nové. Losi se dožívají osmi až patnácti let.
+          Jedním z&nbsp;největších příslušníků čeledi jelenovitých je los evropský (lat. <Text style={styles.italic}>Alces alces</Text>). Běžně dorůstá délky dvou až tří metrů. Samice váží okolo tří set kilogramů, samec může být až dvakrát těžší a poznáte ho podle parohů. Parohy většinou tvarem připomínají lopaty, ale mohou vypadat i&nbsp;jako parůžky. Pořádné parohy mohou vážit až dvacet kilogramů, avšak každý rok je samec shazuje a poté čeká, až mu narostou nové. Losi se dožívají osmi až patnácti let.
         </AnimalText>
         <AnimalText>
           Jak nejlépe losa popsat? Stavbou těla je podobný koni. Na krku, který je kratší než u&nbsp;koní, mu roste hříva. Rozhodně však není tak dlouhá a působivá.
@@ -33,10 +33,10 @@ var AnimalDetail = React.createClass({
           Tlama se u&nbsp;losa a koně podstatně liší. Los má převislý horní pysk. Díky tomu se nám může zdát, že se spíš podobá oslovi. Charakteristickým rysem je pro něj špatný zrak, ale výborný sluch a čich. Kvůli výbornému sluchu je velmi citlivý na hluk. Z&nbsp;toho důvodu se zdržuje jen v&nbsp;místech, která nejsou silně poznamenána lidskou civilizací. Takových míst postupně ubývá, což se na populaci losů odráží.
         </AnimalText>
         <AnimalText>
-          Srst losů je hustší než u&nbsp;ostatních jelenovitých. Je to proto, že losi jsou zvyklí na velmi chladná klimata. Čím chladnější klima, tím hustší srst mu naroste. Největší výskyt těchto zvířat je v&nbsp;lesích a v&nbsp;bažinách na severu Evropy, Asie a Ameriky. Kdysi žili hojně i&nbsp;u&nbsp;nás, nyní se však řadí na seznam silně ohrožených zvířat.
+          Srst losů je hustší než u&nbsp;ostatních jelenovitých. Je to proto, že losi jsou zvyklí na velmi chladné klima. Čím chladnější klima, tím hustší srst mu naroste. Největší výskyt těchto zvířat je v&nbsp;lesích a v&nbsp;bažinách na severu Evropy, Asie a Ameriky. Kdysi žili hojně i&nbsp;u&nbsp;nás, nyní se však řadí na seznam silně ohrožených zvířat.
         </AnimalText>
         <AnimalText>
-          Všimli jste si jejich kopyt? Nejsou obyčejná... Kopyta jsou širší, než jaká známe u&nbsp;koně. Ale proč? Jak již bylo zmíněno, losi žijí i&nbsp;v&nbsp;bažinách. V&nbsp;takových místech potřebují rozložit svou obrovskou hmotnost, aby se nepropadali do bahna. Dokážou běžet rychlostí až 50&nbsp;km/h.
+          Všimli jste si jejich kopyt? Nejsou obyčejná... Jsou širší, než jaká známe třeba u&nbsp;jelena. Ale proč? Jak již bylo zmíněno, losi žijí i&nbsp;v&nbsp;bažinách. V&nbsp;takových místech potřebují rozložit svou obrovskou hmotnost, aby se nepropadali do bahna. Dokážou běžet rychlostí až 50&nbsp;km/h.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

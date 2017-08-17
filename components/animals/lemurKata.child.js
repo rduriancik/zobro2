@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Já tak rád trsám, trsám… Všem dětem z&nbsp;celýho světa – váš král Jelimán to říká na rovinu: Miluju všechny děti, co se pořádně hejbaj! A když už se někdo hejbe, tak ať je sličný a sladký jako já!
         </AnimalText>
         <AnimalText>
-          Pojďme si během trsání povědět něco o&nbsp;nás, lemurech kata. Tady v&nbsp;brněnské zoo je nás dohromady šest a všichni jsme kluci. Určitě už jste správně poznali, že mé jméno je známé z&nbsp;filmu Madagaskar. Ostatní mají taky jména, která jsou s&nbsp;filmem spojená – Morris (pravá ruka krále Jelimána), Alex (lev), Melman (žirafa), Marty (zebra). Jedinou výjimkou je Joffrey, který nese jméno po Joffreym de Peyracovi z&nbsp;filmu Angelika, a to kvůli jizvě na tváři. Jen se zeptejte maminky nebo babičky, jaký to byl šarmantní muž.
+          Pojďme si během trsání povědět něco o&nbsp;nás, lemurech kata. Tady v&nbsp;brněnské zoo je kromě mě dalších pět lemurů kata a všichni jsme kluci. Určitě už jste správně poznali, že mé jméno je známé z&nbsp;filmu Madagaskar. Ostatní mají taky jména, která jsou s&nbsp;filmem spojená – Morris (pravá ruka krále Jelimána), Alex (lev), Melman (žirafa), Marty (zebra). Jedinou výjimkou je Joffrey, který nese jméno po Joffreym de Peyracovi z&nbsp;filmu Angelika, a to kvůli jizvě na tváři. Jen se zeptejte maminky nebo babičky, jaký to byl šarmantní muž.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
