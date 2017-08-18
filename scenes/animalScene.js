@@ -33,8 +33,10 @@ class TextTab extends React.Component {
       title: 'Text',
     tabBarIcon: ({tintColor}) => (
       <Image
-          source={require('../images/tab-icons/t.png')}
-          style={[styles.tabIcons, {backgroundColor: tintColor}]}
+          source={require('../images/tab-icons/icon-text.png')}
+          style={[styles.tabIcons, {
+            backgroundColor: tintColor
+          }]}
       />
     )
   })
@@ -72,7 +74,7 @@ class QRTab extends React.Component {
     title: 'QR tab',
     tabBarIcon: ({tintColor}) => (
       <Image
-          source={require('../images/tab-icons/qr.png')}
+          source={require('../images/tab-icons/icon-qr.png')}
           style={[styles.tabIcons, {backgroundColor: tintColor}]}
       />
     )
@@ -132,7 +134,7 @@ class NeighbourTab extends React.Component {
     title: 'Sousedi',
     tabBarIcon: ({tintColor}) => (
       <Image
-          source={require('../images/tab-icons/neighb.png')}
+          source={require('../images/tab-icons/icon-neigh.png')}
           style={[styles.tabIcons, {backgroundColor: tintColor}]}
       />
     )
@@ -185,7 +187,10 @@ export default class AnimalMainScreen extends React.Component {
         QR: { screen: QRTab },
         Neighbour: { screen: NeighbourTab }
       }, {
-        initialRouteName: this.props.tabName
+        initialRouteName: this.props.tabName,
+        tabBarOptions: {
+          activeTintColor: 'black',
+        }
       });
 
     const MainStack = StackNavigator({
