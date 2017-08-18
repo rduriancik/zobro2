@@ -18,6 +18,7 @@ import {
   Alert,
   TouchableHighlight,
   StyleSheet,
+  Switch,
 } from 'react-native';
 
 import animals from '../animals';
@@ -162,7 +163,8 @@ export default class AnimalMainScreen extends React.Component {
 
   render() {
     let animalName;
-    let image;
+    let adultImage;
+    let childImage;
 
     if ((this.props.animal in animals)) {
       animalName = animals[this.props.animal].name;
@@ -171,9 +173,11 @@ export default class AnimalMainScreen extends React.Component {
     }
 
       if ( this.props.readerLevel === 'adult') {
-        image = require('../images/tab-icons/adult.png');
+        adultImage = require('../images/tab-icons/adult-active.png');
+        childImage = require('../images/tab-icons/child-inactive.png');
       } else {
-        image = require('../images/tab-icons/child.png');
+        adultImage = require('../images/tab-icons/adult-inactive.png');
+        childImage = require('../images/tab-icons/child-active.png');
       }
 
       const MainScreenNavigator = TabNavigator({
@@ -193,13 +197,25 @@ export default class AnimalMainScreen extends React.Component {
         headerLeft: <HeaderBackButton tintColor='#DEDEDE' onPress={ () => {
           return this.props.navigation.goBack();
         }} />,
-        headerRight: <TouchableHighlight onPress={ () => {
-          if (this.props.readerLevel === 'adult') {
-              this.props.setReaderLevel('child');
-          } else {
-              this.props.setReaderLevel('adult');
-          }
-        }}><Image source={image} resizeMode='cover' style={{backgroundColor:'black'}}/></TouchableHighlight>
+        headerRight: (
+          <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
+            <Image style={{marginRight: -5}}
+            source={childImage} />
+            <Switch
+              onTintColor = '#3CAC54'
+              style={{transform: [{scaleX: 0.7}, {scaleY: 0.7}]}}
+              value = { this.props.readerLevel === 'adult' }
+              onValueChange = { (value) => {
+                if (value) {
+                  this.props.setReaderLevel('adult');
+                } else {
+                  this.props.setReaderLevel('child');
+                }
+              }}
+            />
+            <Image style={{marginLeft: -5, marginRight: 5}} source={adultImage} />
+          </View>
+        ),
       }
     });
 
