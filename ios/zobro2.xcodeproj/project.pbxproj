@@ -1092,6 +1092,7 @@
 					"-lc++",
 					"-v",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.zoobrno;
 				PRODUCT_NAME = zobro2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1117,6 +1118,7 @@
 					"-lc++",
 					"-v",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.zoobrno;
 				PRODUCT_NAME = zobro2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
