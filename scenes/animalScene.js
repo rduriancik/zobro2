@@ -167,11 +167,23 @@ export default class AnimalMainScreen extends React.Component {
     let animalName;
     let adultImage;
     let childImage;
+    let animalURI;
 
+    animalURI = this.props.animal;
     if ((this.props.animal in animals)) {
       animalName = animals[this.props.animal].name;
     } else {
-      animalName = 'Chybný QR kód';
+      if (this.props.animal.startsWith("zoo://brno/")) {
+        const animalPart = this.props.animal.substring("zoo://brno/".length);
+        if (animalPart in animals) {
+          animalName = animals[animalPart].name;
+          animalURI = animalPart;
+        } else {
+          animalName = 'Chybný QR kód';
+        }
+      } else {
+        animalName = 'Chybný QR kód';
+      }
     }
 
       if ( this.props.readerLevel === 'adult') {
@@ -225,7 +237,7 @@ export default class AnimalMainScreen extends React.Component {
     });
 
     const p = {};
-    p.animal = this.props.animal;
+    p.animal = animalURI;
     p.readerLevel = this.props.readerLevel;
     p.cameraReady = this.props.cameraReady;
     p.setCameraReady = this.props.setCameraReady;
