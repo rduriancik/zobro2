@@ -139,8 +139,8 @@ export default class EventsScene extends React.Component {
         message: (zooEvent.name + '\n' + zooEvent.place + '\n' + zooEvent.time),
         userInfo: {id: this._createNotificationID(zooEvent, deltaTime)},
         // @fix: this is for testing purposes; run alarm in 10 seconds
-        date: new Date(Date.now() + 1000 * 10),
-//        date: new Date(fireTime - ((deltaTime + 0) * 60 * 1000)),
+//        date: new Date(Date.now() + 1000 * 10),
+        date: new Date(fireTime - ((deltaTime + 0) * 60 * 1000)),
       };
       PushNotification.localNotificationSchedule(z);
 
