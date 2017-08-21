@@ -287,6 +287,19 @@ export default animalDb = {
       {animal: 'husickaDvoubarva', direction: 'left'},
     ]
   },
+  
+  'levKonzsky' : {
+    name: 'Lev konžský',
+    contentAdult: require('./components/animals/levKonzsky.adult'),
+    contentChild: require('./components/animals/levKonzsky.child'),
+    animal: 'levKonzsky',
+    neighbours: [
+      {animal: 'levKonzsky', direction: 'front'},
+//      {animal: 'agapornisFischeruv', direction: 'left'},
+//      {animal: 'kunPrevalskeho', direction: 'back'},
+//      {animal: 'jakDomaci', direction: 'right'},
+    ]
+  },
 
   'levhartCejlonsky' : {
     name: 'Levhart cejlonský',

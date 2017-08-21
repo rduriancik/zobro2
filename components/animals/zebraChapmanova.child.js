@@ -27,7 +27,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Spousta z&nbsp;vás, kamarádi, už o&nbsp;nás někdy řekla, že jsme pruhovaní koně, ale to my nejsme. Sice jsou to naši příbuzní, společně s&nbsp;nimi a osly patříme ke stejnému rodu, ale na nás se nejezdí, navíc máme kratší nohy a větší hlavu. Schválně si nás pořádně prohlédněte. Také máme oči na stranách hlavy, a vidíme tak na všechny strany, dokonce i&nbsp;v&nbsp;noci. Uši jsou zajímavé ještě víc, otáčíme je za zvukem, takže se nemusíme ani pohnout. Prostě lenivě zebrujeme.
+          Spousta z&nbsp;vás už o&nbsp;nás někdy řekla, že jsme pruhovaní koně, ale to my nejsme. Sice jsou to naši příbuzní, společně s&nbsp;nimi a osly patříme ke stejnému rodu, ale na nás se nejezdí, navíc máme kratší nohy a větší hlavu. Schválně si nás pořádně prohlédněte. Také máme oči na stranách hlavy, a vidíme tak na všechny strany, dokonce i&nbsp;v&nbsp;noci. Uši jsou zajímavé ještě víc, otáčíme je za zvukem, takže se nemusíme ani pohnout. Prostě lenivě zebrujeme.
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Ahoj mláďátko, já jsem pekari bělobradý. Co jsi ty zač? Aha, vidím, že kráčíš po zadních, takže jsi buď klokan, pták, nebo člověk. Nevidím ocásek, klokan tedy nebudeš, na ptáka máš moc málo peří. Zřejmě jsi tedy člověčí mládě.
         </AnimalText>
         <AnimalText>
-          Já se jmenuji Cyril a z&nbsp;pánů jsem tady nejstarší. Narodil jsem se v&nbsp;roce 2008 v&nbsp;hlavním městě Německa, tedy v&nbsp;Berlíně. Do Brna jsem přijel v&nbsp;doprovodu čtyř samiček. V&nbsp;létě roku 2013 se mi tady narodil syn.
+          Já se jmenuji Cyril a z&nbsp;pánů jsem tady nejstarší. Narodil jsem se v&nbsp;roce 2008 v&nbsp;hlavním městě Německa, tedy v&nbsp;Berlíně. Do Brna jsem přijel v&nbsp;doprovodu čtyř samiček. Od té doby se už naše rodina pěkně rozrostla.
         </AnimalText>
        <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

@@ -23,7 +23,7 @@ var AnimalDetail = React.createClass({
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-        Skunk je šelma, která se v&nbsp;přírodě dožívá 2–3&nbsp;let a v&nbsp;lidské péči 6–10&nbsp;let. U&nbsp;nás chováme tři skunky – dvě samičky a jednoho samečka. Samec je zpravidla větší než samice, ale samice má zase delší ocas.
+        Skunk je šelma, která se v&nbsp;přírodě dožívá 2–3&nbsp;let a v&nbsp;lidské péči 6–10&nbsp;let. U&nbsp;nás jich chováme hned několik. Samec je zpravidla větší než samice, ale samice má zase delší ocas.
         </AnimalText>
         <AnimalText>
         Dříve, když ještě byly v&nbsp;módě kožešiny, byl kožich skunka velmi cenný. V&nbsp;současné době už tento trend naštěstí pominul. A&nbsp;jak takový kožíšek skunka pruhovaného vypadá? Jak už název napovídá, na husté černé srsti září dva bílé pruhy. Ty vedou od hřbetu po ocas. Když je skunkův ocas svěšený na zem, ani byste si nevšimli, že nějaký má. A&nbsp;přitom je jeho ocas stejně dlouhý jako samotné tělo. Když je skunk klidný, vypadá jako veliká chlupatá kulička. Ale běda, když ho naštvete nebo vylekáte! Skunk zvedne svůj načepýřený ocas nahoru tak, aby vypadal dvojnásobně větší. Nohy má skunk krátké, a kvůli tomu se pohybuje velmi pomalu. Na nohou mu rostou velké a ostré drápy. Ty používá při vyhrabávání nory, ve které spí. Nicméně pokud najde noru, kterou si vyhrabalo jiné zvíře, nebo přírodou vytvořenou díru, rád si do ní vleze. Čumák i&nbsp;uši skunka jsou tmavé a holé jako u&nbsp;myši či potkana. Čich skunka je velice dobrý – používá ho, aby si našel potravu.

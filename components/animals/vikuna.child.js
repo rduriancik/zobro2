@@ -26,7 +26,10 @@ var AnimalDetail = React.createClass({
           Zdravím vás, milí malí přátelé,
         </AnimalText>
         <AnimalText>
-          jmenuji se Björn. Že jste takové jméno ještě neslyšeli? Není divu, však jsem taky přicestoval z&nbsp;Německa. A moje kamarádka, která se narodila v&nbsp;Rusku, mi své jméno ještě ani neprozradila. Říkají, že jsem lama. Ale já nejsem jen tak obyčejná lama, jsem vikuňa. Pravda, nejsem tak velký jako jiné druhy lam nebo naši příbuzní velbloudi, ale přesto jsem velký pán. Jak jinak bych mohl nosit tak drahé šaty? Moje vlna je totiž opravdu cenná. V&nbsp;dávných dobách se do ní směli oblékat jen ti nejurozenější z&nbsp;urozených. Je jemná, ale vlákna, která se z&nbsp;ní utkají, jsou velmi pevná. Může mít až třicet centimetrů a v&nbsp;zimě úžasně zahřeje.
+          jmenuji se Björn. Že jste takové jméno ještě neslyšeli? Není divu, však jsem taky přicestoval z&nbsp;Německa. A moje kamarádka, která se narodila v&nbsp;Rusku, mi své jméno ještě ani neprozradila. Abychom zachovali tradici, ani našemu mláděti nijak neříkáme.
+        </AnimalText>
+        <AnimalText>
+          Říkají, že jsem lama. Ale já nejsem jen tak obyčejná lama, jsem vikuňa. Pravda, nejsem tak velký jako jiné druhy lam nebo naši příbuzní velbloudi, ale přesto jsem velký pán. Jak jinak bych mohl nosit tak drahé šaty? Moje vlna je totiž opravdu cenná. V&nbsp;dávných dobách se do ní směli oblékat jen ti nejurozenější z&nbsp;urozených. Je jemná, ale vlákna, která se z&nbsp;ní utkají, jsou velmi pevná. Může mít až třicet centimetrů a v&nbsp;zimě úžasně zahřeje.
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>

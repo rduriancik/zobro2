@@ -37,7 +37,7 @@ var AnimalDetail = React.createClass({
           Dokonce i&nbsp;mláďata se brzy osamostatní a pak se vydávají svou cestou. Stát na vlastních nohou se naučí téměř okamžitě, nedlouho poté si osvojí i&nbsp;umění běhu. Když se trochu zdokonalí, mohou běhat až padesátikilometrovou rychlostí. Samci pak zůstávají s&nbsp;matkou po dobu čtyř až devíti měsíců, samičky ji obvykle opouštějí po osmi až deseti měsících.
         </AnimalText>
         <AnimalText>
-          U&nbsp;nás v&nbsp;zoo se můžete seznámit s&nbsp;Björnem, který v&nbsp;roce 2010 přicestoval ze zoo v&nbsp;Hannoveru, a se samicí z&nbsp;Moskvy, která se nám dosud nepředstavila. I&nbsp;ona se u&nbsp;nás zabydlela v&nbsp;roce 2010. Kromě příjezdu do Brna mají společný i&nbsp;rok narození. Björn se narodil v&nbsp;červenci 2008, tajemná dáma pak přibližně o&nbsp;dva měsíce později.
+          U&nbsp;nás v&nbsp;zoo se můžete seznámit s&nbsp;Björnem, který v&nbsp;roce 2010 přicestoval ze zoo v&nbsp;Hannoveru, a se samicí z&nbsp;Moskvy, která se nám dosud nepředstavila. I&nbsp;ona se u&nbsp;nás zabydlela v&nbsp;roce 2010. Kromě příjezdu do Brna mají společný i&nbsp;rok narození. Björn se narodil v&nbsp;červenci 2008, tajemná dáma pak přibližně o&nbsp;dva měsíce později. A aby toho nebylo málo, ještě můžete zahlédnou jejich mládě, které se narodilo v&nbsp;červenci 2017.
         </AnimalText>
         <AnimalText>
           O&nbsp;vikuních je to vše, ale nebojte, ještě jsou tu alpaky.

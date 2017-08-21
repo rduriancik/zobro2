@@ -63,7 +63,7 @@ var AnimalDetail = React.createClass({
           Kdo že to jsem? Garfield? Nic takového! Říkají mi Manu, jsem míň oranžový a nejsem tlusťoch. To dělá jenom ten kožich, jasné?
         </AnimalText>
         <AnimalText>
-          Vybrala mi ho moje manulí kamarádka Rosa, protože ta se v&nbsp;módě vyzná nejlíp. Sice spolu nebydlíme, ale jednou za čas se setkáme a popovídáme si. Kdyby tu se mnou byla pořád, užírala by mi z&nbsp;misky a rozčileně bychom pak na sebe štěkali. Mňoukat totiž moc neumíme. A navíc má teď jiné starosti – pečuje o&nbsp;naše čtyři koťátka.
+          Vybrala mi ho moje manulí kamarádka Rosa, protože ta se v&nbsp;módě vyzná nejlíp. Sice spolu nebydlíme, ale jednou za čas se setkáme a popovídáme si. Kdyby tu se mnou byla pořád, užírala by mi z&nbsp;misky a rozčileně bychom pak na sebe štěkali. Mňoukat totiž moc neumíme.
         </AnimalText>
         <AnimalText>
           Stejně je ale Rosa neobyčejná kočka s&nbsp;krásnýma očima. Černé oční panenky má zrovna tak kulaté jako vy. Až se budete mazlit s&nbsp;nějakou kočkou, všimněte si, že její panenky jsou spíš takové podlouhlé.
