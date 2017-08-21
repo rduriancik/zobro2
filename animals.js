@@ -287,8 +287,8 @@ export default animalDb = {
       {animal: 'husickaDvoubarva', direction: 'left'},
     ]
   },
-  
-  'levKonzsky' : {
+
+/*  'levKonzsky' : {
     name: 'Lev konžský',
     contentAdult: require('./components/animals/levKonzsky.adult'),
     contentChild: require('./components/animals/levKonzsky.child'),
@@ -300,7 +300,7 @@ export default animalDb = {
 //      {animal: 'jakDomaci', direction: 'right'},
     ]
   },
-
+*/
   'levhartCejlonsky' : {
     name: 'Levhart cejlonský',
     contentAdult: require('./components/animals/levhartCejlonsky.adult'),
