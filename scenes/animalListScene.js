@@ -120,9 +120,30 @@ export default class AnimalListScene extends React.Component {
       state.fullData[firstLetter].push(animal);
     };
 
+    // Czech sorting
+    // @source: https://stackoverflow.com/a/17543552/2466089
+    const charMapL = " 0123456789aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž";
+    const charMapU = " 0123456789AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ";
+    var charsOrder = {};
+    for(var i in charMapL.split('')) {
+        charsOrder[charMapL[i]] = parseInt(i);
+        charsOrder[charMapU[i]] = parseInt(i);
+    }
+
+    function czechSort(s1, s2) {
+        let idx = 0;
+        while ( (idx < s1.length) && (idx < s2.length) && (charsOrder[s1[idx]] == charsOrder[s2[idx]])) {
+            idx ++;
+        }
+        if ((idx == s1.length) && (idx == s2.length)) return 0;
+        if (idx == s1.length) return 1;
+        if (idx == s2.length) return -1;
+        return charsOrder[s1[idx]] > charsOrder[s2[idx]] ? 1 : (charsOrder[s1[idx]] < charsOrder[s2[idx]] ? -1 : 0);
+    }
+
     for (let letter in state.fullData) {
       state.fullData[letter].sort(function(a, b) {
-        return a.name.localeCompare(b.name);
+        return mySort(a.name, b.name);
       })
     };
 
