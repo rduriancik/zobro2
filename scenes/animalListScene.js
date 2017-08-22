@@ -143,7 +143,7 @@ export default class AnimalListScene extends React.Component {
 
     for (let letter in state.fullData) {
       state.fullData[letter].sort(function(a, b) {
-        return mySort(a.name, b.name);
+        return czechSort(a.name, b.name);
       })
     };
 
