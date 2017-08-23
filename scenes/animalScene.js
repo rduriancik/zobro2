@@ -19,6 +19,7 @@ import {
   TouchableHighlight,
   StyleSheet,
   Switch,
+  Platform,
 } from 'react-native';
 
 import animals from '../animals';
@@ -71,7 +72,7 @@ class QRTab extends React.Component {
   }
 
   static navigationOptions = {
-    title: 'QR tab',
+    title: 'QR kód',
     tabBarIcon: ({tintColor}) => (
       <Image
           source={require('../images/tab-icons/icon-qr.png')}
@@ -194,15 +195,29 @@ export default class AnimalMainScreen extends React.Component {
         childImage = require('../images/tab-icons/child-active.png');
       }
 
+      let tabBarOptions;
+      if (Platform.OS === 'ios') {
+        tabBarOptions = {
+          activeTintColor: 'black',
+        }
+      } else {
+        tabBarOptions = {
+          style: {
+            backgroundColor: '#0b2611',
+          },
+          indicatorStyle: {
+            backgroundColor: '#3CAC54',
+          }
+        }
+      }
+
       const MainScreenNavigator = TabNavigator({
         Text: { screen: TextTab },
         QR: { screen: QRTab },
         Neighbour: { screen: NeighbourTab }
       }, {
         initialRouteName: this.props.tabName,
-        tabBarOptions: {
-          activeTintColor: 'black',
-        }
+        tabBarOptions,
       });
 
     const MainStack = StackNavigator({
