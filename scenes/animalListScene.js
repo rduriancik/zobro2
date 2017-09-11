@@ -163,8 +163,11 @@ export default class AnimalListScene extends React.Component {
     let data = {};
     for (let letter in this.state.fullData) {
       for (let idx in this.state.fullData[letter]) {
-        const animalName = this.state.fullData[letter][idx].name.toUpperCase();
-        if (animalName.includes(' ' + text) || animalName.startsWith(text)) {
+        // This is work-around because .startsWith() is not working on Android
+        // https://stackoverflow.com/questions/46157252/the-difference-between-androids-string-includes-and-string-startswith
+        const animalName = ' ' + this.state.fullData[letter][idx].name.toUpperCase();
+
+        if (animalName.includes(' ' + text)) {
           if (!(letter in data)) {
             data[letter] = [];
           }
