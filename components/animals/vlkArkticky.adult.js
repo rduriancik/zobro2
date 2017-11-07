@@ -34,7 +34,7 @@ var AnimalDetail = React.createClass({
           Expozici pro vlky arktické otevřela Zoo Brno v&nbsp;roce 2004. Výběh o&nbsp;velikosti 3&nbsp;500&nbsp;m<Text style={styles.superscript}>2</Text> byl označen za nejkrásnější nejen u&nbsp;nás, ale i&nbsp;v&nbsp;celé Evropě. Svědčí o&nbsp;tom například prestižní ocenění „Bílý slon“ za nejlepší expozici roku 2006. Její součástí je jezírko s&nbsp;vodopádem a prostor plný pahorků, dolin a klidných míst, kde mohou zvířata odpočívat. Rostou tady různé stromy a křoviny. Návštěvníkům je umožněno pozorovat vlky z&nbsp;více míst – pokud je nevidíte ze srubu s&nbsp;totemem, mohou se vyhřívat na takzvaném Vrcholku, což je nejvýše položený pahorek na druhé straně výběhu.
         </AnimalText>
         <AnimalText>
-          V&nbsp;současné době tvoří zdejší smečku „alfa“ samec Luděk, který k&nbsp;nám dorazil v&nbsp;lednu 2015 z&nbsp;Ebeltoftu v&nbsp;Dánsku, a dvě u&nbsp;nás narozené samice, Malá a Velká. V&nbsp;roce 2016 se oběma samicím narodilo celkem devět mláďat.
+          V&nbsp;současné době tvoří zdejší smečku Luděk, který k&nbsp;nám dorazil v&nbsp;lednu 2015 z&nbsp;Ebeltoftu v&nbsp;Dánsku, a u&nbsp;nás narozená samice Velká společně se čtyřmi loňskými a čtyřmi letošními mláďaty.
         </AnimalText>
       </AnimalTemplate>
     );

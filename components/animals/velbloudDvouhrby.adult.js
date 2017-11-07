@@ -37,7 +37,7 @@ var AnimalDetail = React.createClass({
           Naší známou předností je to, že vydržíme dlouhé týdny bez vody. A je to tak! Naše tělo je schopné překonat až 20%&nbsp;úbytek vody v&nbsp;těle. Zato když máme žízeň, jsme schopni vypít za 10&nbsp;minut až 110&nbsp;litrů vody. A ještě k&nbsp;tomu jsme jako jediní savci schopni pít i&nbsp;slanou vodu.
         </AnimalText>
         <AnimalText>
-          Ještě jsme se vám nepředstavili osobně! Rychle to tedy napravíme. V&nbsp;Brně nás je celkem pět. Samec Dred pochází z&nbsp;Polska a v&nbsp;Brně je od roku 2014. Pak jsme tu čtyři samice. Salika je brněnská rodačka a je z&nbsp;nás nejstarší, narodila se v&nbsp;roce 1992, Fatima se narodila v&nbsp;roce 2006 v&nbsp;Ostravě a k&nbsp;nám do Brna přesídlila v&nbsp;roce 2008. A pak tu máme mámu s&nbsp;dcerou – Majdu a Bellu. Majda pochází ze Slovenska a do Brna přicestovala jako ani ne roční mládě v&nbsp;roce 2004 a v&nbsp;roce 2014 se jí narodila Bella.
+          Ještě jsme se vám nepředstavili osobně! Rychle to tedy napravíme. V&nbsp;Brně nás je celkem osm. Hlavou našeho stáda je Dred, pochází z&nbsp;Polska a v&nbsp;Brně je od roku 2014. Salika je brněnská rodačka a je z&nbsp;nás nejstarší, narodila se v&nbsp;roce 1992, Fatima se narodila v&nbsp;roce 2006 v&nbsp;Ostravě a k&nbsp;nám do Brna přesídlila v&nbsp;roce 2008. A pak tu máme mámu Majdu, která pochází ze Slovenska a do Brna přicestovala jako ani ne roční mládě v&nbsp;roce 2004. V&nbsp;roce 2014 se jí narodila Bella. Nejštědřejší k&nbsp;nám byl ale rok 2017, to se tady narodila hned tři mláďata – Valerie (Majdě), Báhir (Belle) a Fariha (Fatimě).
         </AnimalText>
       </AnimalTemplate>
     );

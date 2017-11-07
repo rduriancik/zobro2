@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Ahoj děti!
         </AnimalText>
         <AnimalText>
-          Jak se dneska máte? Jmenuji se Dred a sem do Brna jsem přijel z&nbsp;Polska. Jsem velbloud dvouhrbý, stejně jako moje kamarádky Salika, Fatima, Majda a Bella, se kterými zde v&nbsp;zoo sdílím výběh.
+          Jak se dneska máte? Jmenuji se Dred a sem do Brna jsem přijel z&nbsp;Polska. Jsem velbloud dvouhrbý, stejně jako Salika, Fatima, Majda, Bella, Valerie, Báhir a Fariha, se kterými zde v&nbsp;zoo sdílím výběh.
         </AnimalText>
         <AnimalText>
           My velbloudi dvouhrbí pocházíme z&nbsp;Asie, kde se potulujeme po pouštích a stepích. Aby nám nebylo smutno, nikdy nechodíme sami – vždy je nás celé stádo. V&nbsp;Asii nás však čím dál více ubývá, a tak jsme se stali zvířaty ohroženými, které je potřeba chránit a dobře se o&nbsp;ně starat.
@@ -37,7 +37,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
       <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Tak co, holky? Řekl jsem našim nejmenším návštěvníkům vše, co jsem měl? Jé, málem bych zapomněl! Chtěl jsem totiž ještě říct, že z&nbsp;nás velbloudů v&nbsp;brněnské zoo je nejmladší Bella, která se narodila v&nbsp;roce 2014 naší Majdě.
+          Tak co, holky? Řekl jsem našim nejmenším návštěvníkům vše, co jsem měl? Jé, málem bych zapomněl! Chtěl jsem totiž ještě říct, že z&nbsp;nás velbloudů v&nbsp;brněnské zoo jsou nejmladší Valerie, Báhir a Fariha, kteří se narodili v&nbsp;roce 2017 maminkám Majdě, Belle (ta je shodou okolností taky dcerou Majdy) a Fatimě.
         </AnimalText>
         <AnimalText>
           A teď už je to snad vše. Tak ahoj, děti, a pozdravujte od nás ostatní zvířátka!
