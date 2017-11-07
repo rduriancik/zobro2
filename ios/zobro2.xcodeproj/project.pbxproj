@@ -494,6 +494,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* zobro2Tests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				C319F0F31FB216B000229B60 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -517,6 +518,14 @@
 				C3093D6C1F44609A00E3E71F /* libRCTPushNotification-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C319F0F31FB216B000229B60 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AC8BA618416B48BD84855965 /* libRCTCamera.a */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		C38D839D1EC1FBF4005CCEED /* Products */ = {
