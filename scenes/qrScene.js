@@ -13,16 +13,20 @@ import Camera from 'react-native-camera';
 import { NavigationActions } from 'react-navigation'
 import { scenes, sceneTitles } from '../scenes';
 
+var setSelectedAnimal;
+
 export default class AboutScene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showCamera: true,
     }
+    setSelectedAnimal = this.props.setSelectedAnimal;
   }
 
   onBarCodeRead(barcode) {
     this.setState({showCamera: false});
+    setSelectedAnimal(barcode.data);
 
     // We want to prevent state when camera is reloaded with back-button
     // This scenarios points back-button to main menu what is fine (and work-around)

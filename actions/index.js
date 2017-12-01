@@ -19,6 +19,13 @@ export function setAnimalTab(tabName) {
   }
 }
 
+export function setSelectedAnimal(animalName) {
+  return {
+    type: 'SET_ANIMAL',
+    animalName
+  }
+}
+
 export function addNotification(event, delta) {
   return {
     type: 'ADD_NOTIFICATION',

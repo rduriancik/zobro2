@@ -5,6 +5,7 @@ const initialAuthState = {
   readerLevel: 'adult',
   tabName: 'Text',
   notifications: {},
+  selectedAnimal: undefined,
 };
 
 function configuration(state = initialAuthState, action) {
@@ -23,6 +24,11 @@ function configuration(state = initialAuthState, action) {
       return {
         ...state,
         tabName: action.tabName
+      }
+    case 'SET_ANIMAL':
+      return {
+        ...state,
+        selectedAnimal: action.animalName
       }
     case 'ADD_NOTIFICATION':
       {

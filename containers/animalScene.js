@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import AnimalScene from '../scenes/animalScene';
-import {setReaderLevel, setCameraReady, setAnimalTab} from '../actions'
+import {setReaderLevel, setCameraReady, setAnimalTab, setSelectedAnimal} from '../actions'
 
 import animals from '../animals';
 import {HEADER_STYLE} from '../styles/styles';
@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch) => {
     setReaderLevel,
     setCameraReady,
     setAnimalTab,
+    setSelectedAnimal,
   }, dispatch);
 }
 
@@ -29,6 +30,16 @@ class AnimalContainer extends React.Component {
 
   static navigationOptions = {
     header: null,
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.navigation.state.params.animal !== nextProps.configuration.selectedAnimal) {
+      // This animal is not on the top of the stack so it makes no sense to update content
+      return false;
+    } else {
+      // On every other change of props or state it should be updated
+      return true;
+    }
   }
 
   render() {
@@ -42,6 +53,7 @@ class AnimalContainer extends React.Component {
           tabName={this.props.configuration.tabName}
           setAnimalTab={this.props.setAnimalTab}
           navigation={this.props.navigation}
+          setSelectedAnimal={this.props.setSelectedAnimal}
         />
       );
     }
