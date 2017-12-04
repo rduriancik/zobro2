@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import AnimalScene from '../scenes/animalScene';
-import {setReaderLevel, setCameraReady, setAnimalTab, setSelectedAnimal} from '../actions'
+import {setReaderLevel, setCameraReady, setAnimalTab} from '../actions'
 
 import animals from '../animals';
 import {HEADER_STYLE} from '../styles/styles';
@@ -19,7 +19,6 @@ const mapDispatchToProps = (dispatch) => {
     setReaderLevel,
     setCameraReady,
     setAnimalTab,
-    setSelectedAnimal,
   }, dispatch);
 }
 
@@ -53,7 +52,6 @@ class AnimalContainer extends React.Component {
           tabName={this.props.configuration.tabName}
           setAnimalTab={this.props.setAnimalTab}
           navigation={this.props.navigation}
-          setSelectedAnimal={this.props.setSelectedAnimal}
         />
       );
     }

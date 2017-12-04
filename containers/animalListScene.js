@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import AnimalListScene from '../scenes/animalListScene';
-import {setAnimalTab, setSelectedAnimal} from '../actions';
+import {setAnimalTab} from '../actions';
 import {HEADER_STYLE} from '../styles/styles';
 
 const mapStateToProps = (state) => {
@@ -15,7 +15,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     setAnimalTab,
-    setSelectedAnimal,
   }, dispatch);
 }
 
@@ -35,7 +34,6 @@ class AnimalListContainer extends React.Component {
     return (
         <AnimalListScene
           setAnimalTab={this.props.setAnimalTab}
-          setSelectedAnimal={this.props.setSelectedAnimal}
           navigation={this.props.navigation}
         />
       );

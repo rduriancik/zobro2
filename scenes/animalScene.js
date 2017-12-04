@@ -153,7 +153,6 @@ class NeighbourTab extends React.Component {
     return (
       <AnimalNeighbourScene
         navigation={this.props.screenProps.parentNavigation}
-        setSelectedAnimal={this.props.screenProps.setSelectedAnimal}
         setAnimalTab={this.props.screenProps.setAnimalTab}
         animal={animalName} />
     );
@@ -259,7 +258,6 @@ export default class AnimalMainScreen extends React.Component {
     p.setCameraReady = this.props.setCameraReady;
     p.setReaderLevel = this.props.setReaderLevel;
     p.setAnimalTab = this.props.setAnimalTab;
-    p.setSelectedAnimal = this.props.setSelectedAnimal;
     p.parentNavigation = this.props.navigation;
     return (
       <MainStack
