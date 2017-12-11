@@ -108,7 +108,7 @@ class QRTab extends React.Component {
     const PADDING = 20;
     const WIDTH = Dimensions.get('window').width - PADDING;
 
-    if (this.props.screenProps.cameraReady) {
+    if ((this.props.screenProps.cameraReady) && (this.props.screenProps.animalTab === 'QR')) {
       return (
         <View style={localStyles.container}>
           <Camera
@@ -257,6 +257,7 @@ export default class AnimalMainScreen extends React.Component {
     p.cameraReady = this.props.cameraReady;
     p.setCameraReady = this.props.setCameraReady;
     p.setReaderLevel = this.props.setReaderLevel;
+    p.animalTab = this.props.tabName;
     p.setAnimalTab = this.props.setAnimalTab;
     p.parentNavigation = this.props.navigation;
     return (
