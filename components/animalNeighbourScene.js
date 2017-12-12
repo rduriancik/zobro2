@@ -24,7 +24,7 @@ class Cell extends React.Component {
     let directionArrow = null;
 
     if (direction === 'front') {
-        directionArrow = require('../images/tab-icons/arrow-front.png');
+      directionArrow = require('../images/tab-icons/arrow-front.png');
     } else if (direction === 'back') {
       directionArrow = require('../images/tab-icons/arrow-back.png');
     } else if (direction === 'right') {
