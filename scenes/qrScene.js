@@ -1,33 +1,32 @@
 import React from 'react';
-//import styles from '../styles/styles';
+import { WIDTH } from '../styles/styles';
 
 import {
   View,
-  ScrollView,
   Text,
   StyleSheet,
-  Alert,
 } from 'react-native';
-import Dimensions from 'Dimensions';
 import Camera from 'react-native-camera';
-import { NavigationActions } from 'react-navigation'
+import { NavigationActions } from 'react-navigation';
 import { scenes, sceneTitles } from '../scenes';
 
 var setSelectedAnimal;
 
-export default class AboutScene extends React.Component {
+export default class QrScene extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       showCamera: true,
     }
+
     setSelectedAnimal = this.props.setSelectedAnimal;
   }
 
   onBarCodeRead(barcode) {
     this.setState({showCamera: false});
     setSelectedAnimal(barcode.data);
-
+    
     // We want to prevent state when camera is reloaded with back-button
     // This scenarios points back-button to main menu what is fine (and work-around)
     // Look at https://stackoverflow.com/questions/44034430/react-navigation-and-component-lifecycle
@@ -49,7 +48,8 @@ export default class AboutScene extends React.Component {
 
   render() {
     const PADDING = 20;
-    const WIDTH = Dimensions.get('window').width - PADDING;
+    const WIDTH_WITH_PADDING = WIDTH - PADDING;
+
 
     if (this.state.showCamera) {
       return (
@@ -70,21 +70,21 @@ export default class AboutScene extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-  },
-  preview: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'center'
-  },
-  capture: {
-    flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#000',
-    padding: 10,
-    margin: 40
-  }
-});
+    container: {
+      flex: 1,
+      flexDirection: 'row',
+    },
+    preview: {
+      flex: 1,
+      justifyContent: 'flex-end',
+      alignItems: 'center'
+    },
+    capture: {
+      flex: 0,
+      backgroundColor: '#fff',
+      borderRadius: 5,
+      color: '#000',
+      padding: 10,
+      margin: 40
+    }
+  });
