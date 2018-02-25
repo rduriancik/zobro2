@@ -19,7 +19,7 @@ import {
 } from 'react-native';
 import { scenes, sceneTitles } from '../scenes';
 import animals from '../animals';
-import AnimalNeighbourScene from '../scenes/animalNeighbourScene';
+import AnimalNeighbourScene from '../components/animalNeighbourScene';
 
 class TextTab extends React.Component {
   constructor(props) {
