@@ -18,12 +18,12 @@ const THUMBNAILS = [
   require('../../images/animals/kapybara/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Vlastníte mokřad a chcete ho vysušit, abyste na jeho místě mohli pást dobytek? Hodláte zlikvidovat svůj znečistěný zahradní bazén, protože se v&nbsp;něm už nikdo nechce koupat? Nedělejte to a pořiďte si pár kapybar! 
+          Vlastníte mokřad a chcete ho vysušit, abyste na jeho místě mohli pást dobytek? Hodláte zlikvidovat svůj znečistěný zahradní bazén, protože se v&nbsp;něm už nikdo nechce koupat? Nedělejte to a pořiďte si pár kapybar!
         </AnimalText>
         <AnimalText>
           Největší hlodavci světa vám zkrátí trávu kvalitněji a efektivněji než jakákoliv ovce či kůň. Mají vysoce výkonné a neustále dorůstající řezáky, jimiž pomohou sochařům opracovat dřevo i&nbsp;kámen.
@@ -78,6 +78,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

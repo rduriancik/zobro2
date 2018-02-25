@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/kulikPisecny/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -40,7 +40,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Ve výběhu nejsme sami, jsou tu s&nbsp;námi jespáci, tenkozobci, a dokonce jeden ústřičník. Máme totiž něco společného – všichni jsme bahňáci. Tak se nám říká, protože máme moc rádi bahnité břehy. Dokonce společně i&nbsp;obědváme, ale nebojte se, jídla je dost a dostane se na všechny. Chovatel nám dává moc dobré granule, ve kterých je všechno, co potřebujeme, abychom byli zdraví, a když je mezi nimi i&nbsp;červík nebo malá krevetka, to je teprve bašta! 
+          Ve výběhu nejsme sami, jsou tu s&nbsp;námi jespáci, tenkozobci, a dokonce jeden ústřičník. Máme totiž něco společného – všichni jsme bahňáci. Tak se nám říká, protože máme moc rádi bahnité břehy. Dokonce společně i&nbsp;obědváme, ale nebojte se, jídla je dost a dostane se na všechny. Chovatel nám dává moc dobré granule, ve kterých je všechno, co potřebujeme, abychom byli zdraví, a když je mezi nimi i&nbsp;červík nebo malá krevetka, to je teprve bašta!
         </AnimalText>
         <AnimalText>
           Ale teď už budeme muset běžet, běháme totiž rádi a stát na místě dlouho nevydržíme.
@@ -48,6 +48,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

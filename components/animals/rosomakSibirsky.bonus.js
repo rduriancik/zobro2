@@ -18,14 +18,14 @@ const THUMBNAILS = [
   require('../../images/animals/rosomakSibirsky/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
         <Text style={styles.strong}>Rosomáčí braková činohra o&nbsp;dvou jednáních aneb Je nutno všechno přerýt</Text>
         </AnimalText>
-        <AnimalText>        
+        <AnimalText>
         </AnimalText>
         <AnimalText>
         Jednání první
@@ -103,17 +103,17 @@ var AnimalDetail = React.createClass({
         <AnimalText>
         <Text style={styles.strong}>Nataša:</Text> <Text style={styles.italic}>(šťastně přikyvuje)</Text>
         </AnimalText>
-        <AnimalText>      
+        <AnimalText>
         </AnimalText>
         <AnimalText>
         Jednání druhé
         </AnimalText>
-        <AnimalText>        
+        <AnimalText>
         </AnimalText>
         <AnimalText>
         <Text style={styles.italic}>Uplynuly týdny, měsíce a v&nbsp;létě norský rosomák Ivan dokončil výkop padesáti nor. Výsledek oslavuje s&nbsp;Natašou. Roznášejí polena a roští z&nbsp;neútulného přístřešku a dekorují výběh.</Text>
         </AnimalText>
-        <AnimalText>      
+        <AnimalText>
         </AnimalText>
         <AnimalText>
         <Text style={styles.strong}>Nataša</Text> <Text style={styles.italic}>(spolu s&nbsp;Ivanem si připíjí z&nbsp;jezírka)</Text><Text style={styles.strong}>:</Text> Ó,&nbsp;Ivane, tys nezklamal. Vím, nikdy nedokážeš svou sílu skolením losa. Jsi však velký architekt s&nbsp;velkými pracovitými tlapami, a to je pro mě mnohem více.
@@ -151,7 +151,7 @@ var AnimalDetail = React.createClass({
         <AnimalText>
         <Text style={styles.strong}>Společně</Text> <Text style={styles.italic}>(pomlaskávajíce)</Text><Text style={styles.strong}>:</Text> Gulo, gulo, gulo!
         </AnimalText>
-        <AnimalText>        
+        <AnimalText>
         </AnimalText>
         <AnimalText>
         <Text style={styles.italic}>Pomalu se zešeřuje. Do ticha občas zazní slova ruských lingvistů zkoumajících alternace vokalických hlásek v&nbsp;jazyce rosomáků.</Text>
@@ -159,6 +159,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

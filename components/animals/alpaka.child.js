@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/alpaka/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Jestli někdy pojedete do Jižní Ameriky, zkuste navštívit Peru. Pozor, to není název tamní prádelny! Jmenuje se tak celý jeden stát. Když si na dlouhé cestě konečně vyperete svoje smradlavé a zašpiněné peruánské ponožky, místní obyvatelé podle jejich barvy poznají, jakou srst měly lamy alpaky, zvířecí obyvatelky Peru a okolí, díky nimž mohly být tyto ponožky vyrobeny. Dobří ponožkoví detektivové poznají, že alpaka může být:
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           <Text style={styles.strong}>BÍLÁ jako ovce</Text>
@@ -42,7 +42,7 @@ var AnimalDetail = React.createClass({
           Věřte nebo ne, lama alpaka je blízká příbuzná velbloudů. Je jen menší, nemá hrby a díky tvrdším kopýtkům se lépe pohybuje ve skalách.
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           <Text style={styles.strong}>HNĚDÁ jako planina</Text>
@@ -58,7 +58,7 @@ var AnimalDetail = React.createClass({
           Alpaky se pasou ve stádech a jsou u&nbsp;toho hodně ostražité. Blížící se nebezpečí dokážou zpozorovat na stovky metrů. Vedoucí samec si svého stáda natolik váží, že je ochotný nasadit vlastní život, aby ostatní zachránil.
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           <Text style={styles.strong}>STRAKATÁ jako překvapení</Text>
@@ -67,7 +67,7 @@ var AnimalDetail = React.createClass({
           Alpakám se rodí zpravidla jedno mládě ročně. Jeho rodiče dopředu nevědí, jakou barvu bude mít. Občas se dokonce narodí mládě vícebarevné.
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           Peruánci dokážou rozeznat ne pět, ale přes dvacet odstínů lamí srsti, a tak se jejich tržiště s&nbsp;oblečením hemží barvami. Až odtud budete odjíždět, nezapomeňte si koupit nějaký hřejivý suvenýr. Třeba dvacet párů ponožek, ať máte zásobu pro příští výlet a nemusíte tolik prát.
@@ -75,6 +75,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

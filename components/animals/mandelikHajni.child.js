@@ -16,7 +16,7 @@ const THUMBNAILS = [
   require('../../images/animals/mandelikHajni/02-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
         <AnimalText>
           Hnízdíme v&nbsp;jižní, střední a jihovýchodní Evropě, západní a střední Asii a v&nbsp;severní Africe. Ze všech mandelíků jsme jediný druh hnízdící v&nbsp;Evropě. Jelikož je nám tady v&nbsp;zimě chladno, odlétáme v&nbsp;září do střední a jižní Afriky, odkud se vracíme obvykle během dubna a května, aby nám bylo pěkně teplo. Bydlíme v&nbsp;řídkých lesích a na lučinách, ovocných sadech, říčních údolích, příležitostně se zabydlíme i&nbsp;ve zříceninách. V&nbsp;zimovištích pak máme rádi suché stromovité savany a křovinaté savany.
         </AnimalText>
-      <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />        
+      <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           Živíme se převážně hmyzem, který dokážeme ulovit i&nbsp;za letu, také nepohrdneme drobnými hlodavci, žábami či ještěrkami. Občas sníme i&nbsp;malé ptáčky, které lovíme na zemi. Rádi ale sezobneme i&nbsp;plody, v&nbsp;našich zemích nejčastěji vinné hrozny. A jak to vypadá s&nbsp;našimi mláďaty? Maminka naklade přibližně ve druhé polovině května nebo počátkem června 4 až 6&nbsp;vajec, ze kterých se do 3&nbsp;týdnů vylíhnou naši potomci. Mladí jedinci nemají břicho azurové, ale zelenohnědé, tatínek a maminka se zbarvením neliší. O&nbsp;krmení se starají oba. Do jednoho měsíce pak mláďata hnízdo v&nbsp;dutinách opouštějí, aby se vydala za svým vlastním dobrodružstvím.
         </AnimalText>
@@ -36,6 +36,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

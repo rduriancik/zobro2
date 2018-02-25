@@ -18,15 +18,15 @@ const THUMBNAILS = [
   require('../../images/animals/vyrVelky/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-        Ahoj kamaráde! Já jsem pan Výr. Jsem největší sova v&nbsp;Evropě, proto mi říkají výr velký. Narodil jsem se první den roku 2011. Protože nerad žiji sám, svůj domeček tady v&nbsp;zoo sdílím s&nbsp;paní Výrovou, která je mladší než já. Na náš nový příbytek si zvykáme teprve od léta&nbsp;2015, protože oba pocházíme z&nbsp;jiné zoologické zahrady. 
+        Ahoj kamaráde! Já jsem pan Výr. Jsem největší sova v&nbsp;Evropě, proto mi říkají výr velký. Narodil jsem se první den roku 2011. Protože nerad žiji sám, svůj domeček tady v&nbsp;zoo sdílím s&nbsp;paní Výrovou, která je mladší než já. Na náš nový příbytek si zvykáme teprve od léta&nbsp;2015, protože oba pocházíme z&nbsp;jiné zoologické zahrady.
         </AnimalText>
         <AnimalText>
-        Abychom se s&nbsp;tebou mohli potkat, urazili jsme opravdu dlouhou cestu. Z&nbsp;vajíčka jsme totiž vykoukli v&nbsp;té největší zemi na světě, která leží v&nbsp;Evropě i&nbsp;v&nbsp;Asii. Víš, která to je? Říká se jí Rusko. Část tohoto státu se nazývá Sibiř. Odtud se vzal i&nbsp;náš další název – západosibiřský. Oproti teplotám, které znáš z&nbsp;České republiky, je tam tak velká zima, že si ji ani nedovedeš představit. 
+        Abychom se s&nbsp;tebou mohli potkat, urazili jsme opravdu dlouhou cestu. Z&nbsp;vajíčka jsme totiž vykoukli v&nbsp;té největší zemi na světě, která leží v&nbsp;Evropě i&nbsp;v&nbsp;Asii. Víš, která to je? Říká se jí Rusko. Část tohoto státu se nazývá Sibiř. Odtud se vzal i&nbsp;náš další název – západosibiřský. Oproti teplotám, které znáš z&nbsp;České republiky, je tam tak velká zima, že si ji ani nedovedeš představit.
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
@@ -42,6 +42,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

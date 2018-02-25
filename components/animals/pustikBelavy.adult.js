@@ -16,7 +16,7 @@ const THUMBNAILS = [
   require('../../images/animals/pustikBelavy/02-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -33,7 +33,7 @@ var AnimalDetail = React.createClass({
         Vytváří monogamní páry na celý život. Páry jsou také věrné svému teritoriu, které neopouští ani v&nbsp;letech, kdy je nedostatek potravy. Potravou mu jsou myši a další hlodavci, ptáci, obojživelníci a hmyz.
         </AnimalText>
         <AnimalText>
-        Hnízdí v&nbsp;dutinách stromů nebo starých hnízdech dravců, občas ve skalních štěrbinách a budovách. Samice obvykle snese 2–6 bílá vajíčka, na kterých sama sedí po dobu 27–29&nbsp;dní. Mláďata krmí asi 5&nbsp;týdnů, po vylétnutí z&nbsp;hnízda své děti ještě asi měsíc přikrmuje. 
+        Hnízdí v&nbsp;dutinách stromů nebo starých hnízdech dravců, občas ve skalních štěrbinách a budovách. Samice obvykle snese 2–6 bílá vajíčka, na kterých sama sedí po dobu 27–29&nbsp;dní. Mláďata krmí asi 5&nbsp;týdnů, po vylétnutí z&nbsp;hnízda své děti ještě asi měsíc přikrmuje.
         </AnimalText>
       <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
@@ -48,6 +48,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

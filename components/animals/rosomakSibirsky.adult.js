@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/rosomakSibirsky/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -31,14 +31,14 @@ var AnimalDetail = React.createClass({
         <AnimalText>
           Čím jsme si tedy zasloužili takové přezdívky? K&nbsp;nám dvěma se moc nehodí, spíš byste nám mohli říkat <Text style={styles.italic}>šikovní bordeláři</Text>, protože rádi hrabeme doupata všude, kde se dá, a všechny úkryty z&nbsp;větví, které nám sem nanosili pracovníci zoo, jsme rozebrali a rozprostřeli po celém svém výběhu.
         </AnimalText>
-      <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
+        <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           Jsme divocí. Ve volné přírodě žijeme převážně sami, svá teritoria o&nbsp;velikosti až 500&nbsp;km<Text style={styles.superscript}>2</Text> si značkujeme jako třeba skunkové. Potkáváme se jen v&nbsp;létě, když chceme zakládat rodiny. Devět měsíců nato se samičkám narodí 1–5&nbsp;mláďat. Dříve se věřilo, že se rodíme jako medvíďata, a to tak, že pokud se medvědici narodí čtyři mláďata, z&nbsp;toho čtvrtého vyroste rosomák. Ale tak to rozhodně není. I&nbsp;když se o&nbsp;nás povídá, že kdybychom dorostli velikosti medvěda, byli bychom nejsilnějšími zvířaty na světě.
         </AnimalText>
         <AnimalText>
           Jsme vynikající lovci a stopaři. Díky svým širokým tlapám se umíme lehce pohybovat po sněhu. Této dovednosti využíváme například při lovu losů – velké zvíře tak dlouho naháníme ve vysokém sněhu, až se los unaví a my ho zakousneme. Běžně však dáváme přednost menším úlovkům a hlavně mršinám, ale neodmítneme ani vejce či různé plody. Potravu umíme vyčichat i&nbsp;pod hlubokým sněhem nebo zvládneme podle pastí dojít až k lidskému obydlí, tam sníst a posbírat, co se dá, a zase se tiše vykrást, aniž bychom se do pastí chytili. Cestou nás nezastaví ani slabší kovové oplocení – s&nbsp;tím si poradí naše silné čelisti plné velmi ostrých zubů.
         </AnimalText>
-      <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />      
+        <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           My rosomáci nemáme příliš přirozených nepřátel – bojíme se snad jen lidí nebo smečky vlků. I&nbsp;když už jsem taky slyšel, že rosomáci dokázali takovou smečku vlků zahnat. Nevím, co je na tom pravdy, ale třeba s&nbsp;pumou, s&nbsp;tou si poradíme. Když vyceníme zuby, naježíme hřbet a začneme temně vrčet, vyděsíme ji natolik, že nechá svou kořist kořistí a zbaběle uteče.
         </AnimalText>
@@ -51,6 +51,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

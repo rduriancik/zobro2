@@ -16,7 +16,7 @@ const THUMBNAILS = [
   require('../../images/animals/mandelikHajni/02-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -29,7 +29,7 @@ var AnimalDetail = React.createClass({
         <AnimalText>
           Ze všech mandelíků je jediný, jenž žije i&nbsp;v&nbsp;Evropě, a to v&nbsp;jižní, střední a jihovýchodní části, na sever jeho oblast zasahuje až k&nbsp;Petrohradu. Vyskytuje se ale i&nbsp;v&nbsp;západní a střední Asii a v&nbsp;severní Africe. Objevuje se v&nbsp;teplých a slunných nížinách. Má rád otevřenou krajinu s&nbsp;remízky a alejemi starých stromů s&nbsp;dutinami, okraje světlých lesů, velké paseky a staré sady.
         </AnimalText>
-      <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />  
+      <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           Kvůli potravě v&nbsp;chladnější části roku u&nbsp;nás však mandelík nezimuje. V&nbsp;srpnu a září odlétá do střední a jižní Afriky, odkud se vrací obvykle během dubna a května. Na svých afrických zimovištích obývá především suchou, zalesněnou savanu a pusté pláně.
         </AnimalText>
@@ -45,6 +45,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

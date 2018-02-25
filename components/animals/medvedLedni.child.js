@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/medvedLedni/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           Milé děti,
         </AnimalText>
         <AnimalText>
-        </AnimalText>      
+        </AnimalText>
         <AnimalText>
           jmenuji se Noria a jsem zatím nejmladším medvídětem místních ledních medvědů, jimiž jsou Cora a Umca. Narodila jsem se v&nbsp;listopadu 2015. Oběma mým rodičům bylo v&nbsp;té době sedmnáct let.
         </AnimalText>
@@ -36,11 +36,11 @@ var AnimalDetail = React.createClass({
         <AnimalText>
           O&nbsp;mých starších sourozencích mi vyprávěla maminka před spaním, když jsem byla malá. Stejně tak o&nbsp;tátovi. Občas ho zaslechnu z&nbsp;vedlejšího výběhu, ale k&nbsp;němu mě chovatelé nepustí. Asi se bojí, že bych ho moc zlobila. Což je pravda. Zlobit, to já umím moc dobře! Ale maminka už má s&nbsp;výchovou mláďat bohaté zkušenosti, takže nezvlčím. Maximálně zmedvědím.
         </AnimalText>
-      <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />      
+      <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           Když jsem se narodila, vážila jsem jen o&nbsp;něco víc než půl pytlíku mouky. Vypadala jsem spíš jak morče než jak medvěd. Maminka mě tulila k&nbsp;sobě, abych byla v&nbsp;teple a mohla se najíst, kdykoliv jsem měla hlad. A já jsem při tom blahem hrčela jak traktor. Když totiž medvíďata sají mléko, opravdu to zní jako startující traktor! Ale po pár měsících už jsem začala běhat po venku a rostla jak z&nbsp;vody. I&nbsp;když je možné, že jsem opravdu rostla z vody – strašně ráda plavu, a ještě raději házím do bazénu balon a pak za ním skáču. Jsem totiž věrná svému jménu – jsem medvěd lední, a voda je přeci taky led, jen rozpuštěný.
         </AnimalText>
-      <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} /> 
+      <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           Na závěr by se hodilo dodat ještě nějaké moudro. Tak třeba: zlobit můžete, ale jen trošku. Jinak buďte na rodiče hodní, vždyť oni si to zaslouží.
         </AnimalText>
@@ -55,6 +55,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

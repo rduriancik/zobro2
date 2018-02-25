@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/klokanZlutonohy/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -46,14 +46,14 @@ var AnimalDetail = React.createClass({
         <AnimalText>
           „Nesmíš to tak prožívat. Zkus to trochu odlehčeně, s&nbsp;nadhledem. Jsi přece klokan, nemusíš se pořád držet při zemi.“
         </AnimalText>
-      <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />        
+      <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           „Dobře, dobře, ale nemám ráda, když si někdo dělá legraci z&nbsp;našeho ocasu. Vždyť je to naše chlouba. Často dokonce delší než celé tělo. Považte, až sedmdesát centimetrů! Samozřejmě ho ale nemáme jen na okrasu, pomáhá nám udržovat rovnováhu. A když ho zrovna nepotřebujeme, prostě ho složíme za záda. Kromě ocasu máme ještě další vychytávky, které nám umožňují život na skalách, kamenitých svazích a prudkých srázech. Řadíme se totiž mezi klokany skalní. Na chodidlech máme drsné polštářky hustě porostlé chlupy, takže hned tak neuklouzneme, a dráp čtvrtého prstu na noze máme kratší než jiné druhy klokanů. Dokonce dokážeme vylézt i&nbsp;na strom, abychom si pochutnali na jeho listech nebo pupenech, většinou si ale vystačíme s&nbsp;obyčejnou trávou. Co jsem to ještě chtěla říct?“
         </AnimalText>
         <AnimalText>
           „Nevím, nemáš v kapse tahák?“
         </AnimalText>
-      <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />                  
+      <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           „Nebuď směšná, víš přece, na co máme kapsy. No jistě, mláďata! Obvykle se rodí jedno, a to zhruba po měsíční březosti. To ale přeskakuju, původně jsem chtěla pokračovat něčím jiným. Co to jen bylo? No ano, původ! Jako každý správný klokan pocházíme z&nbsp;Austrálie, konkrétně z&nbsp;jižní a střední, sem jsme ale s&nbsp;Corowou přišly v&nbsp;roce 2015 z&nbsp;francouzské zoo v&nbsp;Mulhouse. V&nbsp;květnu roku 2016 nám sem z&nbsp;Anglie přivezli i&nbsp;samečka Thutambu, to abychom si měly s&nbsp;kým hrát. Ještě na něco jsem zapomněla?“
         </AnimalText>
@@ -69,6 +69,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

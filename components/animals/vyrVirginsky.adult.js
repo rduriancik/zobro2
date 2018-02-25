@@ -14,12 +14,12 @@ const THUMBNAILS = [
   require('../../images/animals/vyrVirginsky/01-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-        Výr virginský, latinsky <Text style={styles.italic}>Bubo virginianus</Text>, je jedním z&nbsp;ptáků, kteří se vyskytují téměř po celé Americe – Severní, Střední i&nbsp;Jižní. To je slušný výkon, vzhledem k&nbsp;tomu, že Virginii tvoří jeden pomenší trojúhelník země na východním pobřeží USA. 
+        Výr virginský, latinsky <Text style={styles.italic}>Bubo virginianus</Text>, je jedním z&nbsp;ptáků, kteří se vyskytují téměř po celé Americe – Severní, Střední i&nbsp;Jižní. To je slušný výkon, vzhledem k&nbsp;tomu, že Virginii tvoří jeden pomenší trojúhelník země na východním pobřeží USA.
         </AnimalText>
         <AnimalText>
         Průměrný výr virginský dorůstá výšky 56&nbsp;centimetrů, hmotnosti cca 1&nbsp;400&nbsp;gramů a průměrné rozpětí výřích křídel je 127&nbsp;centimetrů. Velikost výra závisí jednak na jeho pohlaví (samičky jsou větší), jednak na místě výskytu (čím dál od rovníku, tím větší pták). Co se vzhledu výrů týče, jejich tvář je hnědá, hrdlo bílé, hruď rezavá a na stranách skvrnitá a zbytek těla mají pokryt vlnkováním v&nbsp;barvě neurčitě hnědožluté.
@@ -33,6 +33,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/orelBelohlavy/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -43,11 +43,9 @@ var AnimalDetail = React.createClass({
         Během doby páření si staví orli hnízda, která patří k&nbsp;vůbec největším ptačím hnízdům na světě (hloubka 4&nbsp;m a průměr až 2,5&nbsp;m). Bývají umístěna vysoko na stromech nebo na skalních římsách a orlům mohou sloužit až pět let. Samička ročně snáší jedno až tři vejce, jejichž inkubační doba je kolem 35&nbsp;dnů. Na vejcích střídavě sedí samice i&nbsp;samec. Jen málokdy se ovšem podaří přivést na svět všechna mláďata.
         </AnimalText>
         <AnimalText>
-        V&nbsp;Zoo Brno se můžete s&nbsp;těmito dravci seznámit doslova tváří v&nbsp;tvář v&nbsp;unikátní volně průchozí voliéře, která byla slavnostně otevřena v&nbsp;roce&nbsp;2014. Momentálně jsou zde dva jedinci – matka s&nbsp;dcerou. Orlí matka, která do Brna dorazila z&nbsp;liberecké zoo, se narodila ve Frankfurtu nad Mohanem v&nbsp;roce 1988 (je to tedy již opravdová dáma v&nbsp;orlích letech). Její dcera se vylíhla v&nbsp;roce&nbsp;2015 v&nbsp;brněnské zoo, což považujeme za velký úspěch, neboť odchov těchto dravců v&nbsp;zajetí je všeobecně velmi složitý. 
+        V&nbsp;Zoo Brno se můžete s&nbsp;těmito dravci seznámit doslova tváří v&nbsp;tvář v&nbsp;unikátní volně průchozí voliéře, která byla slavnostně otevřena v&nbsp;roce&nbsp;2014. Momentálně jsou zde dva jedinci – matka s&nbsp;dcerou. Orlí matka, která do Brna dorazila z&nbsp;liberecké zoo, se narodila ve Frankfurtu nad Mohanem v&nbsp;roce 1988 (je to tedy již opravdová dáma v&nbsp;orlích letech). Její dcera se vylíhla v&nbsp;roce&nbsp;2015 v&nbsp;brněnské zoo, což považujeme za velký úspěch, neboť odchov těchto dravců v&nbsp;zajetí je všeobecně velmi složitý.
         </AnimalText>
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};
