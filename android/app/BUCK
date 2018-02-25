@@ -34,7 +34,7 @@ android_library(
 android_library(
     name = "app-code",
     srcs = glob([
-        "src/main/java/**/*.kt",
+        "src/main/java/**/*.java",
     ]),
     deps = [
         ":all-libs",

@@ -19,7 +19,7 @@
     "react-native-push-notification": "^3.0.2",
     "react-navigation": "git+https://github.com/react-community/react-navigation.git",
     "react-native-alphabetlistview": "git+https://github.com/marxsk/react-native-alphabetlistview.git",
-    "react-native-lightbox": "git+https://github.com/marxsk/react-native-lightbox",
+    "react-native-lightbox": "git+https://github.com/rduriancik/react-native-lightbox",
     "react-native-swiper": "^1.5.13",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera",
     "react-style-proptype": "^3.2.0"
