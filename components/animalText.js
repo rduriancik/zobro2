@@ -2,7 +2,7 @@ import React from 'react';
 import {Text} from 'react-native';
 import styles from '../styles/styles.js';
 
-export default class ourText extends React.Component {
+export default class AnimalText extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -18,4 +18,4 @@ export default class ourText extends React.Component {
       </Text>
     );
   }
-};
+}

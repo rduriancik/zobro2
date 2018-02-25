@@ -1,30 +1,32 @@
 import React from 'react';
-import {View} from 'react-native';
+import PropTypes from 'prop-types'
+import { View } from 'react-native';
 import styles from '../styles/styles';
 import InPageImage from './inPageImage';
 
 export default class AnimalTemplate extends React.Component {
-    constructor(props) {
-      super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-      return (
+  render() {
+    return (
+      <View>
         <View>
-          <View>
-            <InPageImage firstImage={true} indexes={this.props.firstIndex} thumbnails={this.props.thumbnails} images={this.props.images} />
-          </View>
-          <View style={styles.scrollView}>
-            {this.props.children}
-          </View>
+          <InPageImage firstImage={true} indexes={this.props.firstIndex}
+            thumbnails={this.props.thumbnails} images={this.props.images} />
         </View>
-      );
-    }
+        <View style={styles.scrollView}>
+          {this.props.children}
+        </View>
+      </View>
+    );
+  }
 };
 
 AnimalTemplate.propTypes = {
-    firstIndex: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    thumbnails: React.PropTypes.array.isRequired,
-    images: React.PropTypes.array.isRequired,
-    children: React.PropTypes.arrayOf(React.PropTypes.element).isRequired,
+    firstIndex: PropTypes.arrayOf(PropTypes.number).isRequired,
+    thumbnails: PropTypes.array.isRequired,
+    images: PropTypes.array.isRequired,
+    children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
