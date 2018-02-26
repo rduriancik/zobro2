@@ -7,22 +7,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "eslint": "^4.18.1",
-    "prettier": "^1.10.2",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-native": "^0.53.3",
-    "prop-types": "^15.6.0",
-    "redux": "^3.7.2",
-    "react-redux": "^5.0.6",
-    "react-native-hyperlink": "^0.0.12",
-    "react-native-collapsible": "^0.10.0",
-    "react-native-push-notification": "^3.0.2",
-    "react-navigation": "git+https://github.com/react-community/react-navigation.git",
     "react-native-alphabetlistview": "git+https://github.com/marxsk/react-native-alphabetlistview.git",
-    "react-native-lightbox": "git+https://github.com/rduriancik/react-native-lightbox",
-    "react-native-swiper": "^1.5.13",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera",
-    "react-style-proptype": "^3.2.0"
+    "react-native-collapsible": "^0.10.0",
+    "react-native-hyperlink": "^0.0.12",
+    "react-native-lightbox": "git+https://github.com/rduriancik/react-native-lightbox",
+    "react-native-push-notification": "^3.0.2",
+    "react-native-swiper": "^1.5.13",
+    "react-navigation": "git+https://github.com/react-community/react-navigation.git",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-jest": "22.2.2",
