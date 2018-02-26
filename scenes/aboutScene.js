@@ -70,7 +70,7 @@ export default class AboutScene extends React.Component {
           <Text>
             Závěrečné korektury v češtině: Hana Žižková
           </Text>
-          <Text>
+          <Text style={{paddingBottom: 16}}>
             Příprava textů, korektury, překlady do angličtiny a všechny další pomocné práce:
             Babincová Adriana,
             Bendáková Eliška,
