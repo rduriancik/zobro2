@@ -5,6 +5,7 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import Camera from 'react-native-camera';
 import { NavigationActions } from 'react-navigation';
 import HeaderBackButton from 'react-navigation/src/views/Header/HeaderBackButton';
+import PlayButton from 'react-native-simple-player';
 
 import {
   View,
@@ -56,6 +57,7 @@ class TextTab extends React.Component {
     return (
       <ScrollView>
         <AnimalDetail animal = {animalName}/>
+        <PlayButton />
       </ScrollView>
     );
   }
