@@ -1,7 +1,7 @@
 import React from 'react';
 import styles, { HEADER_STYLE } from '../styles/styles';
 
-import { TabNavigator, StackNavigator } from 'react-navigation';
+import { createMaterialTopTabNavigator , createStackNavigator } from 'react-navigation';
 import Camera from 'react-native-camera';
 import { NavigationActions } from 'react-navigation';
 import HeaderBackButton from 'react-navigation/src/views/Header/HeaderBackButton';
@@ -205,7 +205,7 @@ export default class AnimalMainScreen extends React.Component {
       }
     }
 
-    const MainScreenNavigator = TabNavigator({
+    const MainScreenNavigator = createMaterialTopTabNavigator({
       Text: { screen: TextTab },
       QR: { screen: QRTab },
       Neighbour: { screen: NeighbourTab }
@@ -214,7 +214,7 @@ export default class AnimalMainScreen extends React.Component {
       tabBarOptions,
     });
 
-    const MainStack = StackNavigator({
+    const MainStack = createStackNavigator({
       Main: {screen: MainScreenNavigator },
     }, {
       navigationOptions: {
