@@ -54,12 +54,24 @@ class TextTab extends React.Component {
       AnimalDetail = animals[animalName].contentChild;
     }
 
+    let playerStyle = {
+      backgroundColor: '#3C3C3B', 
+      iconColor: '#FFF', 
+      iconSize: 50, 
+      sliderThumbColor: '#009385', 
+      sliderMinTrackColor: '#3CAC54', 
+      sliderMaxTrackColor: '#FFFFFF',
+      textColor: '#FFF',
+    }
+
     return (
       <View style={{flex: 1}}>
         <ScrollView>
           <AnimalDetail animal = {animalName}/>
         </ScrollView>
-        <SimplePlayer isPlaying={false} />
+        <SimplePlayer 
+            isPlaying={false} 
+            style={playerStyle} />
       </View>
     );
   }
@@ -281,4 +293,5 @@ const localStyles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center'
   },
+  
 });
