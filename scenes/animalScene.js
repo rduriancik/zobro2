@@ -71,7 +71,8 @@ class TextTab extends React.Component {
         </ScrollView>
         <SimplePlayer 
             isPlaying={false} 
-            style={playerStyle} />
+            style={playerStyle}
+            preventLoudMusic={true} />
       </View>
     );
   }
