@@ -17,8 +17,8 @@
     "react-native-lightbox": "git+https://github.com/rduriancik/react-native-lightbox",
     "react-native-push-notification": "^3.0.2",
     "react-native-swiper": "^1.5.13",
-    "react-navigation": "git+https://github.com/react-community/react-navigation.git",
     "react-native-simple-player": "file:../SimplePlayer",
+    "react-navigation": "^1.5.8",
     "react-native-vector-icons": "^4.5.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2"
