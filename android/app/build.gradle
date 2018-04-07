@@ -95,13 +95,13 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.2"
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         applicationId "com.zobro2"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
         ndk {
@@ -150,8 +150,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.android.support:appcompat-v7:27.0.2"
-    implementation "com.android.support:support-v4:27.0.2"
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportLibVersion"
     implementation "com.facebook.react:react-native:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"  // From node_modules
 
@@ -162,6 +162,9 @@ dependencies {
 
     implementation(project(':react-native-camera')) {
         exclude group: "com.google.android.gms"
+        compile ("com.google.android.gms:play-services-vision:$rootProject.googlePlayServicesVersion") {
+            force = true
+        }
     }
     implementation("com.google.android.gms:play-services-vision:11.8.0") {
         force = true;
