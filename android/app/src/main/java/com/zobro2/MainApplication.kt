@@ -8,6 +8,7 @@ import com.facebook.react.ReactPackage
 import com.facebook.react.shell.MainReactPackage
 import com.facebook.soloader.SoLoader
 import com.reactlibrary.RNSimplePlayerPackage
+import com.rnfs.RNFSPackage
 import org.reactnative.camera.RNCameraPackage
 
 class MainApplication : Application(), ReactApplication {
@@ -20,7 +21,8 @@ class MainApplication : Application(), ReactApplication {
                         MainReactPackage(),
                         ReactNativePushNotificationPackage(),
                         RNCameraPackage(),
-                        RNSimplePlayerPackage()
+                        RNSimplePlayerPackage(),
+                        RNFSPackage()
                 )
 
         override fun getJSMainModuleName() = "index"

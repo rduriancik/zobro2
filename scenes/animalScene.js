@@ -6,6 +6,7 @@ import Camera from 'react-native-camera';
 import { NavigationActions } from 'react-navigation';
 import HeaderBackButton from 'react-navigation/src/views/Header/HeaderBackButton';
 import { SimplePlayer } from 'react-native-simple-player';
+import  RNFS  from 'react-native-fs';
 
 import {
   View,
@@ -38,6 +39,10 @@ class TextTab extends React.Component {
       )
     })  
 
+    showDownloadFileDialog(){
+
+    }
+
   render() {
     let AnimalDetail;
     const animalName = this.props.screenProps.animal;
@@ -64,6 +69,9 @@ class TextTab extends React.Component {
       textColor: '#FFF',
     }
 
+    RNFS.getAllExternalFilesDirs()
+    .then((result) => console.log(result));
+
     return (
       <View style={{flex: 1}}>
         <ScrollView>
@@ -72,7 +80,9 @@ class TextTab extends React.Component {
         <SimplePlayer 
             isPlaying={false} 
             style={playerStyle}
-            preventLoudMusic={true} />
+            preventLoudMusic={true} 
+            filePath=""
+            onFileNotFound={this.showDownloadFileDialog}/>
       </View>
     );
   }
