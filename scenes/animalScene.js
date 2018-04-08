@@ -1,5 +1,5 @@
 import React from 'react';
-import styles, { HEADER_STYLE } from '../styles/styles';
+import styles, { HEADER_STYLE, WIDTH } from '../styles/styles';
 
 import { TabNavigator , StackNavigator } from 'react-navigation';
 import Camera from 'react-native-camera';
@@ -40,7 +40,11 @@ class TextTab extends React.Component {
     })  
 
     showDownloadFileDialog(){
+      // TODO show error dialog or something
+    }
 
+    onDownloadFileClick() {
+      // TODO start downloading file
     }
 
   render() {
@@ -69,6 +73,37 @@ class TextTab extends React.Component {
       textColor: '#FFF',
     }
 
+    let downloadButtonStyle = {
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      backgroundColor: '#3C3C3B', 
+      width: WIDTH,
+      height: 50
+    }
+
+    let downloadButtonTextStyle = {
+      fontWeight: 'bold', 
+      fontSize: 20, 
+      color: '#FFFFFF', 
+      textAlign: 'center', 
+      textAlignVertical: 'center'
+    }
+
+    let animalAudioPath = null; // TODO
+
+    const player = animalAudioPath != null ? (
+      <SimplePlayer 
+        isPlaying={false} 
+        style={playerStyle}
+        preventLoudMusic={true} 
+        filePath={animalAudioPath}
+        onFileNotFound={this.showDownloadFileDialog}/>
+    ) : (
+      <TouchableHighlight style={downloadButtonStyle} onPress={this.onDownloadFileClick}>
+        <Text style={downloadButtonTextStyle}>Stiahni pribeh</Text>
+      </TouchableHighlight>
+    )
+
     RNFS.getAllExternalFilesDirs()
     .then((result) => console.log(result));
 
@@ -77,12 +112,7 @@ class TextTab extends React.Component {
         <ScrollView>
           <AnimalDetail animal = {animalName}/>
         </ScrollView>
-        <SimplePlayer 
-            isPlaying={false} 
-            style={playerStyle}
-            preventLoudMusic={true} 
-            filePath=""
-            onFileNotFound={this.showDownloadFileDialog}/>
+        {player}
       </View>
     );
   }
