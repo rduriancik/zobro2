@@ -6,7 +6,7 @@ import Camera from 'react-native-camera';
 import { NavigationActions } from 'react-navigation';
 import HeaderBackButton from 'react-navigation/src/views/Header/HeaderBackButton';
 import { SimplePlayer } from 'react-native-simple-player';
-import  RNFS  from 'react-native-fs';
+import RNFetchBlob from 'react-native-fetch-blob';
 
 import {
   View,
@@ -18,6 +18,7 @@ import {
   StyleSheet,
   Switch,
   Platform,
+  PermissionsAndroid
 } from 'react-native';
 import { scenes, sceneTitles } from '../scenes';
 import animals from '../animals';
@@ -26,6 +27,10 @@ import AnimalNeighbourScene from '../components/animalNeighbourScene';
 class TextTab extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      animalStoryPath: null,
+    }
   }
 
   static navigationOptions = (navigation) =>
@@ -37,14 +42,98 @@ class TextTab extends React.Component {
             style={[styles.tabIcons, {backgroundColor: tintColor}]}
         />
       )
-    })  
-
-    showDownloadFileDialog(){
-      // TODO show error dialog or something
+    }) 
+    
+    
+    componentDidMount() {
+      this.getStoryFilePath("");
     }
 
-    onDownloadFileClick() {
+    showErrorFileDialog(){
+      Alert.alert(
+        'Missing audio file',
+        'Cannot play the file because it was not provided.',
+        [
+          {text: 'Cancel', onPress: () => console.log("Missing audio file dialog cancelled")}
+        ]
+      )
+    }
+
+    async onDownloadFileClick() {
       // TODO start downloading file
+      // const dirs = RNFetchBlob.fs.dirs;
+      // console.log(dirs);
+
+      // TODO write permission
+
+      if(Platform.OS === 'android'){
+        try {
+          const granted = await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+            {
+              'title': 'Zoo Brno',
+              'message': 'We need access to your storage to save the file'
+            }
+          )
+          if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+            console.log("Permission granted")
+          } else {
+            console.log("Permission denied")
+            return;
+          }
+        } catch (err) {
+          console.warn(err)
+        }
+      }
+
+      let dir = RNFetchBlob.fs.dirs.SDCardApplicationDir;
+      if (dir === undefined) {
+        dir = RNFetchBlob.fs.dirs.DocumentDir;
+      }
+
+      let animalDirPath = dir + "/animalStories" ;
+      let hasAnimalDir = await RNFetchBlob.fs.isDir(animalDirPath); 
+      if(!hasAnimalDir) {
+        RNFetchBlob.fs.mkdir(animalDirPath)
+          .then(() => console.log("animalStories directory created"))
+          .catch(() => console.log("Error while creating animalStories directory"));
+      }
+
+      RNFetchBlob
+        .config({
+          path: animalDirPath,
+          addAndroidDownloads: {
+            useDownloadManager: true,
+            title: 'Story',
+            description: 'Stoory',
+            path: animalDirPath + "/music.mp3",
+            notification: true
+          }
+        })
+        .fetch('GET', 'https://dl.last.fm/static/1523306299/131211148/d4226f3638e43cad39af02505e69d1c0d143b4659724618e93971c891896311e/Death+Grips+-+Get+Got.mp3')
+        .then((res) => {
+          console.log("File saved to ", res.path());
+        })
+        .catch((err) => console.log(err));
+    }
+
+    async getStoryFilePath(storyName) {
+      let dir = RNFetchBlob.fs.dirs.SDCardApplicationDir;
+      if (dir === undefined) {
+        dir = RNFetchBlob.fs.dirs.DocumentDir;
+      }
+      let animalStoryPath = dir + "/animalStories/music.mp3" ;
+
+      // RNFetchBlob.fs.ls(animalDirPath)
+      // .then((files) => console.log(files));
+      
+      let hasFile = await RNFetchBlob.fs.exists(animalStoryPath);
+      console.log(hasFile);
+      if(hasFile) {
+        this.setState({
+          animalStoryPath: animalStoryPath,
+        })
+      }
     }
 
   render() {
@@ -89,23 +178,18 @@ class TextTab extends React.Component {
       textAlignVertical: 'center'
     }
 
-    let animalAudioPath = null; // TODO
-
-    const player = animalAudioPath != null ? (
+    const player = this.state.animalStoryPath != null ? (
       <SimplePlayer 
         isPlaying={false} 
         style={playerStyle}
         preventLoudMusic={true} 
-        filePath={animalAudioPath}
-        onFileNotFound={this.showDownloadFileDialog}/>
+        filePath={this.state.animalStoryPath}
+        onFileNotFound={this.showErrorFileDialog}/>
     ) : (
       <TouchableHighlight style={downloadButtonStyle} onPress={this.onDownloadFileClick}>
         <Text style={downloadButtonTextStyle}>Stiahni pribeh</Text>
       </TouchableHighlight>
     )
-
-    RNFS.getAllExternalFilesDirs()
-    .then((result) => console.log(result));
 
     return (
       <View style={{flex: 1}}>
