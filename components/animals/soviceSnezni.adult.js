@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/soviceSnezni/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -29,7 +29,7 @@ var AnimalDetail = React.createClass({
           S&nbsp;délkou dosahující k&nbsp;70&nbsp;cm a váhou až 3&nbsp;kg patří k&nbsp;největším z&nbsp;řádu sov. Na rozdíl například od sovy pálené však nepatří do čeledi sovovitých (latinsky <Text style={styles.italic}>Tytonidae</Text>), ale mezi puštíkovité, a nedávno byla přeřazena z rodu sovice (latinsky <Text style={styles.italic}>Nyctea</Text>) do rodu výr (latinsky <Text style={styles.italic}>Bubo</Text>), i&nbsp;když její český název se nezměnil.
         </AnimalText>
         <AnimalText>
-          Spolu s&nbsp;lumíky, zajíci a polárními liškami obývají sovice sněžní tundru, i&nbsp;když na zimu se přesouvají jižněji – do Skandinávie, na Sibiř, Aljašku a v&nbsp;Kanadě až k&nbsp;hranicím s&nbsp;USA. Živí se převážně lumíky. Když se lumíci přemnoží, zvětší se i&nbsp;populace sovic; když je ale lumíků málo, vezmou sovy zavděk jinými živočichy včetně ptáků – třeba sov pálených. V&nbsp;případě nouze se ale uživí i&nbsp;mršinami, v&nbsp;záloze přesto mají další svébytný způsob obživy: sledují polární lišky na lovu a kradou jim jejich kořist. 
+          Spolu s&nbsp;lumíky, zajíci a polárními liškami obývají sovice sněžní tundru, i&nbsp;když na zimu se přesouvají jižněji – do Skandinávie, na Sibiř, Aljašku a v&nbsp;Kanadě až k&nbsp;hranicím s&nbsp;USA. Živí se převážně lumíky. Když se lumíci přemnoží, zvětší se i&nbsp;populace sovic; když je ale lumíků málo, vezmou sovy zavděk jinými živočichy včetně ptáků – třeba sov pálených. V&nbsp;případě nouze se ale uživí i&nbsp;mršinami, v&nbsp;záloze přesto mají další svébytný způsob obživy: sledují polární lišky na lovu a kradou jim jejich kořist.
         </AnimalText>
        <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
@@ -45,6 +45,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

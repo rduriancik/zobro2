@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/soviceSnezni/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -30,7 +30,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          I&nbsp;když asi víte, že sovy loví v&nbsp;noci, my jsme výjimka, běžně lovíme i&nbsp;ve dne. Nejraději se živíme lumíky, což jsou hlodavci – takové větší myši s&nbsp;krátkým ocasem. Ale když je lumíků málo, lovíme i&nbsp;jiná zvířata. 
+          I&nbsp;když asi víte, že sovy loví v&nbsp;noci, my jsme výjimka, běžně lovíme i&nbsp;ve dne. Nejraději se živíme lumíky, což jsou hlodavci – takové větší myši s&nbsp;krátkým ocasem. Ale když je lumíků málo, lovíme i&nbsp;jiná zvířata.
         </AnimalText>
         <AnimalText>
           Žijeme na severu, v&nbsp;tundře, kde je zem pořád zmrzlá a nerostou tam žádné stromy. Proto někdy létáme za polárními liškami, a když něco uloví, obereme je o&nbsp;jejich kořist. Říká se sice „mazaný jako liška“, ale na nás si jen tak nepřijdou! I&nbsp;když občas nás lišky pozlobí taky. Stavíme si totiž hnízda buď ve skalách, nebo přímo na zemi. A z&nbsp;nich nám pak kradou vejce.
@@ -42,6 +42,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

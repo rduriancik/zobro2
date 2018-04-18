@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/orelBelohlavy/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -27,11 +27,11 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        My orlové jsme velcí, až metr vysocí draví ptáci, když roztáhneme svá křídla, od levého k&nbsp;pravému můžeme měřit téměř 2,5&nbsp;metru, což je například výška medvěda grizzlyho vestoje. Jsme velmi dobří letci, když se do toho opřeme, dosahujeme rychlosti až 160&nbsp;kilometrů za hodinu. Za takovou rychlost už bychom mohli mít v&nbsp;Česku i&nbsp;problémy se zákonem. Ve volné přírodě nás můžete spatřit především poblíž větších jezer, rybníků a na mořských pobřežích, a to hlavně v&nbsp;Kanadě, Americe a na severu Mexika. Jsme známí jako národní pták Spojených států amerických a také jako symbol svobody. 
+        My orlové jsme velcí, až metr vysocí draví ptáci, když roztáhneme svá křídla, od levého k&nbsp;pravému můžeme měřit téměř 2,5&nbsp;metru, což je například výška medvěda grizzlyho vestoje. Jsme velmi dobří letci, když se do toho opřeme, dosahujeme rychlosti až 160&nbsp;kilometrů za hodinu. Za takovou rychlost už bychom mohli mít v&nbsp;Česku i&nbsp;problémy se zákonem. Ve volné přírodě nás můžete spatřit především poblíž větších jezer, rybníků a na mořských pobřežích, a to hlavně v&nbsp;Kanadě, Americe a na severu Mexika. Jsme známí jako národní pták Spojených států amerických a také jako symbol svobody.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        Své druhové jméno – bělohlavý – jsme si vysloužili proto, že máme na hlavě a ocasu peří bílé, zatímco na zbytku těla hnědé. Naše mláďata však mají až do svých pěti let hnědé peří s&nbsp;bílými skvrnami. Zobák, pařáty a oči máme svítivě žluté. Naše pařáty jsou neopeřené a máme na nich krátké silné prsty s&nbsp;velkými drápy, kterými chytáme svoji kořist. Vážíme až 6&nbsp;kilogramů a dokážeme za letu unést potravu stejné váhy. 
+        Své druhové jméno – bělohlavý – jsme si vysloužili proto, že máme na hlavě a ocasu peří bílé, zatímco na zbytku těla hnědé. Naše mláďata však mají až do svých pěti let hnědé peří s&nbsp;bílými skvrnami. Zobák, pařáty a oči máme svítivě žluté. Naše pařáty jsou neopeřené a máme na nich krátké silné prsty s&nbsp;velkými drápy, kterými chytáme svoji kořist. Vážíme až 6&nbsp;kilogramů a dokážeme za letu unést potravu stejné váhy.
         </AnimalText>
         <AnimalText>
         V lidské péči se dožíváme až 50&nbsp;let. Nejraději jíme ryby, ale klidně sníme cokoliv, co vypadá aspoň trochu k&nbsp;jídlu, proto o&nbsp;nás naši chovatelé říkají, že jsme tak trochu jako popelnice.
@@ -39,6 +39,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

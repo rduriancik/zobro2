@@ -18,12 +18,12 @@ const THUMBNAILS = [
   require('../../images/animals/jerabMandzusky/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Jeřáb mandžuský (latinsky <Text style={styles.italic}>Grus japonensis</Text>) je druhým největším žijícím druhem jeřába. Dospělí jedinci mohou být až 150&nbsp;cm vysocí s&nbsp;rozpětím křídel 220&nbsp;až 250&nbsp;cm. Jejich průměrná váha se pohybuje kolem 7&nbsp;až 10&nbsp;kg, nejtěžší jedinci mohou vážit až 15&nbsp;kg. Dospělci mají bílé peří, pouze na krku a na části křídel je černě zbarveno. Na hlavě si můžete všimnout červené lysinky, která se s&nbsp;přibývajícím věkem zvětšuje. Své typické zbarvení získají dospívající jedinci ve věku přibližně dvou let.   
+          Jeřáb mandžuský (latinsky <Text style={styles.italic}>Grus japonensis</Text>) je druhým největším žijícím druhem jeřába. Dospělí jedinci mohou být až 150&nbsp;cm vysocí s&nbsp;rozpětím křídel 220&nbsp;až 250&nbsp;cm. Jejich průměrná váha se pohybuje kolem 7&nbsp;až 10&nbsp;kg, nejtěžší jedinci mohou vážit až 15&nbsp;kg. Dospělci mají bílé peří, pouze na krku a na části křídel je černě zbarveno. Na hlavě si můžete všimnout červené lysinky, která se s&nbsp;přibývajícím věkem zvětšuje. Své typické zbarvení získají dospívající jedinci ve věku přibližně dvou let.
         </AnimalText>
         <AnimalText>
           Jeřábi většinou hnízdí v&nbsp;mokřadech na Dálném východě a Japonském souostroví. Jejich přirozených hnízdišť však ubývá, a proto jsou jeřábi mandžuští zapsáni na červeném seznamu IUCN jako ohrožený druh. Živí se zejména bezobratlými, drobnými obratlovci a vodními rostlinami, v&nbsp;zimě ale nepohrdnou ani zrním. Jako většina jeřábů jsou i&nbsp;jeřábi mandžuští tažným druhem, který se na zimu stěhuje na východ Asie. Výjimkou je hejno asi tisícovky jeřábů, kteří žijí celoročně na ostrově Hokkaidó.
@@ -42,6 +42,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

@@ -1,17 +1,16 @@
 import React from 'react';
+import { WIDTH } from '../styles/styles';
+
 import {
   View,
   Text,
   TouchableHighlight,
   TextInput,
-  StyleSheet,
-  Image,
-  Alert,
+  ImageBackground
 } from 'react-native';
-import {sceneTitles} from '../scenes';
-import {WIDTH} from '../styles/styles';
-
+import { sceneTitles, scenes } from '../scenes';
 import AlphabetListView from 'react-native-alphabetlistview';
+
 import animals from '../animals';
 
 class Cell extends React.Component {
@@ -23,17 +22,19 @@ class Cell extends React.Component {
     return (
       <TouchableHighlight
         onPress={() => {
-          this.props.navigation.navigate(sceneTitles['animal-detail'].name, {animal: this.props.item.animal});
+          this.props.navigation.navigate(sceneTitles[scenes.ANIMAL_DETAIL].name,
+          {animal: this.props.item.animal});
         }}
         underlayColor='#bbbbbb'
       >
-      <View style={{height:30, paddingLeft: 5}}>
-        <Text style={{color: 'white'}}>{this.props.item.name}</Text>
-      </View>
+        <View style={{height:30, paddingLeft: 5}}>
+          <Text style={{color: 'white'}}>{this.props.item.name}</Text>
+        </View>
       </TouchableHighlight>
     );
   }
 }
+
 class SectionItem extends React.Component {
   constructor(props) {
     super(props);
@@ -41,19 +42,22 @@ class SectionItem extends React.Component {
 
   render() {
     return (
-        <View style={{
-          backgroundColor: this.props.bgColor,
-          width: 30,
-          height: 30,
-          borderLeftWidth: 1,
-          borderColor: 'white',
-          justifyContent: 'center',
-        }}>
-        <Text style={{color: 'white', textAlign: 'center', fontWeight: '700'}}>{this.props.title}</Text>
-        </View>
+      <View style={{
+        backgroundColor: this.props.bgColor,
+        width: 30,
+        height: 30,
+        borderLeftWidth: 1,
+        borderColor: 'white',
+        justifyContent: 'center',
+      }}>
+        <Text style={{color: 'white', textAlign: 'center', fontWeight: '700'}}>
+          {this.props.title}
+        </Text>
+      </View>
     );
   }
 }
+
 class SectionHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -69,8 +73,8 @@ class SectionHeader extends React.Component {
       backgroundColor: 'rgba(0,0,0,0)',
     };
 
-    return (
-        <Text style={textStyle}>{this.props.title}</Text>
+    return(
+      <Text style={textStyle}>{this.props.title}</Text>
     );
   }
 }
@@ -122,19 +126,19 @@ export default class AnimalListScene extends React.Component {
     const charMapU = " 0123456789AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ";
     var charsOrder = {};
     for(var i in charMapL.split('')) {
-        charsOrder[charMapL[i]] = parseInt(i);
-        charsOrder[charMapU[i]] = parseInt(i);
+      charsOrder[charMapL[i]] = parseInt(i);
+      charsOrder[charMapU[i]] = parseInt(i);
     }
 
     function czechSort(s1, s2) {
-        let idx = 0;
-        while ( (idx < s1.length) && (idx < s2.length) && (charsOrder[s1[idx]] == charsOrder[s2[idx]])) {
-            idx ++;
-        }
-        if ((idx == s1.length) && (idx == s2.length)) return 0;
-        if (idx == s1.length) return 1;
-        if (idx == s2.length) return -1;
-        return charsOrder[s1[idx]] > charsOrder[s2[idx]] ? 1 : (charsOrder[s1[idx]] < charsOrder[s2[idx]] ? -1 : 0);
+      let idx = 0;
+      while ( (idx < s1.length) && (idx < s2.length) && (charsOrder[s1[idx]] == charsOrder[s2[idx]])) {
+          idx ++;
+      }
+      if ((idx == s1.length) && (idx == s2.length)) return 0;
+      if (idx == s1.length) return 1;
+      if (idx == s2.length) return -1;
+      return charsOrder[s1[idx]] > charsOrder[s2[idx]] ? 1 : (charsOrder[s1[idx]] < charsOrder[s2[idx]] ? -1 : 0);
     }
 
     for (let letter in state.fullData) {
@@ -184,9 +188,8 @@ export default class AnimalListScene extends React.Component {
 
   render() {
     return (
-      <Image
+      <ImageBackground
         source={require('../images/background/about.png')}
-        resizeMode="cover"
         style={{flex: 1, width: WIDTH}}
       >
         <TextInput
@@ -206,7 +209,7 @@ export default class AnimalListScene extends React.Component {
           sectionHeaderHeight={22.5}
           compareFunction={(a,b) => {return a.localeCompare(b); }}
         />
-      </Image>
+      </ImageBackground>
     );
   }
 }

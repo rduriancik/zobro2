@@ -1,40 +1,29 @@
 import React from 'react';
-import styles from '../styles/styles';
+import styles, { WIDTH } from '../styles/styles';
 
 import Accordion from 'react-native-collapsible/Accordion';
-import Collapsible from 'react-native-collapsible';
+import PushNotification from 'react-native-push-notification';
 
 import {
   View,
   ScrollView,
   Image,
   TouchableHighlight,
-  StyleSheet,
-  Alert,
+  ImageBackground,
+  Alert
 } from 'react-native';
-import Text from '../components/animalText'
-import Dimensions from 'Dimensions';
-import PushNotification from 'react-native-push-notification';
+import Text from '../components/animalText';
 
 import events from '../events.js';
 
-const backgroundColors = [
-  '#37af54',
-  '#2d9946',
-  '#267f3b',
-  '#20642f',
-  '#267f3b',
-  '#2d9946',
-];
-
 var _this = null;
 
-export default class EventsScene extends React.Component {
+export default class EventScene extends React.Component {
   constructor(props) {
     super(props);
 
     PushNotification.configure({
-        onNotification: function(notification) {
+      onNotification: function(notification) {
             Alert.alert(notification.message);
         },
 
@@ -55,37 +44,34 @@ export default class EventsScene extends React.Component {
   }
 
   _renderHeader(section, index) {
-    const WIDTH = Dimensions.get('window').width;
-
     return (
-      <Image
-        resizeMode='cover'
+      <ImageBackground
         source={section.thumbnail}
         style={{width: WIDTH, height: 80 }}
       >
-      <View
-        style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#144d22B0',
-          height: 80,
-        }}
-        ref={(component) => {
-          if (!(_this.eventHeader.includes(component)) && (component !== null)) {
-            _this.eventHeader.push(component);
-          }
-        }}
-      >
-        <Text style={[styles.eventItemText, {fontWeight: 'bold'}]}>{section.name}</Text>
-        <Text style={styles.eventItemText}>dnes, {section.time}</Text>
-      </View>
-      </Image>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#144d22B0',
+            height: 80,
+          }}
+          ref={(component) => {
+            if (!(_this.eventHeader.includes(component)) && (component !== null)) {
+              _this.eventHeader.push(component);
+            }
+          }}
+        >
+          <Text style={[styles.eventItemText, {fontWeight: 'bold'}]}>
+            {section.name}
+          </Text>
+          <Text style={styles.eventItemText}>dnes, {section.time}</Text>
+        </View>
+      </ImageBackground>
     );
   }
 
   _renderContent(event) {
-    const WIDTH = Dimensions.get('window').width;
-
     return (
       <View style={{backgroundColor: '#1d1b1b'}}>
         <Image
@@ -93,37 +79,46 @@ export default class EventsScene extends React.Component {
           source={event.thumbnail}
           style={{width: WIDTH, height: 120 }}
         />
-        <Text style={{fontSize: 22, paddingBottom: 20, paddingTop: 20, color: 'white', textAlign: 'center'}}>
+        <Text style={{fontSize: 22, paddingBottom: 20, paddingTop: 20,
+          color: 'white', textAlign: 'center'}}>
           {event.place}
         </Text>
-        <Text style={{fontSize: 16, width: WIDTH, textAlign: 'center', paddingBottom: 20, paddingTop: 20, color: 'white'}}>
+        <Text style={{fontSize: 16, width: WIDTH, textAlign: 'center',
+          paddingBottom: 20, paddingTop: 20, color: 'white'}}>
           Chcete být upozorněni na začátek krmení?
         </Text>
         <View style={{height: 62, flexDirection: 'row'}}>
-          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 5)]} onPress={() => _this.toggleEvent(event, 5)}>
+          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 5)]} 
+            onPress={() => _this.toggleEvent(event, 5)}>
             <Text style={styles.eventButtonText}> 5 minut </Text>
           </TouchableHighlight>
-          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 10)]} onPress={() => _this.toggleEvent(event, 10)}>
+          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 10)]}
+            onPress={() => _this.toggleEvent(event, 10)}>
             <Text style={styles.eventButtonText}> 10 minut </Text>
           </TouchableHighlight>
-          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 15)]} onPress={() => _this.toggleEvent(event, 15)}>
+          <TouchableHighlight underlayColor="#aaaaaa" style={[styles.eventButton, _this.styleEvent(event, 15)]}
+            onPress={() => _this.toggleEvent(event, 15)}>
             <Text style={styles.eventButtonText}> 15 minut </Text>
           </TouchableHighlight>
         </View>
       </View>
-    );
+    )
   }
 
   toggleEvent(zooEvent, deltaTime) {
     if (this.checkEventNotification(zooEvent, deltaTime)) {
       this.props.removeNotification(zooEvent, deltaTime);
-      PushNotification.cancelLocalNotifications({ id: this._createNotificationID(zooEvent, deltaTime)});
+      PushNotification.cancelLocalNotifications(
+        { id: this._createNotificationID(zooEvent, deltaTime)}
+      );
     } else {
       const deltas = [5, 10, 15];
       // @todo: fix - android issue, ID have to be integer
       // remove notifications for same zooEvent but different deltaTime
       deltas.forEach((value) => {
-          PushNotification.cancelLocalNotifications({ id: this._createNotificationID(zooEvent, value)});
+          PushNotification.cancelLocalNotifications(
+            { id: this._createNotificationID(zooEvent, value)}
+          );
       });
 
       // add new local notification
@@ -144,7 +139,7 @@ export default class EventsScene extends React.Component {
       };
       PushNotification.localNotificationSchedule(z);
 
-      this.props.addNotification(zooEvent, deltaTime);
+      this.props.addNotification(zooEvent, deltaTime)
     }
   }
 
@@ -215,37 +210,34 @@ export default class EventsScene extends React.Component {
       } else {
         return 0;
       }
-    })
-
-    const WIDTH = Dimensions.get('window').width;
+    });
 
     return (
-      <Image
+      <ImageBackground
         source={require('../images/background/about.png')}
-        resizeMode="cover"
         style={{flex: 1, width: WIDTH}}
       >
-      {
-        filteredEvents.length === 0
-        ? (
-          <View style={[styles.eventItem, {flex:1, flexDirection: 'row', backgroundColor: 'rgba(0,0,0,0)'}]}>
-            <View style={{flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={styles.eventItemText}>Je nám líto,</Text>
-              <Text style={styles.eventItemTextTime}>dnes už jsme nakrmení.</Text>
+        {
+          filteredEvents.length === 0
+          ? (
+            <View style={[styles.eventItem, {flex:1, flexDirection: 'row', backgroundColor: 'rgba(0,0,0,0)'}]}>
+              <View style={{flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                <Text style={styles.eventItemText}>Je nám líto,</Text>
+                <Text style={styles.eventItemTextTime}>dnes už jsme nakrmení.</Text>
+              </View>
             </View>
-          </View>
-        ) : (
-        <ScrollView ref="list">
-          <Accordion
-            sections={filteredEvents}
-            renderHeader={this._renderHeader}
-            renderContent={this._renderContent}
-            onChange={this._onEventChange}
-          />
-        </ScrollView>
-      )
-    }
-      </Image>
+          ) : (
+            <ScrollView ref="list">
+              <Accordion
+                sections={filteredEvents}
+                renderHeader={this._renderHeader}
+                renderContent={this._renderContent}
+                onChange={this._onEventChange}
+              />
+            </ScrollView>
+          )
+        }
+      </ImageBackground>
     );
   }
 }

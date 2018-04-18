@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/jakDomaci/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -33,7 +33,7 @@ var AnimalDetail = React.createClass({
           Primárně nás lidé využívají jako dopravní prostředek, protože uneseme až 150&nbsp;kg. Dále poskytujeme mléko, maso, kožešinu, kůži a naším sušeným trusem se výborně topí, protože hřeje a nepáchne. Lidé nejsou do extrémní vysokohorské zimy vybaveni tak dobře jako my. Dlouhá hnědá srst, kterou vidíte, je pouze jedna z&nbsp;vrstev, pod ní máme ještě hustou podsadu. To je, jako když si do pořádné kosy oblečete svůj nejhrubší svetr a hodíte na sebe ještě kabát. Navíc se skoro nepotíme, tak nám zbytečně neuniká teplo. Proto však špatně snášíme vyšší teploty, jelikož se naopak nemáme jak ochladit. Do života ve výškách jsme vybaveni i&nbsp;velkou kapacitou plic a větším množstvím červených krvinek, abychom vytřískali co nejvíce kyslíku z&nbsp;řídkého vysokohorského vzduchu. Živíme se listy, výhonky keřů, lišejníky či trávou, prostě býlím a taky sněhem, který nám slouží jako zdroj vody.
         </AnimalText>
         <AnimalText>
-          Tibeťané si nás ochočili už před nějakou dobou a naši divocí příbuzní stále ještě ve stádech pobíhají po světě, ale jsou ohrožení. Je jich asi 15&nbsp;000&nbsp;kusů, nás domácích asi 13&nbsp;miliónů, což je znatelný rozdíl. Problémem bývá to, že od nás domestikovaných zvířat snadno naši divocí příbuzní chytnou nějakou nemoc, na kterou nejsou zvyklí. Hlavními nepřáteli divokých jaků jsou však pytláci, kterým se asi zamlouvá, že jsou větší a mají huňatější kožich než my, jaci domácí. 
+          Tibeťané si nás ochočili už před nějakou dobou a naši divocí příbuzní stále ještě ve stádech pobíhají po světě, ale jsou ohrožení. Je jich asi 15&nbsp;000&nbsp;kusů, nás domácích asi 13&nbsp;miliónů, což je znatelný rozdíl. Problémem bývá to, že od nás domestikovaných zvířat snadno naši divocí příbuzní chytnou nějakou nemoc, na kterou nejsou zvyklí. Hlavními nepřáteli divokých jaků jsou však pytláci, kterým se asi zamlouvá, že jsou větší a mají huňatější kožich než my, jaci domácí.
         </AnimalText>
        <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
@@ -45,6 +45,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

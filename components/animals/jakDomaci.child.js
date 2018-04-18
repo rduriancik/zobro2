@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/jakDomaci/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           KLOPÝTAVÁ
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
         Jak se češe jak,
@@ -41,7 +41,7 @@ var AnimalDetail = React.createClass({
           Přes horské hřebeny klopýtá.
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
         Protože má hodně síly,
@@ -56,7 +56,7 @@ var AnimalDetail = React.createClass({
           Pomáhají mu srst vyčesat.
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           Z&nbsp;dlouhé tkají deky, stany,
@@ -71,13 +71,13 @@ var AnimalDetail = React.createClass({
           dělá se z&nbsp;ní oblečení.
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           …
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           Koukejte na naše chlupáče!
@@ -92,7 +92,7 @@ var AnimalDetail = React.createClass({
           přivítá každá kštice!
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           …
@@ -114,6 +114,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

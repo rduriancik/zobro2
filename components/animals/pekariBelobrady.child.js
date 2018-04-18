@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/pekariBelobrady/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -40,7 +40,7 @@ var AnimalDetail = React.createClass({
           Vypadáme jako divoká prasátka, ale rozeznáš nás podle toho, že máme bílou skvrnu na bradě (díky ní jsme dostali své pojmenování). Od divokých prasátek se odlišujeme také tím, že žijeme ve velkých skupinách, v&nbsp;nichž nás může být až několik stovek. Dorůstáme do výšky až 60&nbsp;centimetrů, to je jako dvě kočky nad sebou, a délky až 120&nbsp;centimetrů, což je jako dvě kočky (počítáno bez ocasu) za sebou.
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           P. S.: Při psaní tohoto textu nepřišla žádná kočka o&nbsp;ocásek.
@@ -49,6 +49,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

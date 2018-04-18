@@ -18,12 +18,12 @@ const THUMBNAILS = [
   require('../../images/animals/leskoptevTribarva/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Leskoptev je pták. To každého napadne, protože to zní trochu jako koroptev. Průměrná koroptev je ovšem mnohem méně barevná, větší a popravdě mnohem méně zajímavá. A aby toho nebylo málo, svým chováním připomínají leskoptve z&nbsp;našeho ptactva spíš kukačky. Latinský název zní <Text style={styles.italic}>Lamprotornis superbus</Text>, přičemž patří do čeledi špačkovitých. Tyto informace by mohly evokovat představu trojbarevného špačka velikosti autobusu, jak rozsedá třešeň. Vězte však, že leskoptev dorůstá zhruba 18&nbsp;centimetrů, což jsou přibližně 2/3 koroptve nebo špaček bez nožiček. Co se hmotnosti týče, pohybují se leskoptve mezi 52–77&nbsp;gramy, tedy 6,5×&nbsp;méně, než co váží průměrné koroptve (nebo tolik, kolik by vážil špaček anorektik). 
+          Leskoptev je pták. To každého napadne, protože to zní trochu jako koroptev. Průměrná koroptev je ovšem mnohem méně barevná, větší a popravdě mnohem méně zajímavá. A aby toho nebylo málo, svým chováním připomínají leskoptve z&nbsp;našeho ptactva spíš kukačky. Latinský název zní <Text style={styles.italic}>Lamprotornis superbus</Text>, přičemž patří do čeledi špačkovitých. Tyto informace by mohly evokovat představu trojbarevného špačka velikosti autobusu, jak rozsedá třešeň. Vězte však, že leskoptev dorůstá zhruba 18&nbsp;centimetrů, což jsou přibližně 2/3 koroptve nebo špaček bez nožiček. Co se hmotnosti týče, pohybují se leskoptve mezi 52–77&nbsp;gramy, tedy 6,5×&nbsp;méně, než co váží průměrné koroptve (nebo tolik, kolik by vážil špaček anorektik).
         </AnimalText>
       <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
@@ -36,6 +36,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

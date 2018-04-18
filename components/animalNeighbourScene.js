@@ -1,14 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../styles/styles';
+
 import {
   View,
   Text,
   ListView,
-  TouchableHighlight, Alert, Image,
+  TouchableHighlight,
+  Alert,
+  Image,
 } from 'react-native';
 
-import styles from '../styles/styles';
 import animals from '../animals';
-import {sceneTitles} from '../scenes';
+import { sceneTitles, scenes } from '../scenes';
 
 var navigation;
 var setAnimalTab;
@@ -41,13 +45,15 @@ class Cell extends React.Component {
       <TouchableHighlight
         onPress={() => {
           setAnimalTab('Text');
-          navigation.navigate(sceneTitles['animal-detail'].name, {animal: this.props.item.animal});
+          navigation.navigate(sceneTitles[scenes.ANIMAL_DETAIL].name, {animal: this.props.item.animal});
         }}
         underlayColor='#bbbbbb'
       >
-        <View style={[styles.eventItem, {flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: this.props.backgroundColor}]}>
-        <Image style={{height: 50, width: 50, marginRight: 10}} source={directionArrow} resizeMode='contain' />
-        <Text style={styles.eventItemText}>{animal.name}</Text>
+        <View style={[styles.eventItem, {flex: 1, flexDirection: 'row',
+          alignItems: 'center', backgroundColor: this.props.backgroundColor}]}>
+          <Image style={{height: 50, width: 50, marginRight: 10}} source={directionArrow}
+            resizeMode='contain' />
+          <Text style={styles.eventItemText}>{animal.name}</Text>
         </View>
       </TouchableHighlight>
     );
@@ -62,7 +68,8 @@ export default class AnimalNeighbourScene extends React.Component {
     this.state = {
         dataSource: ds.cloneWithRows(
           animals[this.props.animal].neighbours.map(function(v) { return v })
-      )};
+      )
+    };
   }
 
   render() {
@@ -82,7 +89,7 @@ export default class AnimalNeighbourScene extends React.Component {
     setAnimalTab = this.props.setAnimalTab;
 
     return (
-        <ListView
+      <ListView
           dataSource={this.state.dataSource}
           removeClippedSubviews={false}
           renderRow={(data) => {
@@ -97,5 +104,5 @@ export default class AnimalNeighbourScene extends React.Component {
 }
 
 AnimalNeighbourScene.propTypes = {
-    animal: React.PropTypes.string.isRequired,
+    animal: PropTypes.string.isRequired,
 };

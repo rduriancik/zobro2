@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/psounPreriovy/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -26,7 +26,7 @@ var AnimalDetail = React.createClass({
           „Vetřelec! Na místa, vetřelec!“
         </AnimalText>
         <AnimalText>
-          Cože? Říkáte, že jste jen neškodné děti? Promiňte, měl jsem vás za lišky. Však jste možná lišky podšité. 
+          Cože? Říkáte, že jste jen neškodné děti? Promiňte, měl jsem vás za lišky. Však jste možná lišky podšité.
         </AnimalText>
         <AnimalText>
           „Už můžete vylézt z&nbsp;nor, byl to planý poplach.“
@@ -48,6 +48,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

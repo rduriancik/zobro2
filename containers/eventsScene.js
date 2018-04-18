@@ -1,10 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import EventsScene from '../scenes/eventsScene';
-import {addNotification, removeNotification} from '../actions';
-import {HEADER_STYLE} from '../styles/styles';
+import { addNotification, removeNotification } from '../actions';
+import { HEADER_STYLE } from '../styles/styles';
 
 const mapStateToProps = (state) => {
   return {

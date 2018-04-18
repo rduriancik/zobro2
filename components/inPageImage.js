@@ -1,9 +1,14 @@
 import React from 'react';
-import {Text, View, Image} from 'react-native';
+import PropTypes from 'prop-types';
 import styles from '../styles/styles';
-
-import Lightbox from 'react-native-lightbox';
 import Dimensions from 'Dimensions';
+
+import {
+  Text,
+  View,
+  Image
+} from 'react-native';
+import Lightbox from 'react-native-lightbox';
 import Swiper from 'react-native-swiper';
 
 class AnimalImage extends React.Component {
@@ -12,20 +17,20 @@ class AnimalImage extends React.Component {
   }
 
   render() {
-      return (
-        <Lightbox
-          swipeToDismiss={false}
-          renderContent={this.renderModal}
-          activeProps={this.props}
-          style={this.props.lightboxStyle}
-        >
-          <Image
-            source={this.props.thumbnails[this.props.index]}
-            resizeMode='cover'
-            style={this.props.thumbnailStyle}
-          />
-        </Lightbox>
-      );
+    return (
+      <Lightbox
+        swipeToDismiss={false}
+        renderContent={this.renderModal}
+        activeProps={this.props}
+        style={this.props.lightboxStyle}
+      >
+        <Image
+          source={this.props.thumbnails[this.props.index]}
+          resizeMode='cover'
+          style={this.props.thumbnailStyle}
+        />
+      </Lightbox>
+    );
   }
 
   renderModal(props) {
@@ -43,6 +48,7 @@ class AnimalImage extends React.Component {
         <Text style={styles.buttonText}>›</Text>
       </View>
     );
+
     const leftArrow = (
       <View style={{
         backgroundColor: 'rgba(150,150,150,0.8)',
@@ -56,20 +62,25 @@ class AnimalImage extends React.Component {
     );
 
     return (
-      <Swiper showsButtons={true} index={props.index} prevButton={leftArrow} nextButton={rightArrow} showsPagination={false}>
-        {props.images.map((image, index) => (
-            <View key={index} style={{flex: 1}}>
-              <Image
-                source={image}
-                resizeMode='contain'
-                style={{width: WINDOW_WIDTH, height: WINDOW_HEIGHT}}
-              />
-            </View>
-        ))}
+      <Swiper showsButtons={true} index={props.index} prevButton={leftArrow}
+       nextButton={rightArrow} showsPagination={false}>
+        {
+          props.images.map((image, index) => (
+              <View key={index} style={{flex: 1}}>
+                <Image
+                  source={image}
+                  resizeMode='contain'
+                  style={{width: WINDOW_WIDTH, height: WINDOW_HEIGHT}}
+                />
+              </View>
+            )
+          )
+        }
       </Swiper>
     );
   }
 };
+
 
 export default class InPageImage extends React.Component {
   constructor(props) {
@@ -102,21 +113,21 @@ export default class InPageImage extends React.Component {
       );
     } else if (this.props.indexes.length === 2) {
       return (
-      <View style={{flex: 1, flexDirection: 'row'}}>
-        <AnimalImage
-          index={this.props.indexes[0]}
-          images={this.props.images}
-          thumbnails={this.props.thumbnails}
-          thumbnailStyle={styles.inPageDuoThumbnailLeft}
-        />
-        <AnimalImage
-          index={this.props.indexes[1]}
-          images={this.props.images}
-          thumbnails={this.props.thumbnails}
-          thumbnailStyle={styles.inPageDuoThumbnailRight}
-        />
-      </View>
-    );
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <AnimalImage
+            index={this.props.indexes[0]}
+            images={this.props.images}
+            thumbnails={this.props.thumbnails}
+            thumbnailStyle={styles.inPageDuoThumbnailLeft}
+          />
+          <AnimalImage
+            index={this.props.indexes[1]}
+            images={this.props.images}
+            thumbnails={this.props.thumbnails}
+            thumbnailStyle={styles.inPageDuoThumbnailRight}
+          />
+        </View>
+      );
     } else {
       // More pictures are not supported yet because they are not needed
       return null;
@@ -125,7 +136,7 @@ export default class InPageImage extends React.Component {
 };
 
 InPageImage.propTypes = {
-    indexes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    thumbnails: React.PropTypes.array.isRequired,
-    images: React.PropTypes.array.isRequired,
+    indexes: PropTypes.arrayOf(PropTypes.number).isRequired,
+    thumbnails: PropTypes.array.isRequired,
+    images: PropTypes.array.isRequired,
 };

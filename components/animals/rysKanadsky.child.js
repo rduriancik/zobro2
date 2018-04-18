@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/rysKanadsky/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -30,20 +30,20 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        Jen si protáhnu tlapičky a hned budeme pokračovat. A&nbsp;to se mi děti občas diví, proč mám tak velké tlapky. Mám chuť jim odpovědět, že velké tlapky mám proto, abych je lépe chytla, a velké uši proto, abych je lépe slyšela, ale mohlo by je potom napadnout šťouchat mi do bříška a hledat Karkulku. To tak. To byl vlk, já jsem rys. K&nbsp;obědu mám raději zajíce. Také ti tak chutnají? Tlapky mám tak vyvinuté, abych se mohla stejně lehce pohybovat jak v&nbsp;hlubokém sněhu, tak v&nbsp;trávě. Jako rysí slečně mi na tom samozřejmě záleží. 
+        Jen si protáhnu tlapičky a hned budeme pokračovat. A&nbsp;to se mi děti občas diví, proč mám tak velké tlapky. Mám chuť jim odpovědět, že velké tlapky mám proto, abych je lépe chytla, a velké uši proto, abych je lépe slyšela, ale mohlo by je potom napadnout šťouchat mi do bříška a hledat Karkulku. To tak. To byl vlk, já jsem rys. K&nbsp;obědu mám raději zajíce. Také ti tak chutnají? Tlapky mám tak vyvinuté, abych se mohla stejně lehce pohybovat jak v&nbsp;hlubokém sněhu, tak v&nbsp;trávě. Jako rysí slečně mi na tom samozřejmě záleží.
         </AnimalText>
         <AnimalText>
         Abych pokračovala. Tady v&nbsp;zoo je tu se mnou ještě jeden rys, takže si mám s&nbsp;kým hrát. Povídal, že pochází z&nbsp;Ostravy. Já jsem cizinka ze Spojených států amerických.
         </AnimalText>
         <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        Otázka pro zvídavé hlavičky: jak se správně nazývají členové rysí rodiny? Vyber z&nbsp;nabídky. 
+        Otázka pro zvídavé hlavičky: jak se správně nazývají členové rysí rodiny? Vyber z&nbsp;nabídky.
         </AnimalText>
         <AnimalText>
-        Tatínek je ... (rysák, rys, rysí sameček, rysí tatínek, rysek, rýs, rysic) 
+        Tatínek je ... (rysák, rys, rysí sameček, rysí tatínek, rysek, rýs, rysic)
         </AnimalText>
         <AnimalText>
-        Maminka je ... (rysačka, rys, ryska, rysí samička, rysí slečna, rysí maminka, ryska, rýsa, rysice) 
+        Maminka je ... (rysačka, rys, ryska, rysí samička, rysí slečna, rysí maminka, ryska, rýsa, rysice)
         </AnimalText>
         <AnimalText>
         Děťátko je ... (rysátko, rys, rýše, rysí děťátko, rysáče, rýsátko, rýsáče, rysí mládě)
@@ -51,6 +51,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/araArarauna/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -33,15 +33,13 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        Od ostatních ptáků nás rozeznáte velice snadno. Už z&nbsp;dáli na vás bude svítit naše žluté bříško, modrá křídla a zelená čepička na hlavě. Určitě si také všimnete velkého zahnutého zobáku, kterým rádi louskáme různé oříšky. Pochutnáme si i&nbsp;na pupenech a mladých výhoncích větví různých stromů. Když máme napapaná bříška, můžeme vážit až 1,4&nbsp;kg, to si můžete představit jako pytlík mouky a ještě půlku k&nbsp;tomu. Na výšku měříme až 84&nbsp;cm, to je skoro jako šířka vaší postele. Když roztáhneme křídla, měříme až 112&nbsp;cm. To je jako když roztáhnete ruce, jak nejvíc můžete. 
+        Od ostatních ptáků nás rozeznáte velice snadno. Už z&nbsp;dáli na vás bude svítit naše žluté bříško, modrá křídla a zelená čepička na hlavě. Určitě si také všimnete velkého zahnutého zobáku, kterým rádi louskáme různé oříšky. Pochutnáme si i&nbsp;na pupenech a mladých výhoncích větví různých stromů. Když máme napapaná bříška, můžeme vážit až 1,4&nbsp;kg, to si můžete představit jako pytlík mouky a ještě půlku k&nbsp;tomu. Na výšku měříme až 84&nbsp;cm, to je skoro jako šířka vaší postele. Když roztáhneme křídla, měříme až 112&nbsp;cm. To je jako když roztáhnete ruce, jak nejvíc můžete.
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        Až ary dospějí, většinou si najdou partnera na celý život. Skvělým příkladem jsme já a Koko. I&nbsp;když pak letí páry v&nbsp;hejnu, vždycky se drží u&nbsp;sebe a téměř se dotýkají křídly, podobně jako když se dospělí lidé drží za ruce. 
+        Až ary dospějí, většinou si najdou partnera na celý život. Skvělým příkladem jsme já a Koko. I&nbsp;když pak letí páry v&nbsp;hejnu, vždycky se drží u&nbsp;sebe a téměř se dotýkají křídly, podobně jako když se dospělí lidé drží za ruce.
         </AnimalText>
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

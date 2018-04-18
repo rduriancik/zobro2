@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/bobrKanadsky/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -26,25 +26,23 @@ var AnimalDetail = React.createClass({
         <Text style={styles.italic}>blabla</Text> &nbsp;
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-        
+
         </AnimalText>
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

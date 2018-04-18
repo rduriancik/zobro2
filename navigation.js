@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
 
 import { StackNavigator } from 'react-navigation';
 
@@ -12,7 +10,7 @@ import MenuScene from './scenes/menuScene';
 import AnimalListScene from './containers/animalListScene';
 import AnimalScene from './containers/animalScene';
 import QRScene from './containers/qrScene';
-import {scenes} from './scenes.js';
+import { scenes } from './scenes.js';
 
 const zobro2 = StackNavigator({
   [scenes.MAIN_MENU]: { screen: MenuScene },

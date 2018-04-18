@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/rosomakSibirsky/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -28,14 +28,14 @@ var AnimalDetail = React.createClass({
         <AnimalText>
           Jmenuji se Ivan a jsem rosomák. Ve výběhu je tu se mnou ještě rosomačice Nataša. Právě ona mě pověřila důležitým úkolem: ráda by si vyšla na procházku po zoo. Musím nás oba dostat ven z&nbsp;výběhu.
         </AnimalText>
-      <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
+        <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           Představte si tu svobodu! Prošmejdíme každý kout v&nbsp;zoo. Vytvoříme si nový úkryt. Budeme lidem krást klobásky z&nbsp;talířů a v&nbsp;noci ulovíme velikého jelena. To dělají naši přátelé v&nbsp;divočině celkem často.
         </AnimalText>
         <AnimalText>
           Že chcete znát můj plán? No dobrá, ale opravdu se ujistěte, že nás neposlouchají pracovníci zoo.
         </AnimalText>
-      <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />      
+        <InPageImage indexes={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
           Prvně jsem si říkal, že prchneme raz dva. Pocházíme z&nbsp;dalekého severu, kde se lidé rosomáků báli od nepaměti. Dali nám dokonce přezdívky jako <Text style={styles.italic}>hyeny severu</Text> nebo <Text style={styles.italic}>lesní duchové</Text>. V&nbsp;Brně je ale všechno jiné. Akce <Text style={styles.italic}>„Hlasitě zavrč a uteč!“</Text> se nám nevydařila a chovatelé se nám akorát smáli. Ach&nbsp;jo!
         </AnimalText>
@@ -45,6 +45,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

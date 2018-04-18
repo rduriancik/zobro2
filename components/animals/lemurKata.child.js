@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/lemurKata/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -33,7 +33,7 @@ var AnimalDetail = React.createClass({
           Víte, kde je Madagaskar? Je to celkem velký ostrov u&nbsp;pobřeží Afriky. To, že nás Marty, Alex a jejich parta na Madagaskaru objevili ve filmu, nebyla žádná náhoda – je to jediné místo na Zemi, kde žijeme volně v&nbsp;přírodě. Kvůli ničení unikátní madagaskarské přírody patříme mezi ohrožená zvířata.
         </AnimalText>
         <AnimalText>
-          Jednoznačně nás poznáte podle pruhovaného ocasu. Je pro nás hodně důležitý, využíváme ho pro udržení rovnováhy při skocích a také se s&nbsp;jeho pomocí dorozumíváme ve vysoké trávě. Naše tělo je pokryto hustou a jemnou srstí, na dotek jsme hebcí. Často si ji pročesáváme hřebínkem, který nám tvoří špičáky a řezáky. Srst si pročesáváme také speciálním nehtem na druhém prstu na noze, ostatní drápy máme ploché, takže jsou stejné jako tvoje nehty. 
+          Jednoznačně nás poznáte podle pruhovaného ocasu. Je pro nás hodně důležitý, využíváme ho pro udržení rovnováhy při skocích a také se s&nbsp;jeho pomocí dorozumíváme ve vysoké trávě. Naše tělo je pokryto hustou a jemnou srstí, na dotek jsme hebcí. Často si ji pročesáváme hřebínkem, který nám tvoří špičáky a řezáky. Srst si pročesáváme také speciálním nehtem na druhém prstu na noze, ostatní drápy máme ploché, takže jsou stejné jako tvoje nehty.
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
@@ -48,6 +48,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

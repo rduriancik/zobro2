@@ -1,10 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import QrScene from '../scenes/qrScene';
-import {setCameraReady, setSelectedAnimal} from '../actions';
-import {HEADER_STYLE} from '../styles/styles';
+import { setCameraReady, setSelectedAnimal } from '../actions';
+import { HEADER_STYLE } from '../styles/styles';
 
 const mapStateToProps = (state) => {
   return {
@@ -33,14 +33,14 @@ class QRContainer extends React.Component {
 
   render() {
     return (
-        <QrScene
-          cameraReady={this.props.configuration.cameraReady}
-          setCameraReady={this.props.setCameraReady}
-          setSelectedAnimal={this.props.setSelectedAnimal}
-          navigation={this.props.navigation}
-        />
-      );
-    }
+      <QrScene
+        cameraReady={this.props.configuration.cameraReady}
+        setCameraReady={this.props.setCameraReady}
+        setSelectedAnimal={this.props.setSelectedAnimal}
+        navigation={this.props.navigation}
+      />
+    );
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(QRContainer)

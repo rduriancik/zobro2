@@ -17,18 +17,18 @@ const THUMBNAILS = [
   require('../../images/animals/manul/01-thumb.jpg'),
   require('../../images/animals/manul/02-thumb.jpg'),
   require('../../images/animals/manul/03-thumb.jpg'),
-  require('../../images/animals/manul/04-thumb.jpg'),  
+  require('../../images/animals/manul/04-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
         <AnimalText>
-          Spát a spát, to já mám rád. 
+          Spát a spát, to já mám rád.
         </AnimalText>
         <AnimalText>
-          Když si sklopím uši, nic mě nevyruší. 
+          Když si sklopím uši, nic mě nevyruší.
         </AnimalText>
         <AnimalText>
           Zbožňuju spánek. Mrúú.
@@ -41,13 +41,13 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[2]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Abyste věděli, tady platí jen to, co si umanu já, protože jen já se jmenuju <Text style={styles.italic}>manul</Text>. 
+          Abyste věděli, tady platí jen to, co si umanu já, protože jen já se jmenuju <Text style={styles.italic}>manul</Text>.
         </AnimalText>
         <AnimalText>
           Teď si chci jít trochu schrupnout, takže mě přestaňte otravovat a…
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
         …&nbsp;jejda, to jste vy, přátelé! Pardon, nepoznal jsem vás!
@@ -76,11 +76,9 @@ var AnimalDetail = React.createClass({
           Mrúú. Myslím, že už jsem vám toho pověděl dost.
         </AnimalText>
         <AnimalText>
-          Bylo mi ctí se s&nbsp;vámi setkat. 
+          Bylo mi ctí se s&nbsp;vámi setkat.
         </AnimalText>
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

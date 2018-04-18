@@ -1,14 +1,10 @@
 import React from 'react';
-import { TabNavigator, StackNavigator } from 'react-navigation';
-import Camera from 'react-native-camera';
-import { NavigationActions } from 'react-navigation'
-import { scenes, sceneTitles } from '../scenes';
-import {HEADER_STYLE} from '../styles/styles';
-import HeaderBackButton from 'react-navigation/src/views/Header/HeaderBackButton';
+import styles, { HEADER_STYLE } from '../styles/styles';
 
-import Dimensions from 'Dimensions';
-import styles from '../styles/styles';
-import AnimalNeighbourScene from '../components/animalNeighbourScene';
+import { TabNavigator , StackNavigator } from 'react-navigation';
+import Camera from 'react-native-camera';
+import { NavigationActions } from 'react-navigation';
+import HeaderBackButton from 'react-navigation/src/views/Header/HeaderBackButton';
 
 import {
   View,
@@ -21,8 +17,9 @@ import {
   Switch,
   Platform,
 } from 'react-native';
-
+import { scenes, sceneTitles } from '../scenes';
 import animals from '../animals';
+import AnimalNeighbourScene from '../components/animalNeighbourScene';
 
 class TextTab extends React.Component {
   constructor(props) {
@@ -32,24 +29,22 @@ class TextTab extends React.Component {
   static navigationOptions = (navigation) =>
     ({
       title: 'Text',
-    tabBarIcon: ({tintColor}) => (
-      <Image
-          source={require('../images/tab-icons/icon-text.png')}
-          style={[styles.tabIcons, {
-            backgroundColor: tintColor
-          }]}
-      />
-    )
-  })
+      tabBarIcon: ({tintColor}) => (
+        <Image
+            source={require('../images/tab-icons/icon-text.png')}
+            style={[styles.tabIcons, {backgroundColor: tintColor}]}
+        />
+      )
+    })  
 
   render() {
     let AnimalDetail;
     const animalName = this.props.screenProps.animal;
 
     if (!(animalName in animals)) {
-        return (
-          <Text>Neznámý QR kód načten: {animalName}</Text>
-        );
+      return (
+        <Text>Neznámý QR kód načten: {animalName}</Text>
+      );
     }
 
     if (this.props.screenProps.readerLevel === "adult") {
@@ -60,7 +55,7 @@ class TextTab extends React.Component {
 
     return (
       <ScrollView>
-        <AnimalDetail animal = {animalName} />
+        <AnimalDetail animal = {animalName}/>
       </ScrollView>
     );
   }
@@ -75,8 +70,8 @@ class QRTab extends React.Component {
     title: 'QR kód',
     tabBarIcon: ({tintColor}) => (
       <Image
-          source={require('../images/tab-icons/icon-qr.png')}
-          style={[styles.tabIcons, {backgroundColor: tintColor}]}
+        source={require('../images/tab-icons/icon-qr.png')}
+        style={[styles.tabIcons, {backgroundColor: tintColor}]}
       />
     )
   }
@@ -105,9 +100,6 @@ class QRTab extends React.Component {
   }
 
   render() {
-    const PADDING = 20;
-    const WIDTH = Dimensions.get('window').width - PADDING;
-
     if ((this.props.screenProps.cameraReady) && (this.props.screenProps.animalTab === 'QR')) {
       return (
         <View style={localStyles.container}>
@@ -145,9 +137,9 @@ class NeighbourTab extends React.Component {
     const animalName = this.props.screenProps.animal;
 
     if (!(animalName in animals)) {
-        return (
-          <Text>Neznámý QR kód načten: {animalName}</Text>
-        );
+      return (
+        <Text>Neznámý QR kód načten: {animalName}</Text>
+      );
     }
 
     return (
@@ -155,7 +147,7 @@ class NeighbourTab extends React.Component {
         navigation={this.props.screenProps.parentNavigation}
         setAnimalTab={this.props.screenProps.setAnimalTab}
         animal={animalName} />
-    );
+      );
   }
 }
 
@@ -187,52 +179,53 @@ export default class AnimalMainScreen extends React.Component {
       }
     }
 
-      if ( this.props.readerLevel === 'adult') {
-        adultImage = require('../images/tab-icons/adult-active.png');
-        childImage = require('../images/tab-icons/child-inactive.png');
-      } else {
-        adultImage = require('../images/tab-icons/adult-inactive.png');
-        childImage = require('../images/tab-icons/child-active.png');
-      }
+    if (this.props.readerLevel === 'adult') {
+      adultImage = require('../images/tab-icons/adult-active.png');
+      childImage = require('../images/tab-icons/child-inactive.png');
+    } else {
+      adultImage = require('../images/tab-icons/adult-inactive.png');
+      childImage = require('../images/tab-icons/child-active.png');
+    }
 
-      let tabBarOptions;
-      if (Platform.OS === 'ios') {
-        tabBarOptions = {
-          activeTintColor: 'black',
-        }
-      } else {
-        tabBarOptions = {
-          style: {
-            backgroundColor: '#0b2611',
-          },
-          indicatorStyle: {
-            backgroundColor: '#3CAC54',
-          }
+    let tabBarOptions;
+    if (Platform.OS === 'ios') {
+      tabBarOptions = {
+        activeTintColor: 'black',
+      }
+    } else {
+      tabBarOptions = {
+        style: {
+          backgroundColor: '#0b2611',
+        },
+        indicatorStyle: {
+          backgroundColor: '#3CAC54',
         }
       }
+    }
 
-      const MainScreenNavigator = TabNavigator({
-        Text: { screen: TextTab },
-        QR: { screen: QRTab },
-        Neighbour: { screen: NeighbourTab }
-      }, {
-        initialRouteName: this.props.tabName,
-        tabBarOptions,
-      });
+    const MainScreenNavigator = TabNavigator({
+      Text: { screen: TextTab },
+      QR: { screen: QRTab },
+      Neighbour: { screen: NeighbourTab }
+    }, {
+      initialRouteName: this.props.tabName,
+      tabBarOptions,
+    });
 
     const MainStack = StackNavigator({
-      Main: { screen: MainScreenNavigator },
+      Main: {screen: MainScreenNavigator },
     }, {
       navigationOptions: {
         title: animalName,
         ...HEADER_STYLE,
-        headerLeft: <HeaderBackButton tintColor='#DEDEDE' onPress={ () => {
+        headerLeft: 
+        <HeaderBackButton tintColor='#DEDEDE'  onPress={ () => {
           return this.props.navigation.goBack();
-        }} />,
-        headerRight: (
+        }}/>,
+        headerRight: 
+        (
           <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
-            <Image style={{marginRight: -5}}
-            source={childImage} />
+            <Image style={{marginRight: -5}} source={childImage} />
             <Switch
               onTintColor = '#3CAC54'
               style={{transform: [{scaleX: 0.7}, {scaleY: 0.7}]}}
@@ -249,7 +242,8 @@ export default class AnimalMainScreen extends React.Component {
           </View>
         ),
       }
-    });
+      }
+    );
 
     const p = {};
     p.animal = animalURI;
@@ -260,6 +254,7 @@ export default class AnimalMainScreen extends React.Component {
     p.animalTab = this.props.tabName;
     p.setAnimalTab = this.props.setAnimalTab;
     p.parentNavigation = this.props.navigation;
+
     return (
       <MainStack
         screenProps={p}

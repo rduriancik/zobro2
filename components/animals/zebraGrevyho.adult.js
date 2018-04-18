@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/zebraGrevyho/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[0]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -33,7 +33,7 @@ var AnimalDetail = React.createClass({
         </AnimalText>
         <InPageImage indexes={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator} />
         <AnimalText>
-          Za prvé, zebra Grévyho je rozměrově větší. Může být vysoká až 160&nbsp;cm a dlouhá 250–275&nbsp;cm. Má i&nbsp;zřetelně větší uši. Zebra Chapmanova je kratší i&nbsp;nižší asi o&nbsp;20&nbsp;cm. 
+          Za prvé, zebra Grévyho je rozměrově větší. Může být vysoká až 160&nbsp;cm a dlouhá 250–275&nbsp;cm. Má i&nbsp;zřetelně větší uši. Zebra Chapmanova je kratší i&nbsp;nižší asi o&nbsp;20&nbsp;cm.
         </AnimalText>
         <AnimalText>
           Za druhé, zebra Grévyho má hustší pruhování a na krku má pruhy širší než na zbytku těla, kde je má naopak mnohem užší než zebra Chapmanova. Na břichu žádné pruhy nemá, čímž se liší od všech ostatních druhů. Nos má hnědý a rostou jí na něm drobné fousky. Zebra Chapmanova má čumák černý a mezi černými širšími pruhy má na zadní polovině těla ještě tmavohnědé tenké proužky.
@@ -49,7 +49,7 @@ var AnimalDetail = React.createClass({
           Samec a samice mohou žít samostatně – mimo stádo. To nastává hlavně v&nbsp;případech, když se zebra rozhodne najít prostředí s&nbsp;lepšími životními podmínkami. Přesto se nejčastěji sdružují do stád, protože se tak lépe ubrání predátorům. Nejčastějšími predátory zebry bývají lvi, hyeny nebo krokodýli, na mláďata si však dovolí i&bnsp;gepardi nebo levharti.
         </AnimalText>
         <AnimalText>
-          Samice se většinou druží s&nbsp;více samci. Nicméně když porodí, drží se poblíž jediného po zbytek života. Samice je březí rok nebo i&nbsp;více. Většinou se jí narodí jedno mládě. Pokud se narodí dvojčata, ve většině případů nejsou životaschopná obě. Mláďata se rodí s&nbsp;hnědými pruhy, postupem času jim ztmavnou. Po porodu matka drží potomka u&nbsp;sebe a odhání ostatní samice. Hříbě by totiž následovalo cokoliv, co se hne. Proto je nutné, aby si zvyklo primárně na svou matku. Po půl roce se mládě už trochu osamostatní a až po 3&nbsp;letech se od ní odpoutá úplně. 
+          Samice se většinou druží s&nbsp;více samci. Nicméně když porodí, drží se poblíž jediného po zbytek života. Samice je březí rok nebo i&nbsp;více. Většinou se jí narodí jedno mládě. Pokud se narodí dvojčata, ve většině případů nejsou životaschopná obě. Mláďata se rodí s&nbsp;hnědými pruhy, postupem času jim ztmavnou. Po porodu matka drží potomka u&nbsp;sebe a odhání ostatní samice. Hříbě by totiž následovalo cokoliv, co se hne. Proto je nutné, aby si zvyklo primárně na svou matku. Po půl roce se mládě už trochu osamostatní a až po 3&nbsp;letech se od ní odpoutá úplně.
         </AnimalText>
         <AnimalText>
           Ve stádech s&nbsp;mláďaty existují tzv. školky. Když zebry jdou hledat vodu či potravu, mláďata s&nbsp;sebou neberou. Ta zůstanou pod dozorem jedné samice a jednoho samce. Samice se stará o&nbsp;mláďata a samec celou skupinku chrání.
@@ -60,6 +60,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};

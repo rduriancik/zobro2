@@ -18,7 +18,7 @@ const THUMBNAILS = [
   require('../../images/animals/losEvropsky/03-thumb.jpg'),
 ];
 
-var AnimalDetail = React.createClass({
+export default class AnimalDetail extends React.Component {
   render() {
     return (
       <AnimalTemplate firstIndex={[1]} thumbnails={THUMBNAILS} images={IMAGES} navigator={this.props.navigator}>
@@ -43,10 +43,10 @@ var AnimalDetail = React.createClass({
           Losi patří k&nbsp;podřádu přežvýkavců. Požírají listy stromků a sní dokonce i&nbsp;kůru stromů nebo vodní rostliny. Pokud se chtějí nažrat trávy, musí kvůli svému krátkému krku pořádně rozkročit nohy, aby dosáhli hlavou na zem.
         </AnimalText>
         <AnimalText>
-          Tito tvorové jsou samotáři. Samec a samice žijí zpravidla odděleně. V&nbsp;období říje se samci ozývají sténáním až kvílením, a lákají tak samice. Mnoho samců je v&nbsp;této době agresivní a může zaútočit i&nbsp;na člověka. Samice jsou březí asi devět měsíců a mívají jedno až tři mláďata. Pokusy o&nbsp;domestikaci byly většinou neúspěšné. 
+          Tito tvorové jsou samotáři. Samec a samice žijí zpravidla odděleně. V&nbsp;období říje se samci ozývají sténáním až kvílením, a lákají tak samice. Mnoho samců je v&nbsp;této době agresivní a může zaútočit i&nbsp;na člověka. Samice jsou březí asi devět měsíců a mívají jedno až tři mláďata. Pokusy o&nbsp;domestikaci byly většinou neúspěšné.
         </AnimalText>
         <AnimalText>
-        
+
         </AnimalText>
         <AnimalText>
           Zajímavost:
@@ -57,6 +57,4 @@ var AnimalDetail = React.createClass({
       </AnimalTemplate>
     );
   }
-});
-
-module.exports = AnimalDetail;
+};
