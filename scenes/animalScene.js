@@ -18,7 +18,8 @@ import {
   StyleSheet,
   Switch,
   Platform,
-  PermissionsAndroid
+  PermissionsAndroid,
+  ToastAndroid
 } from 'react-native';
 import { scenes, sceneTitles } from '../scenes';
 import animals from '../animals';
@@ -28,8 +29,15 @@ class TextTab extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      animalStoryPath: null,
+    if(Platform.OS === 'android') {
+      this.state = {
+        animalStoryPath: null,
+      }
+
+      this.onDownloadFileClick = this.onDownloadFileClick.bind(this);
+      this.getStoryFilePath = this.getStoryFilePath.bind(this);
+
+      this.getStoryFilePath("");
     }
   }
 
@@ -43,11 +51,6 @@ class TextTab extends React.Component {
         />
       )
     }) 
-    
-    
-    componentDidMount() {
-      this.getStoryFilePath("");
-    }
 
     showErrorFileDialog(){
       Alert.alert(
@@ -99,6 +102,8 @@ class TextTab extends React.Component {
           .catch(() => console.log("Error while creating animalStories directory"));
       }
 
+      ToastAndroid.show("Download starting",  ToastAndroid.LONG);
+
       RNFetchBlob
         .config({
           path: animalDirPath,
@@ -110,24 +115,31 @@ class TextTab extends React.Component {
             notification: true
           }
         })
-        .fetch('GET', 'https://dl.last.fm/static/1523306299/131211148/d4226f3638e43cad39af02505e69d1c0d143b4659724618e93971c891896311e/Death+Grips+-+Get+Got.mp3')
+        .fetch('GET', 'https://dl.last.fm/static/1524575793/131627927/4e99865260eecb87f0d622510b3b99a908964ff867cda0864d3eb260cad02ff0/Death+Grips+-+I%27ve+Seen+Footage.mp3')
         .then((res) => {
           console.log("File saved to ", res.path());
+          this.setState({
+            animalStoryPath: res.path(),
+          });
         })
-        .catch((err) => console.log(err));
+        .catch((errMsg, statusCode) => ToastAndroid.show(errMsg, ToastAndroid.LONG));
+        
     }
 
     async getStoryFilePath(storyName) {
+      console.log("get story file called");
       let dir = RNFetchBlob.fs.dirs.SDCardApplicationDir;
       if (dir === undefined) {
         dir = RNFetchBlob.fs.dirs.DocumentDir;
       }
-      let animalStoryPath = dir + "/animalStories/music.mp3" ;
+      console.log("get story dir obtained");
+      let animalStoryPath = dir + "/animalStories/music.mp3";
 
       // RNFetchBlob.fs.ls(animalDirPath)
       // .then((files) => console.log(files));
       
       let hasFile = await RNFetchBlob.fs.exists(animalStoryPath);
+      console.log("get story file exists? ");
       console.log(hasFile);
       if(hasFile) {
         this.setState({
@@ -151,51 +163,55 @@ class TextTab extends React.Component {
     } else {
       AnimalDetail = animals[animalName].contentChild;
     }
+    
+    let player = null;
 
-    let playerStyle = {
-      backgroundColor: '#3C3C3B', 
-      iconColor: '#FFF', 
-      iconSize: 50, 
-      sliderThumbColor: '#009385', 
-      sliderMinTrackColor: '#3CAC54', 
-      sliderMaxTrackColor: '#FFFFFF',
-      textColor: '#FFF',
+    if(Platform.OS === 'android') { 
+      let playerStyle = {
+        backgroundColor: '#3C3C3B', 
+        iconColor: '#FFF', 
+        iconSize: 50, 
+        sliderThumbColor: '#009385', 
+        sliderMinTrackColor: '#3CAC54', 
+        sliderMaxTrackColor: '#FFFFFF',
+        textColor: '#FFF',
+      }
+
+      let downloadButtonStyle = {
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        backgroundColor: '#3C3C3B', 
+        width: WIDTH,
+        height: 50
+      }
+
+      let downloadButtonTextStyle = {
+        fontWeight: 'bold', 
+        fontSize: 20, 
+        color: '#FFFFFF', 
+        textAlign: 'center', 
+        textAlignVertical: 'center'
+      }
+
+      player = this.state.animalStoryPath != null ? (
+          <SimplePlayer 
+            isPlaying={false} 
+            style={playerStyle}
+            preventLoudMusic={true} 
+            filePath={this.state.animalStoryPath}
+            onFileNotFound={this.showErrorFileDialog}/>
+        ) : (
+          <TouchableHighlight style={downloadButtonStyle} onPress={this.onDownloadFileClick}>
+            <Text style={downloadButtonTextStyle}>Stiahni pribeh</Text>
+          </TouchableHighlight>
+        )
     }
-
-    let downloadButtonStyle = {
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      backgroundColor: '#3C3C3B', 
-      width: WIDTH,
-      height: 50
-    }
-
-    let downloadButtonTextStyle = {
-      fontWeight: 'bold', 
-      fontSize: 20, 
-      color: '#FFFFFF', 
-      textAlign: 'center', 
-      textAlignVertical: 'center'
-    }
-
-    const player = this.state.animalStoryPath != null ? (
-      <SimplePlayer 
-        isPlaying={false} 
-        style={playerStyle}
-        preventLoudMusic={true} 
-        filePath={this.state.animalStoryPath}
-        onFileNotFound={this.showErrorFileDialog}/>
-    ) : (
-      <TouchableHighlight style={downloadButtonStyle} onPress={this.onDownloadFileClick}>
-        <Text style={downloadButtonTextStyle}>Stiahni pribeh</Text>
-      </TouchableHighlight>
-    )
 
     return (
       <View style={{flex: 1}}>
         <ScrollView>
           <AnimalDetail animal = {animalName}/>
-        </ScrollView>
+        </ScrollView> 
         {player}
       </View>
     );
