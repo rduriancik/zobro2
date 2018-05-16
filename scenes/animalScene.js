@@ -202,7 +202,7 @@ class TextTab extends React.Component {
             onFileNotFound={this.showErrorFileDialog}/>
         ) : (
           <TouchableHighlight style={downloadButtonStyle} onPress={this.onDownloadFileClick}>
-            <Text style={downloadButtonTextStyle}>Stiahni pribeh</Text>
+            <Text style={downloadButtonTextStyle}>Stáhni příběh</Text>
           </TouchableHighlight>
         )
     }

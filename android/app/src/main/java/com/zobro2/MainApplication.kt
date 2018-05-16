@@ -1,15 +1,15 @@
 package com.zobro2
 
 import android.app.Application
+import com.RNFetchBlob.RNFetchBlobPackage
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
 import com.facebook.react.shell.MainReactPackage
 import com.facebook.soloader.SoLoader
-import com.reactlibrary.RNSimplePlayerPackage
-import com.RNFetchBlob.RNFetchBlobPackage
 import org.reactnative.camera.RNCameraPackage
+import com.reactlibrary.RNSimplePlayerPackage
 
 class MainApplication : Application(), ReactApplication {
 

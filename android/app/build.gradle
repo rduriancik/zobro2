@@ -160,19 +160,20 @@ dependencies {
     implementation "com.facebook.react:react-native:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"  // From node_modules
 
-    implementation project(':react-native-push-notification')
-    implementation('com.google.android.gms:play-services-gcm:11.8.0') {
+    implementation (project(':react-native-push-notification')){
+        exclude group: "com.google.android.gms"
+    }
+    implementation('com.google.android.gms:play-services-gcm:15.0.1') {
         force = true;
     }
 
     implementation(project(':react-native-camera')) {
+        exclude group: "com.facebook.infer.annotation"
         exclude group: "com.google.android.gms"
-        compile ("com.google.android.gms:play-services-vision:$rootProject.googlePlayServicesVersion") {
-            force = true
+        implementation 'com.android.support:exifinterface:27.+'
+        implementation("com.google.android.gms:play-services-vision:15.0.2") {
+            force = true;
         }
-    }
-    implementation("com.google.android.gms:play-services-vision:11.8.0") {
-        force = true;
     }
 
     implementation project(':react-native-simple-player')
