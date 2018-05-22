@@ -24,6 +24,16 @@ import {
 import { scenes, sceneTitles } from '../scenes';
 import animals from '../animals';
 import AnimalNeighbourScene from '../components/animalNeighbourScene';
+import { 
+  UNKNOWN_ERROR,
+  PERMISSION_DENIED,
+  STORIES_DIR_ERROR,
+  DOWNLOAD_FAILED_ERROR,
+  NO_CONNECTION_ERROR,
+  hasStoryAndroid,
+  downloadStoryAndroid,
+  getStoryPathAndroid,
+} from '../animalStoriesUtils';
 
 class TextTab extends React.Component {
   constructor(props) {
@@ -34,10 +44,7 @@ class TextTab extends React.Component {
         animalStoryPath: null,
       }
 
-      this.onDownloadFileClick = this.onDownloadFileClick.bind(this);
-      this.getStoryFilePath = this.getStoryFilePath.bind(this);
-
-      this.getStoryFilePath("");
+      this.onDownloadFileClick = this.onDownloadFileClick.bind(this);      
     }
   }
 
@@ -54,99 +61,65 @@ class TextTab extends React.Component {
 
     showErrorFileDialog(){
       Alert.alert(
-        'Missing audio file',
-        'Cannot play the file because it was not provided.',
+        'Zvolený příběh chybí',
+        'Příběh se nenachází v úložišti zařízení.',
         [
-          {text: 'Cancel', onPress: () => console.log("Missing audio file dialog cancelled")}
+          {text: 'Zavřít', onPress: () => console.log("Missing audio file")}
         ]
       )
     }
 
-    async onDownloadFileClick() {
-      // TODO start downloading file
-      // const dirs = RNFetchBlob.fs.dirs;
-      // console.log(dirs);
-
-      // TODO write permission
-
-      if(Platform.OS === 'android'){
-        try {
-          const granted = await PermissionsAndroid.request(
-            PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-            {
-              'title': 'Zoo Brno',
-              'message': 'We need access to your storage to save the file'
-            }
-          )
-          if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-            console.log("Permission granted")
-          } else {
-            console.log("Permission denied")
-            return;
-          }
-        } catch (err) {
-          console.warn(err)
-        }
-      }
-
-      let dir = RNFetchBlob.fs.dirs.SDCardApplicationDir;
-      if (dir === undefined) {
-        dir = RNFetchBlob.fs.dirs.DocumentDir;
-      }
-
-      let animalDirPath = dir + "/animalStories" ;
-      let hasAnimalDir = await RNFetchBlob.fs.isDir(animalDirPath); 
-      if(!hasAnimalDir) {
-        RNFetchBlob.fs.mkdir(animalDirPath)
-          .then(() => console.log("animalStories directory created"))
-          .catch(() => console.log("Error while creating animalStories directory"));
-      }
-
-      ToastAndroid.show("Download starting",  ToastAndroid.LONG);
-
-      RNFetchBlob
-        .config({
-          path: animalDirPath,
-          addAndroidDownloads: {
-            useDownloadManager: true,
-            title: 'Story',
-            description: 'Stoory',
-            path: animalDirPath + "/music.mp3",
-            notification: true
-          }
-        })
-        .fetch('GET', 'https://dl.last.fm/static/1524575793/131627927/4e99865260eecb87f0d622510b3b99a908964ff867cda0864d3eb260cad02ff0/Death+Grips+-+I%27ve+Seen+Footage.mp3')
-        .then((res) => {
-          console.log("File saved to ", res.path());
-          this.setState({
-            animalStoryPath: res.path(),
-          });
-        })
-        .catch((errMsg, statusCode) => ToastAndroid.show(errMsg, ToastAndroid.LONG));
-        
-    }
-
-    async getStoryFilePath(storyName) {
-      console.log("get story file called");
-      let dir = RNFetchBlob.fs.dirs.SDCardApplicationDir;
-      if (dir === undefined) {
-        dir = RNFetchBlob.fs.dirs.DocumentDir;
-      }
-      console.log("get story dir obtained");
-      let animalStoryPath = dir + "/animalStories/music.mp3";
-
-      // RNFetchBlob.fs.ls(animalDirPath)
-      // .then((files) => console.log(files));
-      
-      let hasFile = await RNFetchBlob.fs.exists(animalStoryPath);
-      console.log("get story file exists? ");
-      console.log(hasFile);
-      if(hasFile) {
+    onDownloadFileClick() {
+      downloadStoryAndroid("music").then((path) => { //TODO set storyName into state 
+        console.log("PROMIS FULFILLED");
         this.setState({
-          animalStoryPath: animalStoryPath,
+          animalStoryPath: path,
         })
-      }
+      },
+      (err) => {
+        let errorMsg;
+        switch(err) {
+          case PERMISSION_DENIED:
+            errorMsg = "Bez uděleného povolení není možně stáhnout příběh.";
+            break;
+          case NO_CONNECTION_ERROR:
+            errorMsg = "Žádné internetové připojení. Zkuste opět po připojení k internetu.";
+            break;
+          case STORIES_DIR_ERROR:
+            errorMsg = "Přístup k složce s příběhy se nezdařil.";
+            break;
+          case DOWNLOAD_FAILED_ERROR:
+            errorMsg = "Stěhování příběhu se nepodařilo. Zkontrolujte své internetové připojení.";
+            break;
+          case UNKNOWN_ERROR:
+          default:
+            errorMsg = "Během stahování došlo k neznámé chybě.";
+        }
+
+        Alert.alert(
+          'Chyba',
+          errorMsg,
+          [
+            {text: 'Zavřít', onPress: () => {}}
+          ]
+        )
+      });
     }
+
+  componentDidMount() {
+    // TODO show progress
+    if(Platform.OS === 'android') {
+      let storyName = this.props.screenProps.animal;
+      hasStoryAndroid("music").then((hasFile) => { // TODO use storyname
+        if(hasFile){
+          this.setState({
+            animalStoryPath: getStoryPathAndroid(storyName)
+          });
+        }
+      },
+      (err) => console.log("error"));
+    }
+  }
 
   render() {
     let AnimalDetail;
@@ -167,7 +140,7 @@ class TextTab extends React.Component {
     let player = null;
 
     if(Platform.OS === 'android') { 
-      let playerStyle = {
+      const playerStyle = {
         backgroundColor: '#3C3C3B', 
         iconColor: '#FFF', 
         iconSize: 50, 
@@ -177,15 +150,15 @@ class TextTab extends React.Component {
         textColor: '#FFF',
       }
 
-      let downloadButtonStyle = {
+      const downloadButtonStyle = {
         justifyContent: 'center', 
         alignItems: 'center', 
         backgroundColor: '#3C3C3B', 
         width: WIDTH,
-        height: 50
+        height: 60
       }
 
-      let downloadButtonTextStyle = {
+      const downloadButtonTextStyle = {
         fontWeight: 'bold', 
         fontSize: 20, 
         color: '#FFFFFF', 
@@ -193,11 +166,17 @@ class TextTab extends React.Component {
         textAlignVertical: 'center'
       }
 
+      const preventLoudMusicAlert = {
+        title: "Varování",
+        message: "Použijte sluchátka nebo umístěte telefon blízko ucha.",
+        buttonText: "Zavřít",
+      }
+
       player = this.state.animalStoryPath != null ? (
           <SimplePlayer 
-            isPlaying={false} 
             style={playerStyle}
             preventLoudMusic={true} 
+            preventLoudMusicAlert={preventLoudMusicAlert}
             filePath={this.state.animalStoryPath}
             onFileNotFound={this.showErrorFileDialog}/>
         ) : (

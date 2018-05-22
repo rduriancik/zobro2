@@ -58,7 +58,7 @@ export async function downloadStoryAndroid(storyName) {
 }
 
 export function getStoryPathAndroid(storyName) {
-  return getStoriesDirAndroid() + "/" + storyName + "."; // TODO format
+  return getStoriesDirAndroid() + "/" + storyName + ".mp3"; // TODO format
 }
 
 function getStoriesDirAndroid() {
