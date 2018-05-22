@@ -19,17 +19,14 @@ import {
   Switch,
   Platform,
   PermissionsAndroid,
-  ToastAndroid
+  ToastAndroid,
+  ProgressBarAndroid
 } from 'react-native';
 import { scenes, sceneTitles } from '../scenes';
 import animals from '../animals';
 import AnimalNeighbourScene from '../components/animalNeighbourScene';
 import { 
-  UNKNOWN_ERROR,
-  PERMISSION_DENIED,
-  STORIES_DIR_ERROR,
-  DOWNLOAD_FAILED_ERROR,
-  NO_CONNECTION_ERROR,
+  errors,
   hasStoryAndroid,
   downloadStoryAndroid,
   getStoryPathAndroid,
@@ -70,28 +67,29 @@ class TextTab extends React.Component {
     }
 
     onDownloadFileClick() {
+      this.props.screenProps.setIsDownloading(true);
+
       downloadStoryAndroid("music").then((path) => { //TODO set storyName into state 
-        console.log("PROMIS FULFILLED");
         this.setState({
           animalStoryPath: path,
-        })
+        });
       },
       (err) => {
         let errorMsg;
         switch(err) {
-          case PERMISSION_DENIED:
+          case errors.PERMISSION_DENIED:
             errorMsg = "Bez uděleného povolení není možně stáhnout příběh.";
             break;
-          case NO_CONNECTION_ERROR:
+          case errors.NO_CONNECTION_ERROR:
             errorMsg = "Žádné internetové připojení. Zkuste opět po připojení k internetu.";
             break;
-          case STORIES_DIR_ERROR:
+          case errors.STORIES_DIR_ERROR:
             errorMsg = "Přístup k složce s příběhy se nezdařil.";
             break;
-          case DOWNLOAD_FAILED_ERROR:
+          case errors.DOWNLOAD_FAILED_ERROR:
             errorMsg = "Stěhování příběhu se nepodařilo. Zkontrolujte své internetové připojení.";
             break;
-          case UNKNOWN_ERROR:
+          case errors.UNKNOWN_ERROR:
           default:
             errorMsg = "Během stahování došlo k neznámé chybě.";
         }
@@ -103,6 +101,9 @@ class TextTab extends React.Component {
             {text: 'Zavřít', onPress: () => {}}
           ]
         )
+      })
+      .then(() => {
+        this.props.screenProps.setIsDownloading(false);
       });
     }
 
@@ -113,11 +114,11 @@ class TextTab extends React.Component {
       hasStoryAndroid("music").then((hasFile) => { // TODO use storyname
         if(hasFile){
           this.setState({
-            animalStoryPath: getStoryPathAndroid(storyName)
+            animalStoryPath: getStoryPathAndroid("music") // TODO use storyname 
           });
         }
       },
-      (err) => console.log("error"));
+      (err) => console.log("error: " + err));
     }
   }
 
@@ -155,7 +156,7 @@ class TextTab extends React.Component {
         alignItems: 'center', 
         backgroundColor: '#3C3C3B', 
         width: WIDTH,
-        height: 60
+        height: 50
       }
 
       const downloadButtonTextStyle = {
@@ -172,6 +173,8 @@ class TextTab extends React.Component {
         buttonText: "Zavřít",
       }
 
+      let buttonText = this.props.screenProps.isDownloading ? "Stěhování probíhá" : "Stáhni příběh";
+
       player = this.state.animalStoryPath != null ? (
           <SimplePlayer 
             style={playerStyle}
@@ -180,9 +183,20 @@ class TextTab extends React.Component {
             filePath={this.state.animalStoryPath}
             onFileNotFound={this.showErrorFileDialog}/>
         ) : (
-          <TouchableHighlight style={downloadButtonStyle} onPress={this.onDownloadFileClick}>
-            <Text style={downloadButtonTextStyle}>Stáhni příběh</Text>
+          <View style={{backgroundColor: '#3C3C3B', height: 60}}>
+          <TouchableHighlight 
+            style={downloadButtonStyle} 
+            onPress={this.onDownloadFileClick}
+            disabled={this.props.screenProps.isDownloading}>
+              <Text style={downloadButtonTextStyle}>{buttonText}</Text>
           </TouchableHighlight>
+          {this.props.screenProps.isDownloading && 
+            <ProgressBarAndroid
+                  styleAttr='Horizontal'
+                  color='#FFF'
+                  indeterminate={true} />
+          }
+          </View>
         )
     }
 
@@ -389,8 +403,9 @@ export default class AnimalMainScreen extends React.Component {
     p.setReaderLevel = this.props.setReaderLevel;
     p.animalTab = this.props.tabName;
     p.setAnimalTab = this.props.setAnimalTab;
+    p.setIsDownloading = this.props.setIsDownloading;
+    p.isDownloading = this.props.isDownloading;
     p.parentNavigation = this.props.navigation;
-
     return (
       <MainStack
         screenProps={p}

@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { actions } from '../actions/index'
 
 const initialAuthState = {
   cameraReady: true,
@@ -6,31 +7,32 @@ const initialAuthState = {
   tabName: 'Text',
   notifications: {},
   selectedAnimal: undefined,
+  isDownloading: false
 };
 
 function configuration(state = initialAuthState, action) {
   switch (action.type) {
-    case 'SET_READER_LEVEL':
+    case actions.SET_READER_LEVEL:
       return {
         ...state,
         readerLevel: action.level
       }
-    case 'SET_CAMERA_READY':
+    case actions.SET_CAMERA_READY:
       return {
         ...state,
         cameraReady: action.ready
       }
-    case 'SET_ANIMAL_TAB':
+    case actions.SET_ANIMAL_TAB:
       return {
         ...state,
         tabName: action.tabName
       }
-    case 'SET_ANIMAL':
+    case actions.SET_ANIMAL:
       return {
         ...state,
         selectedAnimal: action.animalName
       }
-    case 'ADD_NOTIFICATION':
+    case actions.ADD_NOTIFICATION:
       {
         let newNotifications = Object.assign({}, state.notifications);
         // store deltaTime so we can highlight right button
@@ -40,7 +42,7 @@ function configuration(state = initialAuthState, action) {
           notifications: newNotifications
         }
       }
-    case 'REMOVE_NOTIFICATION':
+    case actions.REMOVE_NOTIFICATION:
       {
         let newNotifications = Object.assign({}, state.notifications);
         newNotifications[action.eventID] = 0;
@@ -48,6 +50,11 @@ function configuration(state = initialAuthState, action) {
           ...state,
           notifications: newNotifications
         }
+      }
+    case actions.SET_IS_DOWNLOADING:
+      return {
+        ...state,
+        isDownloading: action.isDownloading
       }
     default:
       return state;
