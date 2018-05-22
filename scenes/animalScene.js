@@ -173,7 +173,7 @@ class TextTab extends React.Component {
         buttonText: "Zavřít",
       }
 
-      let buttonText = this.props.screenProps.isDownloading ? "Stěhování probíhá" : "Stáhni příběh";
+      let buttonText = this.props.screenProps.isDownloading ? "Stahování probíhá" : "Stáhni příběh";
 
       player = this.state.animalStoryPath != null ? (
           <SimplePlayer 
