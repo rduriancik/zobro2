@@ -32,13 +32,11 @@ class AnimalContainer extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("Should update " + this.props.configuration.isDownloading);
     if (this.props.navigation.state.params.animal !== nextProps.configuration.selectedAnimal) {
       // This animal is not on the top of the stack so it makes no sense to update content
       return false;
     } else {
       // On every other change of props or state it should be updated
-      console.log("updated");
       return true;
     }
   }

@@ -56,7 +56,7 @@ class TextTab extends React.Component {
       )
     }) 
 
-    showErrorFileDialog(){
+    showMissingAudioFileDialog(){
       Alert.alert(
         'Zvolený příběh chybí',
         'Příběh se nenachází v úložišti zařízení.',
@@ -109,7 +109,7 @@ class TextTab extends React.Component {
 
   componentDidMount() {
     // TODO show progress
-    if(Platform.OS === 'android') {
+    if(Platform.OS === 'android' && !this.props.screenProps.isDownloading) {
       let storyName = this.props.screenProps.animal;
       hasStoryAndroid("music").then((hasFile) => { // TODO use storyname
         if(hasFile){
@@ -181,7 +181,7 @@ class TextTab extends React.Component {
             preventLoudMusic={true} 
             preventLoudMusicAlert={preventLoudMusicAlert}
             filePath={this.state.animalStoryPath}
-            onFileNotFound={this.showErrorFileDialog}/>
+            onFileNotFound={this.showMissingAudioFileDialog}/>
         ) : (
           <View style={{backgroundColor: '#3C3C3B', height: 60}}>
           <TouchableHighlight 
