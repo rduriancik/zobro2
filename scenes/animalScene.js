@@ -108,7 +108,6 @@ class TextTab extends React.Component {
     }
 
   componentDidMount() {
-    // TODO show progress
     if(Platform.OS === 'android' && !this.props.screenProps.isDownloading) {
       let storyName = this.props.screenProps.animal;
       hasStoryAndroid("music").then((hasFile) => { // TODO use storyname

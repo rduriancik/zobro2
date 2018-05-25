@@ -44,11 +44,11 @@ export async function downloadStoryAndroid(storyName) {
         useDownloadManager: true,
         title: "Zoo Brno zvířecí příběh",
         description: "Stahuji příběh " + storyName,
-        path: storiesDir + "/" + storyName + ".mp3", // TODO format
+        path: storiesDir + "/" + storyName + ".mp3",
         notification: true
       }
     })
-    .fetch('GET', 'https://dl.last.fm/static/1526979232/113602306/03ead942a9c3d7d0411677606ee9266003eb0cee0f12ad86bf4317abf23de63f/Sleepmakeswaves+-+It%27s+Dark%2C+It%27s+Cold%2C+It%27s+Winter.mp3'); // TODO URL
+    .fetch('GET', 'https://drive.google.com/uc?export=download&id=1vm23uKzGuR_JDMMhXl-uUSKQMHUlay_t'); // TODO URL
     return downloadResult.path();
   } catch(e) {
     console.log(e);
@@ -57,7 +57,7 @@ export async function downloadStoryAndroid(storyName) {
 }
 
 export function getStoryPathAndroid(storyName) {
-  return getStoriesDirAndroid() + "/" + storyName + ".mp3"; // TODO format
+  return getStoriesDirAndroid() + "/" + storyName + ".mp3";
 }
 
 function getStoriesDirAndroid() {
