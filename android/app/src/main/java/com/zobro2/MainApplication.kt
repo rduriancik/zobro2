@@ -8,8 +8,8 @@ import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
 import com.facebook.react.shell.MainReactPackage
 import com.facebook.soloader.SoLoader
-import org.reactnative.camera.RNCameraPackage
 import com.reactlibrary.RNSimplePlayerPackage
+import org.reactnative.camera.RNCameraPackage
 
 class MainApplication : Application(), ReactApplication {
 
