@@ -168,7 +168,7 @@ class TextTab extends React.Component {
 
       const preventLoudMusicAlert = {
         title: "Varování",
-        message: "Použijte sluchátka nebo umístěte telefon blízko ucha.",
+        message: "Hlasitou hudbou rušíte zvířata. Použijte sluchátka nebo umístěte telefon blízko ucha.",
         buttonText: "Zavřít",
       }
 
